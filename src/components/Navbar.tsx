@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed z-20 flex w-full justify-center">
-      <div className="flex w-full max-w-7xl items-center justify-between p-6">
+      <div className="flex w-full max-w-7xl items-center justify-between px-6 py-4">
         <Link href={"/"}>
           <Image
             src="/logo.png"

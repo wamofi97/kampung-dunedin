@@ -5,10 +5,10 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen items-center justify-center py-32 md:flex">
-      <div className="text-center md:space-y-8 md:text-start">
+    <div className="relative z-10 min-h-screen items-center justify-center gap-x-8 py-32 md:flex">
+      <div className="text-center md:w-3/5 md:space-y-8 md:text-start">
         <h2>Authentic Malaysian Food Delivered to Your Doorstep</h2>
-        <h1 className="font-heading text-3xl font-black sm:text-4xl md:text-6xl lg:text-7xl">
+        <h1 className="font-heading text-3xl font-black sm:text-4xl md:text-5xl lg:text-6xl">
           Bringing a Taste of Malaysia to Dunedin!
         </h1>
         <Image
@@ -33,14 +33,14 @@ const Hero = () => {
           <Button size="lg">Order Now</Button>
         </div>
       </div>
-      {/* <div className="hidden md:block md:w-2/5">
+      <div className="relative hidden h-[450px] md:block md:w-2/5">
         <Image
           src="/logo-without-background.svg"
           alt="Logo"
-          width={500}
-          height={500}
+          fill
+          className="rounded-xl object-cover"
         />
-      </div> */}
+      </div>
     </div>
   );
 };

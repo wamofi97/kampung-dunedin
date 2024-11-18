@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:gap-20">
           <div className="rounded-xl md:w-1/2">
             <Image
-              src="/family.png"
+              src="/family.webp"
               alt="Dunedin"
               width={5120}
               height={3414}
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             <div className="relative h-[450px] w-full md:w-2/3">
               <Image
-                src="/nasi-lemak-daun-pisang.png"
+                src="/nasi-lemak-daun-pisang.webp"
                 alt="Nasi Lemak Daun Pisang"
                 fill
                 className="rounded-xl object-cover"
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="flex h-[400px] w-full md:w-2/3 md:flex-row">
               <div className="relative w-full">
                 <Image
-                  src="/sate-ayam.jpg"
+                  src="/sate-ayam.webp"
                   alt="Sate Ayam"
                   fill
                   className="rounded-l-xl object-cover"
@@ -90,7 +90,7 @@ export default function Home() {
               </div>
               <div className="relative w-full">
                 <Image
-                  src="/sate-daging.jpg"
+                  src="/sate-daging.webp"
                   alt="Sate Daging"
                   fill
                   className="rounded-r-xl object-cover"
@@ -126,7 +126,7 @@ export default function Home() {
         </Headingwbackground>
         <div className="flex flex-col gap-x-20 md:flex-row-reverse">
           <div className="mb-4 space-y-4 md:w-3/5">
-            <p className="text-lg lg:text-xl">
+            <p className="text-xl lg:text-2xl">
               Craving a taste of home or curious about Malaysian cuisine? Place
               your order now and let Kampung Dunedin bring the deliciousness to
               your doorstep. We&apos;re here to make your meals special, whether
