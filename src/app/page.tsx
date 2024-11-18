@@ -26,9 +26,9 @@ export default function Home() {
           <div className="space-y-4 md:w-1/2 md:space-y-8">
             <p className="text-lg md:text-xl">
               We're a family-owned business bringing the authentic taste of
-              Malaysia to Dunedin. ‘Kampung’ means ‘village’ in Malay,
-              symbolizing warmth, tradition, and family. We hope these flavors
-              will bring you as much joy as they bring us.
+              Malaysia to Dunedin. Kampung means village in Malay, symbolizing
+              warmth, tradition, and family. We hope these flavors will bring
+              you as much joy as they bring us.
             </p>
             <div>
               <Link href="/about">
@@ -129,7 +129,7 @@ export default function Home() {
             <p className="text-lg lg:text-xl">
               Craving a taste of home or curious about Malaysian cuisine? Place
               your order now and let Kampung Dunedin bring the deliciousness to
-              your doorstep. We’re here to make your meals special, whether it’s
+              your doorstep. We're here to make your meals special, whether it's
               a quiet weekend at home or a celebration with loved ones!
             </p>
             <ul className="text-lg lg:text-xl">
@@ -156,8 +156,8 @@ export default function Home() {
               <p className="text-lg lg:text-xl">
                 Planning an event or feeding a{" "}
                 <span className="font-semibold">larger group</span>? Kampung
-                Dunedin is happy to cater to your needs! Whether it’s a family
-                gathering, office party, or special celebration, we’ll craft a
+                Dunedin is happy to cater to your needs! Whether it's a family
+                gathering, office party, or special celebration, we'll craft a
                 menu to delight your guests with authentic Malaysian flavors.
                 Get in touch for custom catering options.
               </p>
@@ -172,8 +172,8 @@ export default function Home() {
         </Headingwbackground>
         <p className="text-lg lg:text-xl">
           Our menu changes weekly, so join our WhatsApp group or follow us on
-          Instagram for the latest updates and to see what’s cooking each
-          weekend! We’d love for you to be part of our community and share in
+          Instagram for the latest updates and to see what's cooking each
+          weekend! We'd love for you to be part of our community and share in
           the flavors of Kampung Dunedin.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
