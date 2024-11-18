@@ -1,16 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="p-4 shadow">
-      <div className="container mx-auto flex items-center justify-between">
-        <h1 className="text-xl font-bold">Kampung Dunedin</h1>
-        <ul className="hidden gap-4 md:flex">
+    <nav className="fixed z-20 flex w-full justify-center">
+      <div className="flex w-full max-w-7xl items-center justify-between p-6">
+        <Link href={"/"}>
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={100}
+            height={100}
+            className="w-32"
+          />
+        </Link>
+        <ul className="hidden gap-8 md:flex">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -27,6 +37,7 @@ const Navbar = () => {
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
+        <Button className="hidden md:block">Order Now</Button>
         <button
           className="z-10 block md:hidden"
           onClick={() => {
@@ -36,43 +47,27 @@ const Navbar = () => {
           Menu
         </button>
 
-        <ul
-          className={`${!isOpen && "translate-x-full"} absolute right-0 top-0 flex h-screen w-1/2 flex-col items-center justify-center gap-4 p-4 py-20 text-2xl shadow transition-transform duration-500 md:hidden`}
+        <div
+          className={`${!isOpen && "translate-x-full"} absolute right-0 top-0 h-screen w-2/3 bg-white p-4 py-20 text-2xl shadow transition-all duration-500 sm:w-1/2 md:hidden`}
         >
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/menu">Menu</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/review">Review</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-
-        {/* <ul className="flex flex-col gap-4 sm:hidden">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/menu">Menu</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/review">Review</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul> */}
+          <ul className="flex h-full flex-col items-center justify-center gap-12">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/menu">Menu</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/review">Review</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
