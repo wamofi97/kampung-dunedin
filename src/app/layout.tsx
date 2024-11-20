@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Merriweather, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,12 +11,17 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const merriweather = Merriweather({
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  variable: "--font-merriweather",
+const bespoke = localFont({
+  src: "../../public/fonts/BespokeSerif-Variable.woff2",
+  variable: "--font-bespoke",
 });
+
+// const merriweather = Merriweather({
+//   style: ["normal", "italic"],
+//   subsets: ["latin"],
+//   weight: ["300", "400", "700", "900"],
+//   variable: "--font-merriweather",
+// });
 
 export const metadata: Metadata = {
   title: "Kampung Dunedin",
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${merriweather.variable} antialiased`}
+        className={`${poppins.variable} ${bespoke.variable} overflow-x-hidden antialiased`}
       >
         <Navbar />
         {children}

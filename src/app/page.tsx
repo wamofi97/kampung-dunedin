@@ -1,6 +1,8 @@
 import Headingwbackground from "@/components/Headingwbackground";
 import Hero from "@/components/Hero";
+import MenuSlider from "@/components/MenuSlider";
 import Note from "@/components/Note";
+import ReviewsSlider from "@/components/ReviewSlider";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -8,10 +10,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-3 md:px-6">
+    <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-3 sm:px-6">
+      {/* <div className="absolute min-h-screen w-full bg-[url('/kampung.jpg')] bg-cover"></div> */}
+      <div className="absolute w-full bg-gradient-to-b from-white/50 to-black/90"></div>
       <Hero />
 
-      <section className="my-16 max-w-7xl md:my-24">
+      {/* <ReviewsSlider />
+      <MenuSlider /> */}
+      <section className="relative my-16 max-w-6xl">
         <Headingwbackground>Welcome to Kampung Dunedin!</Headingwbackground>
         <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:gap-20">
           <div className="rounded-xl md:w-1/2">
@@ -20,7 +26,7 @@ export default function Home() {
               alt="Dunedin"
               width={5120}
               height={3414}
-              className="rounded-xl"
+              className="rounded-lg"
             ></Image>
           </div>
           <div className="space-y-4 md:w-1/2 md:space-y-8">
@@ -41,12 +47,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 max-w-7xl md:my-24">
+      <section className="my-16 max-w-6xl">
         <Headingwbackground>Our Signature Menu</Headingwbackground>
         <div className="">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:gap-8 lg:gap-16">
             <div className="space-y-8 md:w-1/3">
-              <h3 className="text-2xl font-semibold text-amber-900 lg:text-4xl">
+              <h3 className="font-heading text-2xl font-semibold text-amber-900 lg:text-4xl">
                 NASI LEMAK DAUN PISANG
               </h3>
               <p className="text-xl lg:text-2xl">
@@ -59,17 +65,17 @@ export default function Home() {
             </div>
             <div className="relative h-[450px] w-full md:w-2/3">
               <Image
-                src="/nasi-lemak-daun-pisang.webp"
+                src="/images/nasi-lemak-daun-pisang.webp"
                 alt="Nasi Lemak Daun Pisang"
                 fill
-                className="rounded-xl object-cover"
+                className="rounded-lg object-cover"
               />
             </div>
           </div>
 
           <div className="my-16 flex flex-col justify-between gap-4 md:flex-row-reverse md:gap-8 lg:gap-16">
-            <div className="space-y-8 md:w-1/3">
-              <h3 className="text-2xl font-semibold text-amber-900 lg:text-4xl">
+            <div className="space-y-8 md:w-2/5">
+              <h3 className="font-heading text-2xl font-semibold text-amber-900 lg:text-4xl">
                 SATE ATAM & SATE DAGING
               </h3>
               <p className="text-xl lg:text-2xl">
@@ -79,21 +85,21 @@ export default function Home() {
                 friends and family!
               </p>
             </div>
-            <div className="flex h-[400px] w-full md:w-2/3 md:flex-row">
+            <div className="flex h-[400px] w-full md:w-3/5 md:flex-row">
               <div className="relative w-full">
                 <Image
-                  src="/sate-ayam.webp"
+                  src="/images/sate-ayam.webp"
                   alt="Sate Ayam"
                   fill
-                  className="rounded-l-xl object-cover"
+                  className="rounded-l-lg object-cover"
                 />
               </div>
               <div className="relative w-full">
                 <Image
-                  src="/sate-daging.webp"
+                  src="/images/sate-daging.webp"
                   alt="Sate Daging"
                   fill
-                  className="rounded-r-xl object-cover"
+                  className="rounded-r-lg object-cover"
                 />
               </div>
             </div>
@@ -120,11 +126,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 max-w-7xl space-y-4 md:my-24">
+      <section className="my-16 max-w-6xl space-y-4">
         <Headingwbackground>
           Ready to Savor Authentic Malaysian Flavors?
         </Headingwbackground>
-        <div className="flex flex-col gap-x-20 md:flex-row-reverse">
+        <div className="flex flex-col gap-x-8 md:flex-row-reverse">
           <div className="mb-4 space-y-4 md:w-3/5">
             <p className="text-xl lg:text-2xl">
               Craving a taste of home or curious about Malaysian cuisine? Place
@@ -136,11 +142,17 @@ export default function Home() {
             <ul className="text-lg lg:text-xl">
               Delivery info:
               <li>
-                • <span className="font-semibold text-amber-800">Weekends</span>{" "}
+                •{" "}
+                <span className="font-semibold text-accent-foreground">
+                  Weekends
+                </span>{" "}
                 only (Saturday & Sunday)
               </li>
               <li>
-                • <span className="font-semibold text-amber-800">Dunedin</span>{" "}
+                •{" "}
+                <span className="font-semibold text-accent-foreground">
+                  Dunedin
+                </span>{" "}
                 and surrounding areas
               </li>
             </ul>
@@ -167,7 +179,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 max-w-7xl space-y-4 md:my-24">
+      <section className="my-16 max-w-6xl space-y-4">
         <Headingwbackground>
           Stay Updated with Our Weekly Menu!
         </Headingwbackground>
@@ -177,7 +189,7 @@ export default function Home() {
           weekend! We&apos;d love for you to be part of our community and share
           in the flavors of Kampung Dunedin.
         </p>
-        <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+        <div className="flex flex-col items-start justify-center gap-4 sm:flex-row">
           <Button size="lg" variant="outline">
             Join Whatsapp Group
           </Button>

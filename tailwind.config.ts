@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ["var(--font-poppins)", "sans-serif"],
-        heading: ["var(--font-merriweather)", "serif"],
+        heading: ["var(--font-bespoke)", "serif"],
       },
       colors: {
         background: "hsl(var(--background))",
