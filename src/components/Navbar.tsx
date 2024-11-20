@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="fixed top-0 z-20 flex w-full justify-center overflow-x-hidden">
+    <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden">
       <div className="flex w-full max-w-7xl items-center justify-between px-6 py-4">
         <Link href={"/"}>
           <Image
