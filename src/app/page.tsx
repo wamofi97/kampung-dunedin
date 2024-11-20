@@ -55,7 +55,7 @@ export default function Home() {
               <h3 className="font-heading text-2xl font-semibold text-amber-900 lg:text-4xl">
                 NASI LEMAK DAUN PISANG
               </h3>
-              <p className="text-xl lg:text-2xl">
+              <p className="text-lg lg:text-xl">
                 Our national dish and a favorite for any meal of the day!
                 Aromatic basmati rice infused with coconut milk and pandan
                 leaves, wrapped in banana leaves. Served with a boiled egg,
@@ -78,7 +78,7 @@ export default function Home() {
               <h3 className="font-heading text-2xl font-semibold text-amber-900 lg:text-4xl">
                 SATE ATAM & SATE DAGING
               </h3>
-              <p className="text-xl lg:text-2xl">
+              <p className="text-lg lg:text-xl">
                 Grilled to perfection, our chicken and beef satay are served
                 with soft, compressed rice cubes, a rich peanut sauce, and fresh
                 cucumber and onions on the side. Perfect for sharing with
@@ -132,7 +132,7 @@ export default function Home() {
         </Headingwbackground>
         <div className="flex flex-col gap-x-8 md:flex-row-reverse">
           <div className="mb-4 space-y-4 md:w-3/5">
-            <p className="text-xl lg:text-2xl">
+            <p className="text-lg lg:text-xl">
               Craving a taste of home or curious about Malaysian cuisine? Place
               your order now and let Kampung Dunedin bring the deliciousness to
               your doorstep. We&apos;re here to make your meals special, whether
