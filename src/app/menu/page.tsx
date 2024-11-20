@@ -120,7 +120,7 @@ const Menu = () => {
         </MenuCard>
         <MenuCard
           heading="Aunty Anija's Sambal Obersea"
-          image="/images/sambalobersea1.webp"
+          image="/images/sambalobersea.webp"
         >
           <p>
             200g+ pack of crunchy sambal premium ikan bilis kering (dried
