@@ -6,7 +6,7 @@ import MenuSlider from "./MenuSlider";
 
 const Hero = () => {
   return (
-    <div className="z-10 flex min-h-[80vh] w-full max-w-7xl flex-col items-center justify-center gap-16 sm:min-h-screen">
+    <div className="z-10 flex min-h-[80vh] w-full max-w-7xl flex-col items-center justify-center gap-2 sm:min-h-screen">
       <div className="flex flex-col items-center space-y-4 md:w-4/5">
         <Image
           src="/whitelogo.png"
@@ -15,7 +15,7 @@ const Hero = () => {
           height="120"
           className="mx-auto block object-cover invert lg:hidden"
         />
-        <h2 className="hidden text-center text-sm uppercase text-muted-foreground md:block md:text-xl">
+        <h2 className="hidden text-center text-sm text-muted-foreground md:block md:text-xl">
           Authentic Malaysian Food in Dunedin
         </h2>
         <div className="flex flex-col items-center justify-between lg:flex-row">
@@ -29,14 +29,21 @@ const Hero = () => {
             />
           </div>
           <h1 className="w-fit text-center font-heading text-[1.6rem] font-bold sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-            Bringing a Taste of <span className="text-amber-400">Malaysia</span>{" "}
-            to Dunedin!
+            Bringing a Taste of{" "}
+            <span className="bg-gradient-to-t from-emerald-900 to-amber-400 bg-clip-text text-transparent">
+              Malaysia
+            </span>{" "}
+            to Dunedin.
+            {/* <span className="bg-gradient-to-t from-sky-800 to-sky-300 bg-clip-text font-black text-transparent">
+              {" "}
+              Dunedin!
+            </span> */}
           </h1>
         </div>
 
         <p className="text-center text-lg md:text-xl lg:text-3xl">
-          Introducing Kampung Dunedin - a family-owned food business bringing
-          authentic Malaysian dishes to your doorstep, every weekend.
+          A family-owned food business serving authentic Malaysian dishes to
+          your doorstep, every weekend.
         </p>
 
         <div className="my-4 flex justify-center gap-2 sm:hidden md:gap-4">
