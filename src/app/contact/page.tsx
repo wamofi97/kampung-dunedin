@@ -24,14 +24,15 @@ const Contact = () => {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-12 md:px-6">
       <h1 className="text-3xl">Get in Touch</h1>
-      <Headingwbackground>We'd Love to Hear from You!</Headingwbackground>
+      <Headingwbackground>We&apos;d Love to Hear from You!</Headingwbackground>
 
       <div className="mb-12 grid gap-12 md:grid-cols-2">
         <div>
           <h2 className="mb-4 text-2xl font-medium"> Contact Us</h2>
           <p className="mb-6 text-muted-foreground">
             Whether you have questions, special requests, or simply want to say
-            hello, we're here for you. Reach out to Kampung Dunedin anytime!
+            hello, we&apos;re here for you. Reach out to Kampung Dunedin
+            anytime!
           </p>
 
           <div className="space-y-4">
@@ -73,7 +74,7 @@ const Contact = () => {
         </div>
 
         <div>
-          <h2 className="mb-4 text-2xl font-medium">Send us a Message</h2>
+          <h2 className="mb-4 text-2xl font-medium">Drop us a Message</h2>
           {formStatus === "submitted" ? (
             <div className="rounded-lg bg-green-100 p-4 dark:bg-green-900">
               <p className="text-green-700 dark:text-green-100">
@@ -107,6 +108,7 @@ const Contact = () => {
               </div>
               <Button
                 type="submit"
+                size="lg"
                 className="w-full"
                 disabled={formStatus === "submitting"}
               >
