@@ -51,7 +51,7 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
   <div className="mx-4 w-96 flex-none rounded-lg bg-white p-6 shadow-md">
     <div className="mb-4 flex items-center">
       {[...Array(review.rating)].map((_, i) => (
-        <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+        <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
       ))}
     </div>
     <p className="mb-4 text-gray-700">{review.text}</p>
