@@ -35,9 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${bespoke.variable} overflow-x-hidden antialiased`}
-      >
+      <body className={`${poppins.variable} ${bespoke.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />

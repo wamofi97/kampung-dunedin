@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="sticky top-0 z-20 flex w-full justify-center">
+    <nav className="fixed top-0 z-20 flex w-full justify-center overflow-x-hidden">
       <div className="flex w-full max-w-7xl items-center justify-between px-6 py-4">
         <Link href={"/"}>
           <Image
@@ -41,7 +41,7 @@ const Navbar = () => {
           <Button className="hidden md:block">Order Now</Button>
         </a>
         <button
-          className="z-10 block md:hidden"
+          className="z-50 block md:hidden"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -50,24 +50,62 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${!isOpen && "translate-x-full"} absolute right-0 top-0 h-screen w-2/3 bg-white p-4 py-20 text-2xl shadow transition-all duration-500 sm:w-1/2 md:hidden`}
+          className={`${!isOpen && "translate-x-full"} fixed right-0 top-0 h-screen w-2/3 bg-neutral-100/95 p-4 py-20 text-2xl shadow transition-all duration-500 sm:w-1/3 md:hidden`}
         >
           <ul className="flex h-full flex-col items-center justify-center gap-12">
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                href="/"
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/menu">Menu</Link>
+              <Link
+                href="/menu"
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                Menu
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link
+                href="/about"
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/review">Review</Link>
+              <Link
+                href="/review"
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                Review
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link
+                href="/contact"
+                onClick={() => {
+                  setIsOpen(!isOpen);
+                }}
+              >
+                Contact
+              </Link>
             </li>
+            <a href="https://bit.ly/WhatsAppKampungDunedin" target="_blank">
+              <Button className="">Order Now</Button>
+            </a>
           </ul>
         </div>
       </div>
