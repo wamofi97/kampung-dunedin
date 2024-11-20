@@ -1,6 +1,5 @@
 import Headingwbackground from "@/components/Headingwbackground";
 import Hero from "@/components/Hero";
-import MenuSlider from "@/components/MenuSlider";
 import Note from "@/components/Note";
 import ReviewsSlider from "@/components/ReviewSlider";
 import { Button } from "@/components/ui/button";
@@ -15,9 +14,7 @@ export default function Home() {
       <div className="absolute w-full bg-gradient-to-b from-white/50 to-black/90"></div>
       <Hero />
 
-      {/* <ReviewsSlider />
-      <MenuSlider /> */}
-      <section className="relative my-16 max-w-6xl">
+      <section className="my-16 max-w-6xl">
         <Headingwbackground>Welcome to Kampung Dunedin!</Headingwbackground>
         <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:gap-20">
           <div className="rounded-xl md:w-1/2">
@@ -52,7 +49,7 @@ export default function Home() {
         <div className="">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:gap-8 lg:gap-16">
             <div className="space-y-8 md:w-1/3">
-              <h3 className="font-heading text-2xl font-semibold text-amber-900 lg:text-4xl">
+              <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
                 NASI LEMAK DAUN PISANG
               </h3>
               <p className="text-lg lg:text-xl">
@@ -75,7 +72,7 @@ export default function Home() {
 
           <div className="my-16 flex flex-col justify-between gap-4 md:flex-row-reverse md:gap-8 lg:gap-16">
             <div className="space-y-8 md:w-2/5">
-              <h3 className="font-heading text-2xl font-semibold text-amber-900 lg:text-4xl">
+              <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
                 SATE ATAM & SATE DAGING
               </h3>
               <p className="text-lg lg:text-xl">
@@ -178,6 +175,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <ReviewsSlider />
 
       <section className="my-16 max-w-6xl space-y-4">
         <Headingwbackground>
