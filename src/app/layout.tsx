@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Merriweather, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 const poppins = Poppins({
@@ -15,13 +15,6 @@ const bespoke = localFont({
   src: "../../public/fonts/BespokeSerif-Variable.woff2",
   variable: "--font-bespoke",
 });
-
-// const merriweather = Merriweather({
-//   style: ["normal", "italic"],
-//   subsets: ["latin"],
-//   weight: ["300", "400", "700", "900"],
-//   variable: "--font-merriweather",
-// });
 
 export const metadata: Metadata = {
   title: "Kampung Dunedin",

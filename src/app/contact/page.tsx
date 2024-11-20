@@ -77,7 +77,7 @@ const Contact = () => {
           {formStatus === "submitted" ? (
             <div className="rounded-lg bg-green-100 p-4 dark:bg-green-900">
               <p className="text-green-700 dark:text-green-100">
-                Thank you for your message! We'll get back to you soon.
+                Thank you for your message! We&apos;ll get back to you soon.
               </p>
             </div>
           ) : (

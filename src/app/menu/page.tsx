@@ -45,7 +45,9 @@ const Menu = () => {
             Nasi Impit: Soft, compressed rice cubes Kuah Kacang: Rich, creamy
             peanut sauce Timun: Fresh cucumber slices Bawang: Crisp onion pieces
           </p>
-          <p>A timeless Malaysian favorite that’s perfect for any occasion!</p>
+          <p>
+            A timeless Malaysian favorite that&apos;s perfect for any occasion!
+          </p>
         </MenuCard>
         <MenuCard
           heading="Sate Daging | Beef Satay "
@@ -67,9 +69,9 @@ const Menu = () => {
         >
           <p className="">
             A beloved favorite from Northern Malaysia, this dish brings the
-            authentic flavors of Penang’s Mamak stalls straight to you! Wrapped
-            takeaway-style to blend all the flavors perfectly (‘Baru surrrrr!’),
-            each plate includes:
+            authentic flavors of Penang&apos;s Mamak stalls straight to you!
+            Wrapped takeaway-style to blend all the flavors perfectly
+            (&apos;Baru surrrrr!&apos;'), each plate includes:
           </p>
           <ul className="mb-4">
             <li>
@@ -110,16 +112,16 @@ const Menu = () => {
         >
           <p>
             Another gem from Penang, perfect for beef lovers! Just like the
-            Mamak stalls, it’s wrapped takeaway-style to let all the delicious
-            flavors blend together. Each serving includes: Nasi Basmati: Fluffy,
-            aromatic basmati rice Ayam Madu: Sweet, caramelized chicken Kuah
-            Kari: Rich, flavorful curry gravy Telur Dadar: Classic Mamak-style
-            omelet Bendi Rebus: Tender boiled okra
+            Mamak stalls, it&apos;s wrapped takeaway-style to let all the
+            delicious flavors blend together. Each serving includes: Nasi
+            Basmati: Fluffy, aromatic basmati rice Ayam Madu: Sweet, caramelized
+            chicken Kuah Kari: Rich, flavorful curry gravy Telur Dadar: Classic
+            Mamak-style omelet Bendi Rebus: Tender boiled okra
           </p>
           <p>
             Optional Add-ons:🥘 Extra kuah campur (mixed gravy) for the ultimate
-            ‘kuah banjir’ experience🥬 Fried sayur kobis goreng mamak (cabbage)
-            for an added crunch!"
+            &apos;kuah banjir&apos; experience🥬 Fried sayur kobis goreng mamak
+            (cabbage) for an added crunch!"
           </p>
         </MenuCard>
         <MenuCard
@@ -128,13 +130,13 @@ const Menu = () => {
         >
           <p>
             200g+ pack of crunchy sambal premium ikan bilis kering (dried
-            anchovies). Packed with bold Malaysian flavors, it’s perfect as a
-            snack or a savory topping for your favorite dishes.
+            anchovies). Packed with bold Malaysian flavors, it&apos;s perfect as
+            a snack or a savory topping for your favorite dishes.
           </p>
         </MenuCard>
       </div>
       <Note>
-        <h3 className="text-2xl font-bold">And there’s more to come!</h3>
+        <h3 className="text-2xl font-bold">And there&apos;s more to come!</h3>
         <p>
           We’re trialing exciting new dishes each week to bring you even more
           flavors of Malaysia. Stay tuned for updates on our weekly menus!

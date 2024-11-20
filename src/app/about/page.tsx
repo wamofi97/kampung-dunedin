@@ -31,10 +31,10 @@ const About = () => {
       </div>
       <p className="my-4 text-lg md:text-xl">
         Being away from our kampung (village) has taught us the true meaning of
-        comfort food. It's not just about the taste; it's about the memories,
-        the togetherness, and the stories shared over a meal. That's why we
-        started Kampung Dunedin: to bring a piece of our culture, traditions,
-        and love for food to this beautiful city.
+        comfort food. It&apos;s not just about the taste; it&apos;s about the
+        memories, the togetherness, and the stories shared over a meal.
+        That&apos;s why we started Kampung Dunedin: to bring a piece of our
+        culture, traditions, and love for food to this beautiful city.
       </p>
       <p className="my-4 text-lg md:text-xl">
         Every weekend, we prepare dishes that hold a special place in our
@@ -44,11 +44,11 @@ const About = () => {
         and techniques passed down through generations.
       </p>
       <p className="my-4 text-lg md:text-xl">
-        But Kampung Dunedin is more than just a food business — it's a way to
-        build connections. Through our food, we hope to share a taste of
+        But Kampung Dunedin is more than just a food business — it&apos;s a way
+        to build connections. Through our food, we hope to share a taste of
         Malaysia with you, sparking joy and creating new memories around your
-        dining table. Whether you're new to Malaysian cuisine or already a fan,
-        we invite you to experience the magic of kampung-style cooking.
+        dining table. Whether you&apos;re new to Malaysian cuisine or already a
+        fan, we invite you to experience the magic of kampung-style cooking.
       </p>
       {/* <p className="my-4 text-lg md:text-xl ">
         We're always experimenting with flavors and dishes, introducing new menu
