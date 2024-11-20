@@ -14,8 +14,8 @@ body {
     --card-foreground: 20 14.3% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
-    --primary: 32.1 94.6% 43.7%;
-    --primary-foreground: 60 9.1% 97.8%;
+    --primary: 37.7 92.1% 50.2%;
+    --primary-foreground: 176.1 69.4% 21.8%;
     --secondary: 60 4.8% 95.9%;
     --secondary-foreground: 24 9.8% 10%;
     --muted: 60 4.8% 95.9%;
@@ -112,7 +112,7 @@ body {
   width: min(calc(var(--width) * var(--quantity)), 100%);
   height: var(--height);
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 5% 95%, transparent);
 }
 .slider .list {
   display: flex;
