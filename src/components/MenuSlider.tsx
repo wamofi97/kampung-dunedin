@@ -55,7 +55,7 @@ const MenuSlider = () => {
           style={{ "--position": 4 } as React.CSSProperties}
         >
           <Image
-            src="/images/nasi-kandar-ayam-madu.webp"
+            src="/images/nasikandarayammadu.webp"
             alt="nasi kandar ayam madu"
             width={125}
             height={200}
@@ -67,7 +67,7 @@ const MenuSlider = () => {
           style={{ "--position": 5 } as React.CSSProperties}
         >
           <Image
-            src="/images/nasi-kandar-daging-masak-hitam-mamak.webp"
+            src="/images/nasikandardagingmasakhitammamak.webp"
             alt="nasi kandar daging masak hitam mamak"
             width={125}
             height={200}
@@ -79,7 +79,7 @@ const MenuSlider = () => {
           style={{ "--position": 6 } as React.CSSProperties}
         >
           <Image
-            src="/images/nasi-kandar-optional.webp"
+            src="/images/nasikandaroptional.webp"
             alt="nasi kandar optional"
             width={125}
             height={200}
@@ -91,7 +91,7 @@ const MenuSlider = () => {
           style={{ "--position": 7 } as React.CSSProperties}
         >
           <Image
-            src="/images/nasi-lemak-daun-pisang2.webp"
+            src="/images/nasilemakdaunpisang2.webp"
             alt="nasi lemak daun pisang 2"
             width={125}
             height={200}
@@ -103,7 +103,7 @@ const MenuSlider = () => {
           style={{ "--position": 8 } as React.CSSProperties}
         >
           <Image
-            src="/images/sambal-obersea-2.webp"
+            src="/images/sambalobersea2.webp"
             alt="sambal obersea"
             width={125}
             height={200}

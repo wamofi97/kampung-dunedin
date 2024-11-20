@@ -7,17 +7,11 @@ import React from "react";
 
 const Menu = () => {
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-3 py-12 md:px-6">
+    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-3 py-12 md:px-6">
       <h1 className="text center texl-xl md:text-3xl">Our Signature Dishes</h1>
       <Headingwbackground>
         Malaysian Flavors You&apos;ll Love
       </Headingwbackground>
-      {/* 
-      <p className="text-sm">
-        Every plate we serve comes with a story, and we&apos;re thrilled to hear
-        yours! Here&apos;s what our amazing customers have to say about their
-        Kampung Dunedin experience.
-      </p> */}
 
       <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <MenuCard
