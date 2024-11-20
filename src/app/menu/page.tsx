@@ -98,8 +98,8 @@ const Menu = () => {
           <ul>
             Optional Add-ons:
             <li>
-              🥘 Extra kuah campur (mixed gravy) for the ultimate ‘kuah banjir’
-              experience
+              🥘 Extra kuah campur (mixed gravy) for the ultimate &apos;kuah
+              banjir&apos; experience
             </li>
             <li>
               🍗 Fried sayur kobis goreng mamak (cabbage) for an added crunch!
@@ -138,8 +138,8 @@ const Menu = () => {
       <Note>
         <h3 className="text-2xl font-bold">And there&apos;s more to come!</h3>
         <p>
-          We’re trialing exciting new dishes each week to bring you even more
-          flavors of Malaysia. Stay tuned for updates on our weekly menus!
+          We&apos;re trialing exciting new dishes each week to bring you even
+          more flavors of Malaysia. Stay tuned for updates on our weekly menus!
         </p>
         <Link href="https://bit.ly/WhatsAppKampungDunedin" target="_blank">
           <Button size="lg" className="mt-8 w-full">
