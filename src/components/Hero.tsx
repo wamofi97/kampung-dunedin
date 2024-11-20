@@ -6,7 +6,7 @@ import MenuSlider from "./MenuSlider";
 
 const Hero = () => {
   return (
-    <div className="z-10 flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-16">
+    <div className="z-10 flex min-h-[80vh] w-full max-w-7xl flex-col items-center justify-center gap-16 sm:min-h-screen">
       <div className="flex flex-col items-center space-y-4 md:w-4/5">
         <Image
           src="/whitelogo.png"
