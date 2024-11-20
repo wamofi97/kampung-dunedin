@@ -112,7 +112,7 @@ body {
   width: min(calc(var(--width) * var(--quantity)), 100%);
   height: var(--height);
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, #000 5% 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
 }
 .slider .list {
   display: flex;
