@@ -71,7 +71,7 @@ const Menu = () => {
             A beloved favorite from Northern Malaysia, this dish brings the
             authentic flavors of Penang&apos;s Mamak stalls straight to you!
             Wrapped takeaway-style to blend all the flavors perfectly
-            (&apos;Baru surrrrr!&apos;'), each plate includes:
+            (&apos;Baru surrrrr!&apos;), each plate includes:
           </p>
           <ul className="mb-4">
             <li>
@@ -121,7 +121,7 @@ const Menu = () => {
           <p>
             Optional Add-ons:🥘 Extra kuah campur (mixed gravy) for the ultimate
             &apos;kuah banjir&apos; experience🥬 Fried sayur kobis goreng mamak
-            (cabbage) for an added crunch!"
+            (cabbage) for an added crunch!
           </p>
         </MenuCard>
         <MenuCard
