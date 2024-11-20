@@ -59,7 +59,7 @@ const Menu = () => {
         </MenuCard>
         <MenuCard
           heading="Nasi Kandar Ayam Madu"
-          image="/images/nasi-kandar-ayam-madu.webp"
+          image="/images/nasikandarayammadu.webp"
         >
           <p className="">
             A beloved favorite from Northern Malaysia, this dish brings the
@@ -102,7 +102,7 @@ const Menu = () => {
         </MenuCard>
         <MenuCard
           heading="Nasi Kandar Daging Masak Hitam Mamak"
-          image="/images/nasi-kandar-daging-masak-hitam-mamak.webp"
+          image="/images/nasikandardagingmasakhitammamak.webp"
         >
           <p>
             Another gem from Penang, perfect for beef lovers! Just like the
@@ -120,7 +120,7 @@ const Menu = () => {
         </MenuCard>
         <MenuCard
           heading="Aunty Anija's Sambal Obersea"
-          image="/images/sambal-obersea-1.webp"
+          image="/images/sambalobersea1.webp"
         >
           <p>
             200g+ pack of crunchy sambal premium ikan bilis kering (dried
