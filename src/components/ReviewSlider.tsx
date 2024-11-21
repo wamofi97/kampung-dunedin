@@ -48,7 +48,7 @@ const reviews: Review[] = [
 ];
 
 const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
-  <div className="mx-4 w-96 flex-none rounded-lg bg-white p-6 shadow-md">
+  <div className="mx-4 w-56 flex-none rounded-lg bg-white p-6 shadow-md md:w-96">
     <div className="mb-4 flex items-center">
       {[...Array(review.rating)].map((_, i) => (
         <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
@@ -64,10 +64,10 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
 
 const ReviewSlider = () => {
   return (
-    <div className="scroll-container my-20 w-full overflow-hidden bg-amber-100/20">
+    <div className="scroll-container my-12 w-full overflow-hidden bg-amber-100/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden">
-          <div className="animate-slide flex">
+          <div className="md:animate-slide animate-slide-sm sm:animate-slide-md flex">
             {reviews.concat(reviews).map((review, index) => (
               <ReviewCard key={`${review.id}-${index}`} review={review} />
             ))}
