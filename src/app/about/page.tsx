@@ -10,13 +10,13 @@ const About = () => {
         From Malaysia to Dunedin – Sharing the Flavors of Home
       </Headingwbackground>
 
-      <div className="relative bg-white px-6 py-12 text-justify md:px-12 lg:px-24">
+      <div className="relative bg-white px-3 py-12 text-justify md:px-12 lg:px-24">
         <div className="absolute inset-0 bg-[url('/batik.webp')] opacity-30"></div>
-        <p className="mb-4 md:text-lg">
+        <p className="mb-4 leading-relaxed md:text-lg">
           Welcome to Kampung Dunedin, where the flavors of Malaysia meet the
           heart of Dunedin, New Zealand.
         </p>
-        <p className="mb-4 md:text-lg">
+        <p className="mb-4 leading-relaxed md:text-lg">
           We are a small, family-owned food business with a passion for sharing
           authentic Malaysian cuisine. Our journey began with a simple longing
           for home — the familiar taste of spices, the aroma of pandan leaves,
@@ -31,7 +31,7 @@ const About = () => {
             className="rounded-lg object-cover"
           ></Image>
         </div>
-        <p className="mb-4 md:text-lg">
+        <p className="mb-4 leading-relaxed md:text-lg">
           Being away from our <span className="italic">kampung</span> (village)
           has taught us the true meaning of comfort food. It&apos;s not just
           about the taste; it&apos;s about the memories, the togetherness, and
@@ -39,7 +39,7 @@ const About = () => {
           Dunedin, to bring a piece of our culture, traditions, and love for
           food to this beautiful city.
         </p>
-        <p className="mb-4 md:text-lg">
+        <p className="mb-4 leading-relaxed md:text-lg">
           Every weekend, we prepare dishes that hold a special place in our
           hearts. From the iconic{" "}
           <span className="font-semibold text-amber-600">Nasi Lemak</span> to
@@ -50,7 +50,7 @@ const About = () => {
           is crafted with care, using authentic ingredients and techniques
           passed down through generations.
         </p>
-        <p className="mb-4 md:text-lg">
+        <p className="mb-8 leading-relaxed md:text-lg">
           But Kampung Dunedin is more than just a food business — it&apos;s a
           way to build connections. Through our food, we hope to share a taste
           of Malaysia with you, sparking joy and creating new memories around
@@ -64,7 +64,7 @@ const About = () => {
         also to build a community of food lovers who appreciate the richness of
         Malaysian culture.
       </p> */}
-        <p className="text-lg font-medium leading-relaxed text-gray-900">
+        <p className="font-medium leading-relaxed text-gray-900 md:text-lg">
           Thank you for supporting our journey. From our kitchen to your table,
           we hope to bring you comfort, warmth, and a whole lot of
           deliciousness.{" "}
