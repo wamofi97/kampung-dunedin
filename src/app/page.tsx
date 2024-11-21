@@ -14,7 +14,7 @@ export default function Home() {
       <div className="absolute w-full bg-gradient-to-b from-white/50 to-black/90"></div>
       <Hero />
 
-      <section className="my-16 max-w-6xl">
+      <section className="my-12 max-w-6xl">
         <Headingwbackground>Welcome to Kampung Dunedin!</Headingwbackground>
         <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:gap-20">
           <div className="rounded-xl md:w-1/2">
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 max-w-6xl">
+      <section className="my-12 max-w-6xl">
         <Headingwbackground>Our Signature Menu</Headingwbackground>
         <div className="">
           <div className="flex flex-col justify-between gap-4 md:flex-row md:gap-8 lg:gap-16">
@@ -70,7 +70,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="my-16 flex flex-col justify-between gap-4 md:flex-row-reverse md:gap-8 lg:gap-16">
+          <div className="my-12 flex flex-col justify-between gap-4 md:flex-row-reverse md:gap-8 lg:gap-16">
             <div className="space-y-8 md:w-2/5">
               <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
                 SATE ATAM & SATE DAGING
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="my-16 max-w-6xl space-y-4">
+      <section className="my-12 max-w-6xl space-y-4">
         <Headingwbackground>
           Ready to Savor Authentic Malaysian Flavors?
         </Headingwbackground>
@@ -178,7 +178,7 @@ export default function Home() {
 
       <ReviewsSlider />
 
-      <section className="my-16 max-w-6xl space-y-4">
+      <section className="my-12 max-w-6xl space-y-4">
         <Headingwbackground>
           Stay Updated with Our Weekly Menu!
         </Headingwbackground>
