@@ -7,11 +7,12 @@ import MenuSlider from "./MenuSlider";
 const Hero = () => {
   return (
     <div className="z-10 flex min-h-[80vh] w-full max-w-5xl flex-col items-center justify-center gap-2 md:min-h-screen">
+      <div className="absolute -z-10 min-h-[80vh] w-full bg-[url(/batik.webp)] bg-cover bg-center bg-no-repeat opacity-40 bg-blend-multiply md:min-h-screen md:opacity-20"></div>
       <div className="flex flex-col items-center gap-y-6">
         <h2 className="rounded-full bg-amber-100 px-2 py-1 text-center text-sm text-muted-foreground md:px-4 md:text-base">
           Authentic Malaysian Food in Dunedin
         </h2>
-        <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row">
           <div>
             <Image
               src="/logowbackground.webp"
