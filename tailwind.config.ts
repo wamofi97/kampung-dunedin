@@ -9,6 +9,14 @@ export default {
   ],
   theme: {
     extend: {
+      textStrokeWidth: {
+        sm: "1px",
+        DEFAULT: "2px",
+        lg: "3px",
+      },
+      textStrokeColor: {
+        DEFAULT: "#000", // Default stroke color
+      },
       fontFamily: {
         body: ["var(--font-poppins)", "sans-serif"],
         heading: ["var(--font-bespoke)", "serif"],
@@ -62,5 +70,20 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".text-stroke": {
+          "-webkit-text-stroke": "2px #000",
+        },
+        ".text-stroke-sm": {
+          "-webkit-text-stroke": "1px #064e3b",
+        },
+        ".text-stroke-lg": {
+          "-webkit-text-stroke": "3px #000",
+        },
+      });
+    },
+  ],
 } satisfies Config;

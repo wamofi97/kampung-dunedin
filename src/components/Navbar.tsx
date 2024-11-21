@@ -35,14 +35,14 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden bg-emerald-900">
-      <div className="flex w-full max-w-6xl items-center justify-between px-6 py-4">
+      <div className="flex w-full max-w-6xl items-center justify-between px-3 py-4 md:px-6">
         <Link href={"/"}>
           <Image
-            src="/logo.webp"
+            src="/logo.png"
             alt="Logo"
-            width={100}
+            width={200}
             height={100}
-            className="w-32 invert"
+            className="w-28"
           />
         </Link>
         <div className="flex gap-8 font-heading uppercase text-accent lg:gap-12">
