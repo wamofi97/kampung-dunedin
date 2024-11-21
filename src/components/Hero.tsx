@@ -25,7 +25,7 @@ const Hero = () => {
             <h1>
               Bringing a Taste of{" "}
               <span className="block">
-                <span className="sm:text-stroke-sm bg-[url('/batikhorizontal.png')] bg-clip-text sm:text-transparent">
+                <span className="bg-[url('/batikhorizontal.png')] bg-clip-text stroke-black stroke-1 [-webkit-text-stroke:1px_black] sm:text-transparent">
                   Malaysia
                 </span>{" "}
                 to Dunedin.

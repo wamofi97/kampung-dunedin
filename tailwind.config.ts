@@ -70,20 +70,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    function ({ addUtilities }) {
-      addUtilities({
-        ".text-stroke": {
-          "-webkit-text-stroke": "2px #000",
-        },
-        ".text-stroke-sm": {
-          "-webkit-text-stroke": "1px #064e3b",
-        },
-        ".text-stroke-lg": {
-          "-webkit-text-stroke": "3px #000",
-        },
-      });
-    },
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
