@@ -34,8 +34,8 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden bg-lime-900">
-      <div className="flex w-full max-w-7xl items-center justify-between px-6 py-4">
+    <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden bg-emerald-900">
+      <div className="flex w-full max-w-6xl items-center justify-between px-6 py-4">
         <Link href={"/"}>
           <Image
             src="/logo.webp"
@@ -45,12 +45,12 @@ const Navbar = () => {
             className="w-32 invert"
           />
         </Link>
-        <div className="flex gap-8 font-heading uppercase text-white lg:gap-12">
+        <div className="flex gap-8 font-heading uppercase text-accent lg:gap-12">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.link}
-              className={`${pathname === link.link ? "font-bold text-primary" : "font-normal"} hidden text-lg transition-colors duration-300 hover:text-amber-400 md:block`}
+              className={`${pathname === link.link ? "font-bold text-primary" : "font-normal"} hidden transition-colors duration-300 hover:text-amber-300 md:block lg:text-lg`}
             >
               {link.name}
             </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
           <Button className="hidden md:block">Order Now</Button>
         </a>
         <button
-          className="z-50 block text-primary md:hidden"
+          className="z-50 block text-accent md:hidden"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -69,7 +69,7 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${!isOpen && "translate-x-full"} fixed right-0 top-20 h-screen w-2/3 space-y-20 bg-neutral-100/95 p-4 py-32 text-2xl shadow transition-all duration-500 sm:w-1/3 md:hidden`}
+          className={`${!isOpen && "translate-x-full"} fixed right-0 top-20 h-screen w-2/3 space-y-20 bg-emerald-900/95 p-4 py-32 text-2xl text-accent shadow transition-all duration-500 sm:w-1/3 md:hidden`}
         >
           <div className="flex flex-col items-center gap-12">
             {navLinks.map((link) => (
