@@ -19,13 +19,13 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
       </h2>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="relative my-4 h-[400px] cursor-pointer"
+        className="relative my-4 h-[370px] cursor-pointer overflow-hidden rounded-lg"
       >
         <Image
           src={image}
           alt={heading}
           fill
-          className="rounded-lg object-cover object-bottom"
+          className="rounded-lg object-cover object-bottom transition-transform duration-500 ease-in-out hover:scale-105"
         />
       </div>
       <div className={isOpen ? "block" : "hidden"}>{children}</div>
