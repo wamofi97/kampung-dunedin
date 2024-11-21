@@ -13,7 +13,7 @@ const Menu = () => {
         Malaysian Flavors You&apos;ll Love
       </Headingwbackground>
 
-      <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-8 grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
         <MenuCard
           heading="Nasi Lemak Daun Pisang"
           image="/images/nasi-lemak-daun-pisang.webp"
