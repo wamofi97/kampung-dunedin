@@ -69,7 +69,7 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${!isOpen && "translate-x-full"} fixed right-0 top-20 h-screen w-2/3 space-y-20 bg-emerald-900/95 p-4 py-32 text-2xl text-accent shadow transition-all duration-500 sm:w-1/3 md:hidden`}
+          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[72px] h-screen w-2/3 space-y-20 bg-emerald-900/95 p-4 py-32 text-2xl text-accent shadow transition-all duration-500 sm:w-1/3 md:hidden`}
         >
           <div className="flex flex-col items-center gap-12">
             {navLinks.map((link) => (
