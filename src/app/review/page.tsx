@@ -58,7 +58,7 @@ const Review = () => {
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="item-center mb-8 flex flex-col gap-6 rounded-lg border-b bg-white p-8 text-center"
+            className="item-center mb-8 flex flex-col gap-6 rounded-lg border-b p-8 text-center"
           >
             <div className="mx-auto flex items-center">
               {[...Array(review.rating)].map((_, index) => (
