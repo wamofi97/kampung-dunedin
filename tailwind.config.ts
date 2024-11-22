@@ -9,14 +9,6 @@ export default {
   ],
   theme: {
     extend: {
-      textStrokeWidth: {
-        sm: "1px",
-        DEFAULT: "2px",
-        lg: "3px",
-      },
-      textStrokeColor: {
-        DEFAULT: "#000", // Default stroke color
-      },
       fontFamily: {
         body: ["var(--font-poppins)", "sans-serif"],
         heading: ["var(--font-bespoke)", "serif"],
