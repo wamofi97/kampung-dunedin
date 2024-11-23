@@ -11,7 +11,7 @@ const About = () => {
         From Malaysia to Dunedin – Sharing the Flavors of Home
       </Headingwbackground>
 
-      <div className="relative bg-white px-3 py-12 text-justify md:px-12 lg:px-24">
+      <div className="relative bg-white px-3 py-12 text-justify md:px-12 lg:px-20">
         <div className="absolute inset-0 bg-[url('/batik.webp')] opacity-30"></div>
         <p className="mb-4 leading-relaxed md:text-lg">
           Welcome to Kampung Dunedin, where the flavors of Malaysia meet the
@@ -24,7 +24,7 @@ const About = () => {
           and the warmth of dishes that remind us of the bustling streets and
           vibrant hawker stalls of Malaysia.
         </p>
-        <div className="relative mb-4 h-[20vw] min-h-[450px] w-full">
+        <div className="relative mb-4 h-[50vw] max-h-[525px] min-h-[350px] w-full">
           <Image
             src={family}
             alt="Dunedin"
