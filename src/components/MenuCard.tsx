@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -13,20 +14,27 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <div className="h-fit rounded-lg bg-white p-6 shadow-md">
-      <h2 className="text-center font-heading text-xl font-semibold">
-        {heading}
-      </h2>
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className="relative my-4 h-[370px] cursor-pointer overflow-hidden rounded-lg"
-      >
+    <div
+      onClick={() => setIsOpen(!isOpen)}
+      className={`group ${!isOpen && "h-fit"} cursor-pointer grid-flow-row-dense rounded-lg bg-white/70 p-6 shadow-md`}
+    >
+      <div className="relative my-4 h-[370px] overflow-hidden rounded-lg">
         <Image
           src={image}
           alt={heading}
           fill
-          className="rounded-lg object-cover object-bottom transition-transform duration-500 ease-in-out hover:scale-105"
+          className="rounded-lg object-cover object-bottom transition-transform duration-500 ease-in-out group-hover:scale-105"
         />
+      </div>
+      <div className="flex items-center">
+        <h2 className="mb-4 font-heading text-xl font-semibold text-primary-foreground">
+          {heading}
+        </h2>
+        <span className="ml-auto text-sm text-gray-500">
+          <ChevronRight
+            className={`${isOpen && "rotate-90"} -translate-y-2 transition-transform duration-300 group-hover:scale-125`}
+          />
+        </span>
       </div>
       <div className={isOpen ? "block" : "hidden"}>{children}</div>
     </div>
