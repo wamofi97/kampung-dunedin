@@ -1,4 +1,4 @@
-import { Instagram, Mail, MessageSquare, Phone } from "lucide-react";
+import { Instagram, Mail, MessageSquare } from "lucide-react";
 import React from "react";
 
 const Footer = () => {

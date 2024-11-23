@@ -4,9 +4,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Instagram, Mail, MessageSquare, Phone } from "lucide-react";
+import { Instagram, Mail, MessageSquare } from "lucide-react";
 import Headingwbackground from "@/components/Headingwbackground";
-import Note from "@/components/Note";
 
 const Contact = () => {
   const [formStatus, setFormStatus] = useState<
