@@ -48,11 +48,11 @@ const Review = () => {
       <h1 className="text-3xl">Reviews</h1>
       <Headingwbackground>What Our Customers Are Saying</Headingwbackground>
 
-      <p className="mb-8 text-center">
+      {/* <p className="mb-8 text-center">
         Every plate we serve comes with a story, and we&apos;re thrilled to hear
         yours! Here&apos;s what our amazing customers have to say about their
         Kampung Dunedin experience.
-      </p>
+      </p> */}
 
       <div className="mb-20 max-w-4xl space-y-8">
         {reviews.map((review) => (
