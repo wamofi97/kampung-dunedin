@@ -9,7 +9,7 @@ const MenuSlider = () => {
         {
           "--width": "125px",
           "--height": "200px",
-          "--quantity": 8,
+          "--quantity": 11,
         } as React.CSSProperties
       }
     >
@@ -28,7 +28,7 @@ const MenuSlider = () => {
         </div>
         <div
           className="item"
-          style={{ "--position": 2 } as React.CSSProperties}
+          style={{ "--position": 11 } as React.CSSProperties}
         >
           <Image
             src="/images/sate-ayam.webp"
@@ -40,7 +40,7 @@ const MenuSlider = () => {
         </div>
         <div
           className="item"
-          style={{ "--position": 3 } as React.CSSProperties}
+          style={{ "--position": 6 } as React.CSSProperties}
         >
           <Image
             src="/images/sate-daging.webp"
@@ -52,7 +52,7 @@ const MenuSlider = () => {
         </div>
         <div
           className="item"
-          style={{ "--position": 4 } as React.CSSProperties}
+          style={{ "--position": 7 } as React.CSSProperties}
         >
           <Image
             src="/images/nasikandarayammadu.webp"
@@ -64,7 +64,7 @@ const MenuSlider = () => {
         </div>
         <div
           className="item"
-          style={{ "--position": 5 } as React.CSSProperties}
+          style={{ "--position": 10 } as React.CSSProperties}
         >
           <Image
             src="/images/nasikandardagingmasakhitammamak.webp"
@@ -76,7 +76,7 @@ const MenuSlider = () => {
         </div>
         <div
           className="item"
-          style={{ "--position": 6 } as React.CSSProperties}
+          style={{ "--position": 3 } as React.CSSProperties}
         >
           <Image
             src="/images/nasikandaroptional.webp"
@@ -88,7 +88,7 @@ const MenuSlider = () => {
         </div>
         <div
           className="item"
-          style={{ "--position": 7 } as React.CSSProperties}
+          style={{ "--position": 9 } as React.CSSProperties}
         >
           <Image
             src="/images/nasilemakdaunpisang2.webp"
@@ -104,6 +104,42 @@ const MenuSlider = () => {
         >
           <Image
             src="/images/sambalobersea2.webp"
+            alt="sambal obersea"
+            width={125}
+            height={200}
+            className="rounded-lg"
+          />
+        </div>
+        <div
+          className="item"
+          style={{ "--position": 2 } as React.CSSProperties}
+        >
+          <Image
+            src="/images/kuih.webp"
+            alt="sambal obersea"
+            width={125}
+            height={200}
+            className="rounded-lg"
+          />
+        </div>
+        <div
+          className="item"
+          style={{ "--position": 4 } as React.CSSProperties}
+        >
+          <Image
+            src="/images/karipap.webp"
+            alt="sambal obersea"
+            width={125}
+            height={200}
+            className="rounded-lg"
+          />
+        </div>
+        <div
+          className="item"
+          style={{ "--position": 5 } as React.CSSProperties}
+        >
+          <Image
+            src="/images/bungkus.webp"
             alt="sambal obersea"
             width={125}
             height={200}
