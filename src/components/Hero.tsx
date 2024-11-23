@@ -6,31 +6,25 @@ import MenuSlider from "./MenuSlider";
 
 const Hero = () => {
   return (
-    <div className="z-10 flex min-h-[80vh] w-full max-w-5xl flex-col items-center justify-center gap-2 md:min-h-screen">
-      <div className="absolute -z-10 min-h-[80vh] w-full bg-[url(/batik.webp)] bg-cover bg-center bg-no-repeat opacity-40 bg-blend-multiply md:min-h-screen md:opacity-30"></div>
+    <div className="z-10 flex min-h-[90vh] w-full max-w-5xl flex-col justify-center gap-2 py-8 md:min-h-screen">
       <div className="flex flex-col items-center gap-y-6">
-        <h2 className="rounded-full bg-amber-100 px-2 py-1 text-center text-sm text-muted-foreground md:px-4 md:text-base">
+        <h2 className="rounded-full bg-accent px-2 py-2 text-center text-sm text-muted-foreground md:px-4 md:text-base">
           Authentic Malaysian Food in Dunedin
         </h2>
         <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row">
           <div>
             <Image
-              src="/logowbackground.webp"
+              src="/whitelogo.webp"
               alt="Logo"
               width="200"
               height="200"
-              className="mx-auto rounded-full object-cover"
+              className="lg:44 w-32 invert md:w-40"
             />
           </div>
           <div className="w-fit text-center font-heading text-[1.6rem] font-bold leading-none text-emerald-950 sm:text-[2.5rem] md:text-[3.25rem] lg:text-6xl xl:text-7xl">
             <h1>
               Bringing a Taste of{" "}
-              <span className="block">
-                <span className="bg-[url('/batikhorizontal.png')] bg-clip-text sm:stroke-black sm:stroke-1 sm:text-transparent sm:[-webkit-text-stroke:1px_black]">
-                  Malaysia
-                </span>{" "}
-                to Dunedin.
-              </span>
+              <span className="block">Malaysia to Dunedin.</span>
             </h1>
           </div>
         </div>
