@@ -6,7 +6,7 @@ import MenuSlider from "./MenuSlider";
 
 const Hero = () => {
   return (
-    <div className="z-10 flex min-h-[90vh] w-full max-w-5xl flex-col justify-center gap-2 py-8 md:min-h-screen">
+    <div className="z-10 flex min-h-[90dvh] w-full max-w-5xl flex-col justify-center gap-2 py-8 md:min-h-screen">
       <div className="flex flex-col items-center gap-y-6">
         <h2 className="rounded-full bg-accent px-2 py-2 text-center text-sm text-muted-foreground md:px-4 md:text-base">
           Authentic Malaysian Food in Dunedin
