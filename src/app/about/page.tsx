@@ -1,6 +1,7 @@
 import Headingwbackground from "@/components/Headingwbackground";
 import Image from "next/image";
 import React from "react";
+import family from "../../../public/family.webp";
 
 const About = () => {
   return (
@@ -25,9 +26,10 @@ const About = () => {
         </p>
         <div className="relative mb-4 h-[20vw] max-h-[650px] min-h-[500px] w-full">
           <Image
-            src="/family.webp"
+            src={family}
             alt="Dunedin"
             fill
+            placeholder="blur"
             className="rounded-lg object-cover"
           ></Image>
         </div>

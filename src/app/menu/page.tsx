@@ -4,6 +4,12 @@ import Note from "@/components/Note";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
+import nasilemakdaunpisang from "../../../public/images/nasi-lemak-daun-pisang.webp";
+import sateayam from "../../../public/images/sate-ayam.webp";
+import satedaging from "../../../public/images/sate-daging.webp";
+import nasikandarayammadu from "../../../public/images/nasikandarayammadu.webp";
+import nasikandardagingmasakhitammamak from "../../../public/images/nasikandardagingmasakhitammamak.webp";
+import sambalobersea from "../../../public/images/sambalobersea.webp";
 
 const Menu = () => {
   return (
@@ -14,10 +20,7 @@ const Menu = () => {
       </Headingwbackground>
 
       <div className="mb-8 grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
-        <MenuCard
-          heading="Nasi Lemak Daun Pisang"
-          image="/images/nasi-lemak-daun-pisang.webp"
-        >
+        <MenuCard heading="Nasi Lemak Daun Pisang" image={nasilemakdaunpisang}>
           <p className="mb-4">
             Our national dish, wrapped in tradition. Fragrant coconut rice
             steamed with pandan leaves, served with a boiled egg, crispy
@@ -30,10 +33,7 @@ const Menu = () => {
             <li> 🌶️ Add on extra sambal on the side </li>
           </ul>
         </MenuCard>
-        <MenuCard
-          heading="Sate Ayam | Chicken Satay"
-          image="/images/sate-ayam.webp"
-        >
+        <MenuCard heading="Sate Ayam | Chicken Satay" image={sateayam}>
           <p className="mb-4">
             Juicy, marinated chicken skewers grilled to perfection. Served with:
           </p>
@@ -57,10 +57,7 @@ const Menu = () => {
             A timeless Malaysian favorite that&apos;s perfect for any occasion!
           </p>
         </MenuCard>
-        <MenuCard
-          heading="Sate Daging | Beef Satay "
-          image="/images/sate-daging.webp"
-        >
+        <MenuCard heading="Sate Daging | Beef Satay " image={satedaging}>
           <p className="mb-4">
             Tender, flavorful beef skewers with a smoky char. Served with:
           </p>
@@ -85,10 +82,7 @@ const Menu = () => {
             scene.
           </p>
         </MenuCard>
-        <MenuCard
-          heading="Nasi Kandar Ayam Madu"
-          image="/images/nasikandarayammadu.webp"
-        >
+        <MenuCard heading="Nasi Kandar Ayam Madu" image={nasikandarayammadu}>
           <p className="mb-4">
             A beloved favorite from Northern Malaysia, this dish brings the
             authentic flavors of Penang&apos;s Mamak stalls straight to you!
@@ -130,7 +124,7 @@ const Menu = () => {
         </MenuCard>
         <MenuCard
           heading="Nasi Kandar Daging Masak Hitam Mamak"
-          image="/images/nasikandardagingmasakhitammamak.webp"
+          image={nasikandardagingmasakhitammamak}
         >
           <p className="mb-4">
             Another gem from Penang, perfect for beef lovers! Just like the
@@ -170,10 +164,7 @@ const Menu = () => {
             </li>
           </ul>
         </MenuCard>
-        <MenuCard
-          heading="Aunty Anija's Sambal Obersea"
-          image="/images/sambalobersea.webp"
-        >
+        <MenuCard heading="Aunty Anija's Sambal Obersea" image={sambalobersea}>
           <p className="mb-4">
             200g+ pack of crunchy sambal premium ikan bilis kering (dried
             anchovies).
