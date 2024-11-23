@@ -11,7 +11,7 @@ import family from "../../public/family.webp";
 export default function Home() {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-3 sm:px-6">
-      <div className="absolute -z-10 min-h-screen w-full bg-[url(/batik.webp)] bg-cover bg-center opacity-40 md:opacity-30"></div>
+      <div className="absolute -z-10 min-h-[90dvh] w-full bg-[url(/batik.webp)] bg-cover bg-center opacity-40 md:min-h-screen md:opacity-30"></div>
       <Hero />
 
       <section className="my-12 mt-24 max-w-6xl">

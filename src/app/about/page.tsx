@@ -24,7 +24,7 @@ const About = () => {
           and the warmth of dishes that remind us of the bustling streets and
           vibrant hawker stalls of Malaysia.
         </p>
-        <div className="relative mb-4 h-[20vw] max-h-[650px] min-h-[500px] w-full">
+        <div className="relative mb-4 h-[20vw] min-h-[450px] w-full">
           <Image
             src={family}
             alt="Dunedin"
