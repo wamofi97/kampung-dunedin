@@ -10,20 +10,18 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col items-center px-3 sm:px-6">
-      {/* <div className="absolute min-h-screen w-full bg-[url('/kampung.jpg')] bg-cover"></div> */}
-      <div className="absolute w-full bg-gradient-to-b from-white/50 to-black/90"></div>
+      <div className="absolute -z-10 min-h-screen w-full bg-[url(/batik.webp)] bg-cover bg-center opacity-40 md:opacity-30"></div>
       <Hero />
 
-      <section className="my-12 max-w-6xl">
+      <section className="my-12 mt-24 max-w-6xl">
         <Headingwbackground>Welcome to Kampung Dunedin!</Headingwbackground>
         <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:gap-20">
-          <div className="rounded-xl md:w-1/2">
+          <div className="relative h-96 w-full md:w-1/2">
             <Image
               src="/family.webp"
               alt="Dunedin"
-              width={5120}
-              height={3414}
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-cover"
             ></Image>
           </div>
           <div className="space-y-4 md:w-1/2 md:space-y-8">
@@ -47,11 +45,19 @@ export default function Home() {
       <section className="my-12 max-w-6xl">
         <Headingwbackground>Our Signature Menu</Headingwbackground>
         <div className="">
-          <div className="flex flex-col justify-between gap-4 md:flex-row md:gap-8 lg:gap-16">
-            <div className="space-y-8 md:w-1/3">
+          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:gap-8 lg:gap-16">
+            <div className="space-y-4 sm:w-1/2 md:w-2/5 md:space-y-8">
               <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
                 NASI LEMAK DAUN PISANG
               </h3>
+              <div className="relative h-96 w-full sm:hidden md:w-2/3">
+                <Image
+                  src="/images/nasi-lemak-daun-pisang.webp"
+                  alt="Nasi Lemak Daun Pisang"
+                  fill
+                  className="rounded-lg object-cover"
+                />
+              </div>
               <p className="text-lg lg:text-xl">
                 Our national dish and a favorite for any meal of the day!
                 Aromatic basmati rice infused with coconut milk and pandan
@@ -60,21 +66,39 @@ export default function Home() {
                 brings it all together.
               </p>
             </div>
-            <div className="relative h-[450px] w-full md:w-2/3">
+            <div className="relative hidden h-96 w-full sm:block sm:w-1/2 md:w-3/5">
               <Image
                 src="/images/nasi-lemak-daun-pisang.webp"
                 alt="Nasi Lemak Daun Pisang"
                 fill
-                className="rounded-lg object-cover"
+                className="object-cover sm:rounded-lg"
               />
             </div>
           </div>
 
-          <div className="my-12 flex flex-col justify-between gap-4 md:flex-row-reverse md:gap-8 lg:gap-16">
-            <div className="space-y-8 md:w-2/5">
+          <div className="my-12 flex flex-col justify-between gap-4 sm:flex-row-reverse sm:gap-8 lg:gap-16">
+            <div className="space-y-4 sm:w-1/3 md:space-y-8">
               <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
                 SATE ATAM & SATE DAGING
               </h3>
+              <div className="relative flex h-[900px] w-full flex-col gap-2 sm:hidden sm:h-[350px] sm:w-2/3 sm:flex-row sm:gap-0 md:h-[400px]">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/images/sate-ayam.webp"
+                    alt="Sate Ayam"
+                    fill
+                    className="object-cover object-bottom sm:rounded-l-lg sm:object-center"
+                  />
+                </div>
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/images/sate-daging.webp"
+                    alt="Sate Daging"
+                    fill
+                    className="object-cover object-bottom sm:rounded-r-lg sm:object-center"
+                  />
+                </div>
+              </div>
               <p className="text-lg lg:text-xl">
                 Grilled to perfection, our chicken and beef satay are served
                 with soft, compressed rice cubes, a rich peanut sauce, and fresh
@@ -82,21 +106,21 @@ export default function Home() {
                 friends and family!
               </p>
             </div>
-            <div className="flex h-[400px] w-full md:w-3/5 md:flex-row">
-              <div className="relative w-full">
+            <div className="relative hidden w-full flex-row gap-0 sm:flex sm:h-[350px] sm:w-2/3 md:h-[400px]">
+              <div className="relative h-full w-full">
                 <Image
                   src="/images/sate-ayam.webp"
                   alt="Sate Ayam"
                   fill
-                  className="rounded-l-lg object-cover"
+                  className="object-cover object-bottom sm:rounded-l-lg sm:object-center"
                 />
               </div>
-              <div className="relative w-full">
+              <div className="relative h-full w-full">
                 <Image
                   src="/images/sate-daging.webp"
                   alt="Sate Daging"
                   fill
-                  className="rounded-r-lg object-cover"
+                  className="object-cover object-bottom sm:rounded-r-lg sm:object-center"
                 />
               </div>
             </div>
@@ -188,7 +212,7 @@ export default function Home() {
           weekend! We&apos;d love for you to be part of our community and share
           in the flavors of Kampung Dunedin.
         </p>
-        <div className="flex flex-col items-start justify-center gap-4 sm:flex-row">
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button size="lg" variant="outline">
             Join Whatsapp Group
           </Button>
