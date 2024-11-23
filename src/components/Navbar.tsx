@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="flex w-full max-w-6xl items-center justify-between px-3 py-4 md:px-6">
         <Link href={"/"}>
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="Logo"
             width={200}
             height={100}
