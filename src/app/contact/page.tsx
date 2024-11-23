@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Instagram, Mail, MessageSquare, Phone } from "lucide-react";
 import Headingwbackground from "@/components/Headingwbackground";
+import Note from "@/components/Note";
 
 const Contact = () => {
   const [formStatus, setFormStatus] = useState<
@@ -19,6 +20,8 @@ const Contact = () => {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
     setFormStatus("submitted");
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+    setFormStatus("idle");
   };
 
   return (
@@ -27,52 +30,6 @@ const Contact = () => {
       <Headingwbackground>We&apos;d Love to Hear from You!</Headingwbackground>
 
       <div className="mb-12 grid gap-12 md:grid-cols-2">
-        <div>
-          <h2 className="mb-4 text-2xl font-medium"> Contact Us</h2>
-          <p className="mb-6 text-muted-foreground">
-            Whether you have questions, special requests, or simply want to say
-            hello, we&apos;re here for you. Reach out to Kampung Dunedin
-            anytime!
-          </p>
-
-          <div className="space-y-4">
-            <a
-              href="https://bit.ly/WhatsAppKampungDunedin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-primary"
-            >
-              <MessageSquare className="h-5 w-5" />
-              <span>Join our WhatsApp group</span>
-            </a>
-            <a
-              href="tel:021-123-4567"
-              className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Phone className="h-5 w-5" />
-              <span>(021) 123-4567</span>
-            </a>
-
-            <a
-              href="https://instagram.com/kampungdunedin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Instagram className="h-5 w-5" />
-              <span>Follow us on Instagram</span>
-            </a>
-
-            <a
-              href="mailto:kampungdunedin@gmail.com"
-              className="flex items-center gap-3 text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Mail className="h-5 w-5" />
-              <span>kampungdunedin@gmail.com</span>
-            </a>
-          </div>
-        </div>
-
         <div>
           <h2 className="mb-4 text-2xl font-medium">Drop us a Message</h2>
           {formStatus === "submitted" ? (
@@ -116,6 +73,44 @@ const Contact = () => {
               </Button>
             </form>
           )}
+        </div>
+
+        <div className="order-last md:order-first">
+          <h2 className="mb-4 text-2xl font-medium"> Contact Us</h2>
+          <p className="mb-6 text-muted-foreground">
+            Whether you have questions, special requests, or simply want to say
+            hello, we&apos;re here for you. Reach out to Kampung Dunedin
+            anytime!
+          </p>
+          <div className="space-y-4">
+            <a
+              href="https://bit.ly/WhatsAppKampungDunedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 transition-colors hover:text-primary"
+            >
+              <MessageSquare className="h-5 w-5" />
+              <span>Join our WhatsApp group</span>
+            </a>
+
+            <a
+              href="https://instagram.com/kampungdunedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 transition-colors hover:text-primary"
+            >
+              <Instagram className="h-5 w-5" />
+              <span>Follow us on Instagram</span>
+            </a>
+
+            <a
+              href="mailto:kampungdunedin@gmail.com"
+              className="flex items-center gap-3 transition-colors hover:text-primary"
+            >
+              <Mail className="h-5 w-5" />
+              <span>kampungdunedin@gmail.com</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
