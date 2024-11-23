@@ -1,4 +1,4 @@
-import { Instagram, Mail, MessageSquare } from "lucide-react";
+import { Facebook, Instagram, Mail, MessageSquare } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
           <p>Copyright &copy; 2024 Kampung Dunedin. All Rights Reserved.</p>
           <p className="text-gray-400">Developed by by wamofi.dev</p>
         </div>
-        <div className="flex gap-4 md:gap-6">
+        <div className="flex flex-wrap gap-4 md:gap-6">
           <a
             href="https://bit.ly/WhatsAppKampungDunedin"
             target="_blank"
@@ -19,6 +19,12 @@ const Footer = () => {
             <MessageSquare className="h-5 w-5" />
           </a>
           <a
+            href="mailto:kampungdunedin@gmail.com"
+            className="flex items-center gap-3 transition-colors hover:text-primary"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+          <a
             href="https://instagram.com/kampungdunedin"
             target="_blank"
             rel="noopener noreferrer"
@@ -26,12 +32,13 @@ const Footer = () => {
           >
             <Instagram className="h-5 w-5" />
           </a>
-
           <a
-            href="mailto:kampungdunedin@gmail.com"
+            href="https://www.facebook.com/profile.php?id=61568764888910"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-3 transition-colors hover:text-primary"
           >
-            <Mail className="h-5 w-5" />
+            <Facebook className="h-5 w-5" />
           </a>
         </div>
       </div>

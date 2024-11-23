@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
+import { Facebook, Instagram, Mail, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
@@ -69,9 +69,9 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[72px] h-screen w-2/3 space-y-20 bg-emerald-900/95 p-4 py-32 text-2xl text-accent shadow transition-all duration-500 sm:w-1/3 md:hidden`}
+          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[72px] h-screen w-2/3 space-y-20 bg-emerald-900/95 p-4 py-20 text-2xl text-accent shadow transition-all duration-500 sm:w-1/3 md:hidden`}
         >
-          <div className="flex flex-col items-center gap-12">
+          <div className="flex flex-col items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -90,6 +90,26 @@ const Navbar = () => {
               <Button size="lg" className="">
                 Order Now
               </Button>
+            </a>
+          </div>
+          <div className="flex justify-center gap-8">
+            <a
+              href="https://instagram.com/kampungdunedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61568764888910"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="h-6 w-6" />
+            </a>
+
+            <a href="mailto:kampungdunedin@gmail.com" className="">
+              <Mail className="h-6 w-6" />
             </a>
           </div>
         </div>
