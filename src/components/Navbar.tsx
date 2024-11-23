@@ -45,12 +45,12 @@ const Navbar = () => {
             className="w-28"
           />
         </Link>
-        <div className="flex gap-8 font-heading uppercase text-accent lg:gap-12">
+        <div className="hidden gap-8 md:flex lg:gap-12">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.link}
-              className={`${pathname === link.link ? "font-bold text-primary" : "font-normal"} hidden transition-colors duration-300 hover:text-amber-300 md:block lg:text-lg`}
+              className={`${pathname === link.link ? "text-primary" : "text-accent"} font-heading font-medium uppercase transition-colors duration-300 hover:text-amber-300 lg:text-lg`}
             >
               {link.name}
             </Link>
