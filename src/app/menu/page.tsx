@@ -36,9 +36,23 @@ const Menu = () => {
         >
           <p className="mb-4">
             Juicy, marinated chicken skewers grilled to perfection. Served with:
-            Nasi Impit: Soft, compressed rice cubes Kuah Kacang: Rich, creamy
-            peanut sauce Timun: Fresh cucumber slices Bawang: Crisp onion pieces
           </p>
+          <ul className="mb-4">
+            <li>
+              <span className="font-medium">Nasi Impit:</span> Soft, compressed
+              rice cubes
+            </li>
+            <li>
+              <span className="font-medium">Kuah Kacang:</span> Rich, creamy
+              peanut sauce
+            </li>
+            <li>
+              <span className="font-medium">Timun:</span> Fresh cucumber slices
+            </li>
+            <li>
+              <span className="font-medium">Bawang:</span> Crisp onion pieces
+            </li>
+          </ul>
           <p>
             A timeless Malaysian favorite that&apos;s perfect for any occasion!
           </p>
@@ -48,10 +62,24 @@ const Menu = () => {
           image="/images/sate-daging.webp"
         >
           <p className="mb-4">
-            Tender, flavorful beef skewers with a smoky char. Paired with: Nasi
-            Impit: Soft, compressed rice cubes Kuah Kacang: Signature peanut
-            sauce Timun: Crunchy cucumber slices Bawang: Fresh onion pieces
+            Tender, flavorful beef skewers with a smoky char. Served with:
           </p>
+          <ul className="mb-4">
+            <li>
+              <span className="font-medium">Nasi Impit:</span> Soft, compressed
+              rice cubes
+            </li>
+            <li>
+              <span className="font-medium">Kuah Kacang:</span> Rich, creamy
+              peanut sauce
+            </li>
+            <li>
+              <span className="font-medium">Timun:</span> Fresh cucumber slices
+            </li>
+            <li>
+              <span className="font-medium">Bawang:</span> Crisp onion pieces
+            </li>
+          </ul>
           <p>
             A hearty and satisfying classic from Malaysia&apos;s street food
             scene.
@@ -61,7 +89,7 @@ const Menu = () => {
           heading="Nasi Kandar Ayam Madu"
           image="/images/nasikandarayammadu.webp"
         >
-          <p className="">
+          <p className="mb-4">
             A beloved favorite from Northern Malaysia, this dish brings the
             authentic flavors of Penang&apos;s Mamak stalls straight to you!
             Wrapped takeaway-style to blend all the flavors perfectly
@@ -69,23 +97,23 @@ const Menu = () => {
           </p>
           <ul className="mb-4">
             <li>
-              <span className="font-semibold">Nasi Basmati:</span> Fluffy,
+              <span className="font-medium">Nasi Basmati:</span> Fluffy,
               aromatic basmati rice
             </li>
             <li>
-              <span className="font-semibold">Ayam Madu:</span> Sweet,
-              caramelized chicken
+              <span className="font-medium">Ayam Madu:</span> Sweet, caramelized
+              chicken
             </li>
             <li>
-              <span className="font-semibold">Kuah Kari:</span> Rich, flavorful
+              <span className="font-medium">Kuah Kari:</span> Rich, flavorful
               curry gravy
             </li>
             <li>
-              <span className="font-semibold">Telur Dadar:</span> Classic
+              <span className="font-medium">Telur Dadar:</span> Classic
               Mamak-style omelet
             </li>
             <li>
-              <span className="font-semibold">Bendi Rebus:</span> Tender boiled
+              <span className="font-medium">Bendi Rebus:</span> Tender boiled
               okra
             </li>
           </ul>
@@ -104,28 +132,55 @@ const Menu = () => {
           heading="Nasi Kandar Daging Masak Hitam Mamak"
           image="/images/nasikandardagingmasakhitammamak.webp"
         >
-          <p>
+          <p className="mb-4">
             Another gem from Penang, perfect for beef lovers! Just like the
             Mamak stalls, it&apos;s wrapped takeaway-style to let all the
-            delicious flavors blend together. Each serving includes: Nasi
-            Basmati: Fluffy, aromatic basmati rice Ayam Madu: Sweet, caramelized
-            chicken Kuah Kari: Rich, flavorful curry gravy Telur Dadar: Classic
-            Mamak-style omelet Bendi Rebus: Tender boiled okra
+            delicious flavors blend together. Each serving includes:
           </p>
-          <p>
-            Optional Add-ons:🥘 Extra kuah campur (mixed gravy) for the ultimate
-            &apos;kuah banjir&apos; experience🥬 Fried sayur kobis goreng mamak
-            (cabbage) for an added crunch!
-          </p>
+          <ul className="mb-4">
+            <li>
+              <span className="font-medium">Nasi Basmati:</span> Fluffy,
+              aromatic basmati rice
+            </li>
+            <li>
+              <span className="font-medium">Ayam Madu:</span> Sweet, caramelized
+              chicken
+            </li>
+            <li>
+              <span className="font-medium">Kuah Kari:</span> Rich, flavorful
+              curry gravy
+            </li>
+            <li>
+              <span className="font-medium">Telur Dadar:</span> Classic
+              Mamak-style omelet
+            </li>
+            <li>
+              <span className="font-medium">Bendi Rebus:</span> Tender boiled
+              okra
+            </li>
+          </ul>
+          <ul>
+            Optional Add-ons:
+            <li>
+              🥘 Extra kuah campur (mixed gravy) for the ultimate &apos;kuah
+              banjir&apos; experience
+            </li>
+            <li>
+              🍗 Fried sayur kobis goreng mamak (cabbage) for an added crunch!
+            </li>
+          </ul>
         </MenuCard>
         <MenuCard
           heading="Aunty Anija's Sambal Obersea"
           image="/images/sambalobersea.webp"
         >
-          <p>
+          <p className="mb-4">
             200g+ pack of crunchy sambal premium ikan bilis kering (dried
-            anchovies). Packed with bold Malaysian flavors, it&apos;s perfect as
-            a snack or a savory topping for your favorite dishes.
+            anchovies).
+          </p>
+          <p>
+            Packed with bold Malaysian flavors, it&apos;s perfect as a snack or
+            a savory topping for your favorite dishes.
           </p>
         </MenuCard>
       </div>
