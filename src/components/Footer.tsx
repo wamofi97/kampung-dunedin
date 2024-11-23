@@ -15,12 +15,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 transition-colors hover:text-primary"
+            aria-label="WhatsApp"
           >
             <MessageSquare className="h-5 w-5" />
           </a>
           <a
             href="mailto:kampungdunedin@gmail.com"
             className="flex items-center gap-3 transition-colors hover:text-primary"
+            aria-label="Email"
           >
             <Mail className="h-5 w-5" />
           </a>
@@ -29,6 +31,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 transition-colors hover:text-primary"
+            aria-label="Instagram"
           >
             <Instagram className="h-5 w-5" />
           </a>
@@ -37,6 +40,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 transition-colors hover:text-primary"
+            aria-label="Facebook"
           >
             <Facebook className="h-5 w-5" />
           </a>

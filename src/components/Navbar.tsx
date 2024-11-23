@@ -97,6 +97,7 @@ const Navbar = () => {
               href="https://instagram.com/kampungdunedin"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram"
             >
               <Instagram className="h-6 w-6" />
             </a>
@@ -104,11 +105,12 @@ const Navbar = () => {
               href="https://www.facebook.com/profile.php?id=61568764888910"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Facebook"
             >
               <Facebook className="h-6 w-6" />
             </a>
 
-            <a href="mailto:kampungdunedin@gmail.com" className="">
+            <a href="mailto:kampungdunedin@gmail.com" aria-label="Email">
               <Mail className="h-6 w-6" />
             </a>
           </div>
