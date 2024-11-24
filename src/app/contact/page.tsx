@@ -19,8 +19,8 @@ const Contact = () => {
     "idle" | "submitting" | "submitted"
   >("idle");
 
-  const handleChange = async (e: React.ChangeEvent<HTMLFormElement>) => {
-    const { name, value } = e.target;
+  const handleChange = async (e: React.ChangeEvent<HTMLElement>) => {
+    const { name, value } = e.target as HTMLInputElement | HTMLTextAreaElement;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
@@ -54,7 +54,7 @@ const Contact = () => {
   // Simulate form submission
 
   return (
-    <div className="mx-auto flex min-h-[73vh] w-full max-w-6xl flex-col items-center px-6 py-12 md:px-6">
+    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-12 md:min-h-[calc(100vh-257px)] md:px-6">
       <h1 className="text-3xl">Get in Touch</h1>
       <Headingwbackground>We&apos;d Love to Hear from You!</Headingwbackground>
 
