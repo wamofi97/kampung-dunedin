@@ -72,48 +72,6 @@ body {
   }
 }
 
-@layer utilities {
-  @keyframes slide {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  .animate-slide {
-    animation: slide 15s linear infinite;
-  }
-  .animate-slide-md {
-    animation: slide 10s linear infinite;
-  }
-  .animate-slide-sm {
-    animation: slide 10s linear infinite;
-  }
-
-  .scroll-container {
-    -webkit-mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
-    mask: linear-gradient(
-      90deg,
-      transparent,
-      white 20%,
-      white 80%,
-      transparent
-    );
-  }
-
-  .scroll-container:hover {
-    animation-play-state: paused !important;
-  }
-}
-
 .slider {
   width: min(calc(var(--width) * var(--quantity)), 100%);
   height: var(--height);
