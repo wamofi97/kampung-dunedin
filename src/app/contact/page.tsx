@@ -6,25 +6,55 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Instagram, Mail, MessageSquare } from "lucide-react";
 import Headingwbackground from "@/components/Headingwbackground";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const [formStatus, setFormStatus] = useState<
     "idle" | "submitting" | "submitted"
   >("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleChange = async (e: React.ChangeEvent<HTMLFormElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setFormStatus("submitted");
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-    setFormStatus("idle");
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+        e.target as HTMLFormElement,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
+      )
+      .then(async () => {
+        console.log("SUCCESS!");
+        setFormStatus("submitted");
+        setFormData({ name: "", email: "", message: "" });
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+        setFormStatus("idle");
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        setFormStatus("idle");
+      });
   };
 
+  // Simulate form submission
+
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-12 md:px-6">
+    <div className="mx-auto flex min-h-[73vh] w-full max-w-6xl flex-col items-center px-6 py-12 md:px-6">
       <h1 className="text-3xl">Get in Touch</h1>
       <Headingwbackground>We&apos;d Love to Hear from You!</Headingwbackground>
 
@@ -78,6 +108,9 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Input
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your Name"
                   required
                   disabled={formStatus === "submitting"}
@@ -86,6 +119,9 @@ const Contact = () => {
               <div>
                 <Input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Your Email"
                   required
                   disabled={formStatus === "submitting"}
@@ -93,6 +129,9 @@ const Contact = () => {
               </div>
               <div>
                 <Textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Your Message"
                   required
                   className="min-h-[150px]"
