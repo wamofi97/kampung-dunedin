@@ -45,7 +45,6 @@ const reviews = [
 const Review = () => {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-3 py-12 md:px-6">
-      <h1 className="text-3xl">Reviews</h1>
       <Headingwbackground>What Our Customers Are Saying</Headingwbackground>
 
       {/* <p className="mb-8 text-center">

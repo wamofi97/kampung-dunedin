@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MessageSquare } from "lucide-react";
+import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
 import React from "react";
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
             className="flex items-center gap-3 transition-colors hover:text-primary"
             aria-label="WhatsApp"
           >
-            <MessageSquare className="h-5 w-5" />
+            <MessageCircle className="h-5 w-5" />
           </a>
           <a
             href="mailto:kampungdunedin@gmail.com"

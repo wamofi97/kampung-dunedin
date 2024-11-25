@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Instagram, Mail, MessageSquare } from "lucide-react";
+import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
 import Headingwbackground from "@/components/Headingwbackground";
 import emailjs from "@emailjs/browser";
 
@@ -55,7 +55,6 @@ const Contact = () => {
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-12 md:min-h-[calc(100vh-257px)] md:px-6">
-      <h1 className="text-3xl">Get in Touch</h1>
       <Headingwbackground>We&apos;d Love to Hear from You!</Headingwbackground>
 
       <div className="mb-12 grid gap-12 md:grid-cols-2">
@@ -63,8 +62,7 @@ const Contact = () => {
           <h2 className="mb-4 text-2xl font-medium"> Contact Us</h2>
           <p className="mb-6 text-muted-foreground">
             Whether you have questions, special requests, or simply want to say
-            hello, we&apos;re here for you. Reach out to Kampung Dunedin
-            anytime!
+            hello, we&apos;re here for you.
           </p>
           <div className="space-y-4">
             <a
@@ -73,8 +71,17 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-4 transition-colors hover:text-primary"
             >
-              <MessageSquare className="h-6 w-6" />
+              <MessageCircle className="h-6 w-6" />
               <span className="sm:text-lg">Join our WhatsApp group</span>
+            </a>
+            <a
+              href="https://facebook.com/kampungdunedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 transition-colors hover:text-primary"
+            >
+              <Facebook className="h-6 w-6" />
+              <span className="sm:text-lg">Find us on Facebook</span>
             </a>
 
             <a
@@ -92,7 +99,9 @@ const Contact = () => {
               className="flex items-center gap-4 transition-colors hover:text-primary"
             >
               <Mail className="h-6 w-6" />
-              <span className="sm:text-lg">kampungdunedin@gmail.com</span>
+              <span className="sm:text-lg">
+                (Email) kampungdunedin@gmail.com
+              </span>
             </a>
           </div>
         </div>

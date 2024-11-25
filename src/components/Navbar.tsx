@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Facebook, Instagram, Mail, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const navLinks = [
     {
       name: "Home",
@@ -34,7 +34,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden bg-emerald-900">
+    <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden bg-emerald-900 shadow-md">
       <div className="flex w-full max-w-6xl items-center justify-between px-3 py-4 md:px-6">
         <Link href={"/"}>
           <Image
@@ -69,7 +69,7 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[72px] h-screen w-2/3 space-y-20 bg-emerald-900/95 p-4 py-20 text-2xl text-accent shadow transition-all duration-500 sm:w-1/3 md:hidden`}
+          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[71px] h-screen w-2/3 space-y-20 bg-emerald-900/95 p-4 py-20 text-2xl text-accent shadow transition-all duration-500 sm:w-1/3 md:hidden`}
         >
           <div className="flex flex-col items-center gap-8">
             {navLinks.map((link) => (

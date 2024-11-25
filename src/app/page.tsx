@@ -3,7 +3,13 @@ import Hero from "@/components/Hero";
 import Note from "@/components/Note";
 import ReviewsSlider from "@/components/ReviewSlider";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
+import {
+  ArrowUpRight,
+  ExternalLink,
+  Facebook,
+  Instagram,
+  MessageCircle,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import family from "../../public/family.webp";
@@ -28,10 +34,10 @@ export default function Home() {
           </div>
           <div className="space-y-4 md:w-1/2 md:space-y-8">
             <p className="text-lg md:text-xl">
-              We&apos;re a family-owned business bringing the authentic taste of
-              Malaysia to Dunedin. Kampung means village in Malay, symbolizing
-              warmth, tradition, and family. We hope these flavors will bring
-              you as much joy as they bring us.
+              We are a Dunedin-based Malaysian family bringing an authentic
+              taste of Malaysia through our small business. Kampung means
+              village in Malay. We hope these flavours bring you as much comfort
+              and joy as they bring us while we are away from home.
             </p>
             <div>
               <Link href="/about">
@@ -62,10 +68,9 @@ export default function Home() {
             </div>
             <p className="text-lg lg:text-xl">
               Our national dish and a favorite for any meal of the day! Aromatic
-              basmati rice infused with coconut milk and pandan leaves, wrapped
-              in banana leaves. Served with a boiled egg, crispy anchovies,
-              roasted peanuts, and a spicy sambal sauce that brings it all
-              together.
+              basmati rice infused with coconut milk and pandan leaves. Served
+              with boiled egg, crispy anchovies, roasted peanuts, fresh
+              cucumber, and spicy sambal, all wrapped in banana leaves.
             </p>
           </div>
           <div className="relative hidden h-96 w-full sm:block sm:w-1/2 md:w-3/5">
@@ -82,7 +87,7 @@ export default function Home() {
         <div className="my-12 flex flex-col justify-between gap-4 sm:flex-row-reverse sm:gap-8 lg:gap-16">
           <div className="space-y-4 sm:w-1/3 md:space-y-8">
             <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
-              SATE ATAM & SATE DAGING
+              SATE AYAM & SATE DAGING
             </h3>
             <div className="relative flex h-[900px] w-full flex-col gap-2 sm:hidden">
               <div className="relative h-full w-full">
@@ -105,10 +110,9 @@ export default function Home() {
               </div>
             </div>
             <p className="text-lg lg:text-xl">
-              Grilled to perfection, our chicken and beef satay are served with
-              soft, compressed rice cubes, a rich peanut sauce, and fresh
-              cucumber and onions on the side. Perfect for sharing with friends
-              and family!
+              Our chicken and beef satay are served with soft, compressed rice
+              cubes, a rich peanut sauce, and fresh cucumber and onions on the
+              side. Perfect for sharing with friends and whanau!
             </p>
           </div>
           <div className="relative hidden w-full flex-row gap-0 sm:flex sm:h-[350px] sm:w-2/3 md:h-[400px]">
@@ -147,7 +151,7 @@ export default function Home() {
           <div className="flex items-center justify-end">
             <Link href="/menu">
               <Button size="lg" variant="outline">
-                View More Menu <ExternalLink className="ml-2 h-8 w-8" />
+                Our Menu <ExternalLink className="ml-2 h-8 w-8" />
               </Button>
             </Link>
           </div>
@@ -156,34 +160,15 @@ export default function Home() {
 
       <section className="my-12 max-w-6xl space-y-4">
         <Headingwbackground>
-          Ready to Savor Authentic Malaysian Flavors?
+          Craving for a taste of Malaysia?
         </Headingwbackground>
         <div className="flex flex-col gap-x-8 md:flex-row-reverse">
           <div className="mb-4 space-y-4 md:w-3/5">
             <p className="text-lg lg:text-xl">
-              Craving a taste of home or curious about Malaysian cuisine? Place
-              your order now and let Kampung Dunedin bring the deliciousness to
-              your doorstep. We&apos;re here to make your meals special, whether
-              it&apos;s a quiet weekend at home or a celebration with loved
-              ones!
+              Kampung Dunedin brings authentic Malaysian food to your doorstep.
+              We&apos;re here to make your meals special, whether it&apos;s a
+              quiet meal at home or a celebration with loved ones!
             </p>
-            <p>Delivery info:</p>
-            <ul className="text-lg lg:text-xl">
-              <li>
-                •{" "}
-                <span className="font-semibold text-accent-foreground">
-                  Weekends
-                </span>{" "}
-                only (Saturday & Sunday)
-              </li>
-              <li>
-                •{" "}
-                <span className="font-semibold text-accent-foreground">
-                  Dunedin
-                </span>{" "}
-                and surrounding areas
-              </li>
-            </ul>
             <div>
               <a href="">
                 <Button size="lg" className="w-full">
@@ -195,12 +180,11 @@ export default function Home() {
           <div className="md:w-2/5">
             <Note>
               <p className="text-lg lg:text-xl">
-                Planning an event or feeding a{" "}
-                <span className="font-semibold">larger group</span>? Kampung
-                Dunedin is happy to cater to your needs! Whether it&apos;s a
-                family gathering, office party, or special celebration,
-                we&apos;ll craft a menu to delight your guests with authentic
-                Malaysian flavors. Get in touch for custom catering options.
+                Planning an event or feeding a larger group? Kampung Dunedin is
+                happy to cater to your needs! Whether it&apos;s a family
+                gathering, tour group, or special celebration, we&apos;ll
+                delight your guests with authentic Malaysian flavours. Get in
+                touch for catering options.
               </p>
             </Note>
           </div>
@@ -211,7 +195,7 @@ export default function Home() {
 
       <section className="my-12 max-w-6xl space-y-4">
         <Headingwbackground>
-          Stay Updated with Our Weekly Menu!
+          Stay Updated with Our Weekly Menu
         </Headingwbackground>
         <p className="text-lg lg:text-xl">
           Our menu changes weekly, so join our WhatsApp group or follow us on
@@ -222,6 +206,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link href="https://bit.ly/WhatsAppKampungDunedin" target="_blank">
             <Button size="lg" variant="outline">
+              <MessageCircle />
               Join Whatsapp Group
             </Button>
           </Link>
@@ -230,7 +215,14 @@ export default function Home() {
             target="_blank"
           >
             <Button size="lg" variant="outline">
-              Follow @kampungdunedin
+              <Instagram />
+              Follow on Instagram
+            </Button>
+          </Link>
+          <Link href="https://www.facebook.com/kampungdunedin/" target="_blank">
+            <Button size="lg" variant="outline">
+              <Facebook />
+              Find us on Facebook
             </Button>
           </Link>
         </div>
