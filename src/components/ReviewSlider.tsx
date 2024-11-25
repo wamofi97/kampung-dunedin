@@ -48,7 +48,7 @@ const reviews = [
 ];
 
 const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
-  <div className="w-(--width) h-[(--height)] rounded-lg bg-white p-6 shadow-md">
+  <div className="flex h-[225px] w-[400px] flex-col justify-between rounded-lg bg-white p-6 shadow-md">
     <div className="mb-4 flex items-center">
       {[...Array(review.rating)].map((_, i) => (
         <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
@@ -65,11 +65,11 @@ const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
 const ReviewSlider = () => {
   return (
     <div
-      className="slider my-4 max-w-7xl"
+      className="slider"
       style={
         {
-          "--width": "300px",
-          "--height": "250px",
+          "--width": "400px",
+          "--height": "227px",
           "--quantity": 5,
         } as React.CSSProperties
       }
