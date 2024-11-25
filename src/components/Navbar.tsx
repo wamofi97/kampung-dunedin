@@ -56,11 +56,16 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <a href="https://bit.ly/WhatsAppKampungDunedin" target="_blank">
-          <Button className="hidden md:block">Order Now</Button>
+        <a
+          href="https://bit.ly/WhatsAppKampungDunedin"
+          target="_blank"
+          className="hidden md:block"
+        >
+          <Button>Order Now</Button>
         </a>
         <button
           className="z-50 block text-accent md:hidden"
+          aria-label="Toggle Menu"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
