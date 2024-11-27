@@ -15,7 +15,7 @@ const Menu = () => {
     <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-3 py-12 md:min-h-[calc(100vh-257px)] md:px-6">
       <div className="dotted-background"></div>
       <Headingwbackground>
-        Malaysian Flavors You&apos;ll Love
+        Malaysian Flavours You&apos;ll Love
       </Headingwbackground>
 
       <div className="mb-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">

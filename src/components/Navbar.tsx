@@ -34,7 +34,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden bg-emerald-900 shadow-md">
+    <nav className="sticky top-0 z-20 flex w-full justify-center overflow-x-hidden bg-secondary shadow-md">
       <div className="flex w-full max-w-6xl items-center justify-between px-3 py-4 md:px-6">
         <Link href={"/"}>
           <Image
@@ -75,14 +75,14 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[71px] flex h-screen w-screen justify-end text-accent transition-all duration-700 md:hidden`}
+          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[70px] flex h-[calc(100vh-70px)] w-full justify-end text-accent transition-all duration-700 md:hidden`}
         >
           <div
             className="w-1/3 sm:w-1/2"
             onClick={() => setIsOpen(!isOpen)}
           ></div>
           <div
-            className={`h-screen w-2/3 space-y-20 bg-emerald-900/95 sm:w-1/2`}
+            className={`flex w-2/3 flex-col items-center justify-evenly bg-emerald-900/95 sm:w-1/2`}
           >
             <div className="flex flex-col items-center gap-8">
               {navLinks.map((link) => (

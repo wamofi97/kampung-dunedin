@@ -25,13 +25,13 @@ export default function Home() {
         <div className="my-12 max-w-6xl">
           <Headingwbackground>Welcome to Kampung Dunedin!</Headingwbackground>
           <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:gap-16">
-            <div className="relative h-96 w-full md:w-1/2 md:shadow-xl">
+            <div className="relative h-96 w-full md:w-1/2">
               <Image
                 src={family}
                 alt="Dunedin"
                 fill
                 placeholder="blur"
-                className="h-auto rounded-lg object-cover md:shadow-xl"
+                className="h-auto rounded-lg object-cover"
               ></Image>
             </div>
             <div className="space-y-4 md:w-1/2 md:space-y-8">
@@ -56,12 +56,12 @@ export default function Home() {
       <section className="flex w-full justify-center bg-gradient-to-br from-amber-100 via-background to-amber-100 px-4 py-12 sm:px-6">
         <div className="my-12 max-w-6xl">
           <Headingwbackground>Our Signature Menu</Headingwbackground>
-          <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row sm:gap-8 md:mb-20 lg:gap-16">
-            <div className="space-y-4 sm:w-1/2 md:w-2/5 md:space-y-8">
-              <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
+          <div className="mb-12 flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-8 md:mb-20 lg:gap-16">
+            <div className="sm:w-1/2 md:w-2/5">
+              <h3 className="mb-8 bg-gradient-to-b from-emerald-900 to-emerald-700 bg-clip-text font-heading text-2xl font-semibold text-transparent underline decoration-primary underline-offset-4 lg:text-4xl">
                 NASI LEMAK DAUN PISANG
               </h3>
-              <div className="relative h-96 w-full sm:hidden md:w-2/3 md:shadow-xl">
+              <div className="relative h-96 w-full sm:hidden md:w-2/3">
                 <Image
                   src="/images/nasi-lemak-daun-pisang.webp"
                   alt="Nasi Lemak Daun Pisang"
@@ -79,7 +79,7 @@ export default function Home() {
               </p>
               <p className="text-lg lg:text-xl"></p>
             </div>
-            <div className="relative hidden h-96 w-full sm:block sm:w-1/2 md:w-3/5 md:shadow-xl">
+            <div className="relative hidden h-96 w-full sm:block sm:w-1/2 md:w-3/5">
               <Image
                 src="/images/nasi-lemak-daun-pisang.webp"
                 alt="Nasi Lemak Daun Pisang"
@@ -92,10 +92,10 @@ export default function Home() {
 
           <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row-reverse sm:gap-8 md:mb-20 lg:gap-16">
             <div className="space-y-4 sm:w-1/3 md:space-y-8">
-              <h3 className="font-heading text-2xl font-semibold text-emerald-900 lg:text-4xl">
+              <h3 className="bg-gradient-to-b from-emerald-900 to-emerald-700 bg-clip-text font-heading text-2xl font-semibold text-transparent underline decoration-primary underline-offset-4 lg:text-4xl">
                 SATE AYAM & SATE DAGING
               </h3>
-              <div className="relative flex h-[900px] w-full flex-col gap-2 sm:hidden md:shadow-xl">
+              <div className="relative flex h-[900px] w-full flex-col gap-2 sm:hidden">
                 <div className="relative h-full w-full">
                   <Image
                     src="/images/sate-ayam.webp"
@@ -123,7 +123,7 @@ export default function Home() {
               </p>
             </div>
             <div className="relative hidden w-full flex-row gap-0 sm:flex sm:h-[350px] sm:w-2/3 md:h-[400px]">
-              <div className="relative h-full w-full md:shadow-xl">
+              <div className="relative h-full w-full">
                 <Image
                   src="/images/sate-ayam.webp"
                   alt="Sate Ayam"
@@ -132,7 +132,7 @@ export default function Home() {
                   className="object-cover object-bottom sm:rounded-l-lg sm:object-center"
                 />
               </div>
-              <div className="relative h-full w-full md:shadow-xl">
+              <div className="relative h-full w-full">
                 <Image
                   src="/images/sate-daging.webp"
                   alt="Sate Daging"

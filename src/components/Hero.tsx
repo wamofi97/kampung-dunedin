@@ -18,11 +18,11 @@ const Hero = () => {
         <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-8 sm:flex-row">
           <div>
             <Image
-              src="/whitelogo.webp"
+              src="/logo-without-background.png"
               alt="Logo"
-              width="250"
-              height="250"
-              className="w-60 invert sm:w-36 md:w-44"
+              width="1000"
+              height="1000"
+              className="w-60 sm:w-36 md:w-44"
             />
           </div>
           <div className="w-fit text-center font-heading text-[1.6rem] font-bold leading-tight text-emerald-950 sm:text-[2.5rem] md:text-[3.25rem] lg:text-6xl">
@@ -39,7 +39,7 @@ const Hero = () => {
 
         <div className="flex justify-center gap-2 sm:hidden md:gap-4">
           <Link href="/menu">
-            <Button variant="secondary">Our menu</Button>
+            <Button variant="secondary">Our Menu</Button>
           </Link>
           <Link href="https://bit.ly/WhatsAppKampungDunedin" target="_blank">
             <Button variant="default" className="border-2 border-primary">
@@ -51,7 +51,7 @@ const Hero = () => {
         <div className="my-4 hidden justify-center gap-2 sm:flex md:gap-4">
           <Link href="/menu">
             <Button size="lg" variant="secondary" className="">
-              Our menu
+              Our Menu
             </Button>
           </Link>
           <Link href="https://bit.ly/WhatsAppKampungDunedin" target="_blank">
