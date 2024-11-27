@@ -166,7 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full px-4 py-12 sm:px-6">
+      <section className="flex w-full flex-col items-center px-4 py-12 sm:px-6">
         <div className="my-12 max-w-6xl">
           <Headingwbackground>
             Craving for a taste of Malaysia?
