@@ -48,7 +48,7 @@ const Hero = () => {
           </Link>
         </div>
 
-        <div className="my-4 hidden justify-center gap-2 sm:flex">
+        <div className="my-4 hidden justify-center gap-4 sm:flex">
           <Link href="/menu">
             <Button size="lg" variant="secondary" className="">
               Our Menu
