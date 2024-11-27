@@ -58,7 +58,7 @@ export default function Home() {
           <Headingwbackground>Our Signature Menu</Headingwbackground>
           <div className="mb-12 flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-8 md:mb-20 lg:gap-16">
             <div className="sm:w-1/2 md:w-2/5">
-              <h3 className="mb-8 font-heading text-2xl font-semibold text-secondary underline decoration-primary underline-offset-4 lg:text-4xl">
+              <h3 className="mb-8 text-center font-heading text-2xl font-semibold text-secondary underline decoration-primary underline-offset-4 md:text-start lg:text-4xl">
                 NASI LEMAK DAUN PISANG
               </h3>
               <div className="relative h-96 w-full sm:hidden md:w-2/3">
@@ -92,7 +92,7 @@ export default function Home() {
 
           <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row-reverse sm:gap-8 md:mb-20 lg:gap-16">
             <div className="space-y-4 sm:w-1/3 md:space-y-8">
-              <h3 className="font-heading text-2xl font-semibold text-secondary underline decoration-primary underline-offset-4 lg:text-4xl">
+              <h3 className="text-center font-heading text-2xl font-semibold text-secondary underline decoration-primary underline-offset-4 md:text-start lg:text-4xl">
                 SATE AYAM & SATE DAGING
               </h3>
               <div className="relative flex h-[900px] w-full flex-col gap-2 sm:hidden">
