@@ -45,10 +45,10 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
           </span>
         </div>
         <div
-          className={`${isOpen ? "h-auto pb-3 sm:h-[240px] md:h-[230px]" : "h-0"} overflow-hidden transition-all duration-700`}
+          className={`${isOpen ? "h-auto pb-3 sm:h-[240px] md:h-[230px]" : "h-0"} overflow-hidden transition-all duration-500`}
         >
           <div
-            className={`${isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} border-l-4 border-primary/80 pl-3 transition-all duration-700`}
+            className={`${isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} border-l-4 border-primary/80 pl-3 transition-all duration-500`}
           >
             {children}
           </div>
