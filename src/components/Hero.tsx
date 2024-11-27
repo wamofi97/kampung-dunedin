@@ -6,7 +6,7 @@ import MenuSlider from "./MenuSlider";
 
 const Hero = () => {
   return (
-    <div className="z-10 flex min-h-[calc(100vh-71px)] w-full max-w-6xl flex-col justify-center px-3 pb-16 md:px-6">
+    <div className="z-10 flex min-h-[calc(100vh-71px)] w-full max-w-6xl flex-col justify-center px-3 py-8 pb-16 md:px-6 md:pb-8">
       <div className="flex flex-col items-center gap-y-4">
         <h2 className="hidden rounded-full border-2 px-2 py-2 text-center text-sm text-muted-foreground sm:block md:text-base">
           <span className="mr-2 rounded-full bg-gradient-to-r from-accent to-primary px-4">
