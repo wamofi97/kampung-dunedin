@@ -9,7 +9,7 @@ const reviews = [
     id: 1,
     author: "Aisyah J.",
     rating: 5,
-    text: "“The Nasi Lemak Daun Pisang is absolutely divine! It took me straight back to my childhood in Malaysia. Thank you for sharing this amazing dish!”",
+    text: "The Nasi Lemak Daun Pisang is absolutely divine! It took me straight back to my childhood in Malaysia. Thank you for sharing this amazing dish!",
     date: "March 2024",
   },
   {
