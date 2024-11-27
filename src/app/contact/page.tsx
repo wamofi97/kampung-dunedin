@@ -55,6 +55,7 @@ const Contact = () => {
 
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-12 md:min-h-[calc(100vh-257px)] md:px-6">
+      <div className="dotted-background"></div>
       <Headingwbackground>We&apos;d Love to Hear from You!</Headingwbackground>
 
       <div className="mb-12 grid gap-12 md:grid-cols-2">
@@ -99,9 +100,7 @@ const Contact = () => {
               className="flex items-center gap-4 transition-colors hover:text-primary"
             >
               <Mail className="h-6 w-6" />
-              <span className="sm:text-lg">
-                (Email) kampungdunedin@gmail.com
-              </span>
+              <span className="sm:text-lg">kampungdunedin@gmail.com</span>
             </a>
           </div>
         </div>

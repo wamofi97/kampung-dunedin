@@ -5,11 +5,12 @@ import family from "../../../public/family.webp";
 
 const About = () => {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-3 py-12 md:px-6">
+    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-12 md:min-h-[calc(100vh-257px)] md:px-6">
+      <div className="dotted-background"></div>
       <Headingwbackground>Our Story</Headingwbackground>
 
-      <div className="relative bg-white px-3 py-12 text-justify md:px-12 lg:px-20">
-        <div className="absolute inset-0 bg-[url('/batik.webp')] opacity-30"></div>
+      <div className="relative text-justify md:px-12 lg:px-20">
+        {/* <div className="absolute inset-0 bg-[url('/batik.webp')] opacity-30"></div> */}
         <p className="mb-4 leading-relaxed md:text-lg">
           Welcome to Kampung Dunedin, where authentic flavours of Malaysia meet
           Dunedin, New Zealand.
@@ -33,27 +34,29 @@ const About = () => {
           that remind us of the vibrant hawker stalls in Malaysia.
         </p>
         <p className="mb-4 leading-relaxed md:text-lg">
-          Being away from our kampung (village) has taught us the true meaning
-          of comfort food.
+          Being away from our{" "}
+          <span className="font-semibold italic">kampung</span> (village) has
+          taught us the true meaning of comfort food.
         </p>
-        <p className="mb-4 leading-relaxed md:text-lg">
+        <p className="mb-4 md:text-lg">
           It&apos;s not just about the taste, but also, the memories of eating
           together as a community, and stories shared over our meals.
         </p>
-        <p className="my-4 md:text-lg">
+        <p className="my-4 leading-relaxed md:text-lg">
           We prepare dishes that hold a special place in our hearts (and
           tummies). Our recipes are crafted with care, using authentic
           techniques and passed down through generations.
         </p>
-        <p className="my-4 md:text-lg">
+        <p className="my-4 leading-relaxed md:text-lg">
           We hope to build a community in Ōtepoti Dunedin through Kampung
           Dunedin.
         </p>
-        <p className="my-4 md:text-lg">
+        <p className="my-4 leading-relaxed md:text-lg">
           Thank you for supporting our journey. From our kitchen to your home,
-          we hope to bring you a taste of our village. Selamat menjamu selera!
+          we hope to bring you a taste of our village.{" "}
+          <span className="font-semibold italic">Selamat menjamu selera! </span>
         </p>
-        <p className="font-medium leading-relaxed text-gray-900 md:text-lg">
+        <p className="mt-8 text-center text-sm font-medium leading-relaxed text-gray-900 md:text-lg">
           💓 Aunty Anija, Fareez Fauzi & Arina Aizal 💓
         </p>
       </div>

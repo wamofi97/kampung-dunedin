@@ -12,8 +12,8 @@ const Note = ({
   return (
     <div
       className={cn(
+        "mx-auto rounded-lg bg-gradient-to-r from-card to-accent/50 px-6 py-6 text-card-foreground shadow-xl shadow-primary/50",
         className,
-        "mx-auto w-fit rounded-lg border-l-8 border-primary bg-gradient-to-r from-background to-accent px-8 py-8",
       )}
     >
       {children}

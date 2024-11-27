@@ -12,12 +12,13 @@ import sambalobersea from "../../../public/images/sambalobersea.webp";
 
 const Menu = () => {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-3 py-12 md:px-6">
+    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-3 py-12 md:min-h-[calc(100vh-257px)] md:px-6">
+      <div className="dotted-background"></div>
       <Headingwbackground>
         Malaysian Flavors You&apos;ll Love
       </Headingwbackground>
 
-      <div className="mb-8 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {[
           {
             heading: "Nasi Lemak Daun Pisang",
@@ -103,7 +104,7 @@ const Menu = () => {
             ),
           },
           {
-            heading: "Aunty Anija Sambal Obersea",
+            heading: "Aunty Anija's Sambal Obersea",
             image: sambalobersea,
             content: (
               <>
@@ -125,8 +126,10 @@ const Menu = () => {
         ))}
       </div>
       <Note>
-        <h3 className="text-2xl font-bold">And there&apos;s more to come!</h3>
-        <p>
+        <h3 className="mb-2 text-xl font-medium">
+          And there&apos;s more to come!
+        </h3>
+        <p className="text-lg">
           We&apos;re trialing exciting new dishes each week to bring you even
           more flavours of Malaysia. Join our WhatsApp group for updates on our
           weekly menus!

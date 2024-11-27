@@ -1,12 +1,22 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
-const Headingwbackground = ({ children }: { children: React.ReactNode }) => {
+const Headingwbackground = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <div className="mb-8 w-full rounded-xl py-3 text-center uppercase text-emerald-950/80 md:mb-16">
-      <h2 className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl">
-        {children}
-      </h2>
-    </div>
+    <h2
+      className={cn(
+        "mb-8 w-full rounded-xl py-3 text-center font-heading text-3xl font-bold text-emerald-950 md:mb-16 md:text-4xl lg:text-5xl",
+        className,
+      )}
+    >
+      {children}
+    </h2>
   );
 };
 

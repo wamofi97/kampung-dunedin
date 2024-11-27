@@ -16,36 +16,37 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className={`${!isOpen && "h-fit"} group flex cursor-pointer flex-col rounded-lg bg-white/70 p-6 shadow-md md:min-h-[490px]`}
+      className={`group flex cursor-pointer flex-col border-b-2 pb-3`}
     >
-      <div className="relative mb-4 h-[370px] overflow-hidden rounded-lg">
+      <div className="relative mb-4 h-[380px] overflow-hidden rounded-2xl">
         <Image
           src={image}
           alt={heading}
           fill
           placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="t rounded-lg object-cover transition-transform duration-500 group-hover:scale-105 sm:object-bottom"
+          className="rounded-2xl object-cover transition-transform duration-500 group-hover:scale-105 sm:object-bottom"
         />
+        {/* <div className="bg-gradient-radial absolute inset-0 from-transparent via-transparent via-60% to-black opacity-80"></div> */}
       </div>
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col">
         <div className="flex">
           <h2
-            className={`${isOpen && "mb-4"} font-heading text-xl font-semibold text-primary-foreground transition-[font-size] duration-500`}
+            className={`mb-4 font-heading text-xl font-semibold text-emerald-900 transition-[font-size] duration-500`}
           >
             {heading}
           </h2>
-          <span className="ml-auto text-sm text-gray-500">
+          <span className="ml-auto">
             <ChevronRight
-              className={`${isOpen && "rotate-90"} transition-transform duration-300`}
+              className={`${isOpen && "rotate-90"} transition-transform duration-300 group-hover:scale-125`}
             />
           </span>
         </div>
         <div
-          className={`${isOpen ? "h-full sm:h-[230px] xl:h-[205px]" : "h-0"} overflow-hidden transition-all duration-500`}
+          className={`${isOpen ? "h-auto sm:h-[240px] md:h-[210px]" : "h-0"} overflow-hidden transition-all duration-500`}
         >
           <div
-            className={`${isOpen ? "translate-y-0" : "translate-y-full"} transition-transform duration-500`}
+            className={`${isOpen ? "translate-y-0" : "-translate-y-full"} border-l-4 border-primary/80 pl-3 transition-transform duration-500`}
           >
             {children}
           </div>

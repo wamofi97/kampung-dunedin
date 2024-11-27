@@ -16,8 +16,8 @@ body {
     --popover-foreground: 20 14.3% 4.1%;
     --primary: 45.9 96.7% 64.5%;
     --primary-foreground: 165.7 91.3% 9%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
+    --secondary: 164.2 85.7% 16.5%;
+    --secondary-foreground: 48 96.5% 88.8%;
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
     --accent: 48 96.5% 88.8%;
@@ -70,6 +70,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  .dotted-background {
+    @apply absolute top-0 z-[-2] h-full w-full bg-amber-50 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(252,211,77,0.3),rgba(255,255,255,0))];
+  }
 }
 
 .slider {
@@ -121,9 +124,9 @@ body {
   height: var(--height);
   position: absolute;
   left: 100%;
-  animation: reviewRun 20s linear infinite;
+  animation: reviewRun 30s linear infinite;
   animation-delay: calc(
-    20s / var(--quantity) * ((var(--quantity) - var(--position)))
+    30s / var(--quantity) * ((var(--quantity) - var(--position)) * -1)
   ) !important;
 }
 .slider .list .reviewitem img {
