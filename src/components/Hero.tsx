@@ -6,7 +6,7 @@ import MenuSlider from "./MenuSlider";
 
 const Hero = () => {
   return (
-    <div className="z-10 flex min-h-[90dvh] w-full max-w-6xl flex-col justify-center gap-2 px-3 md:min-h-screen md:px-6">
+    <div className="z-10 flex min-h-[calc(100vh-71px)] w-full max-w-6xl flex-col items-center justify-center px-3 pb-16 md:px-6">
       <div className="flex flex-col items-center gap-y-4">
         <h2 className="hidden rounded-full border-2 px-2 py-2 text-center text-sm text-muted-foreground sm:block md:text-base">
           <span className="mr-2 rounded-full bg-gradient-to-r from-accent to-primary px-4">
@@ -15,7 +15,7 @@ const Hero = () => {
           {"  "}
           Authentic Malaysian Food in Dunedin
         </h2>
-        <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-8 sm:flex-row">
+        <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-4 sm:flex-row">
           <div>
             <Image
               src="/logo-without-background.png"
@@ -37,7 +37,7 @@ const Hero = () => {
           doorstep.
         </p>
 
-        <div className="flex justify-center gap-2 sm:hidden md:gap-4">
+        <div className="flex justify-center gap-4 sm:hidden">
           <Link href="/menu">
             <Button variant="secondary">Our Menu</Button>
           </Link>
@@ -48,7 +48,7 @@ const Hero = () => {
           </Link>
         </div>
 
-        <div className="my-4 hidden justify-center gap-2 sm:flex md:gap-4">
+        <div className="my-4 hidden justify-center gap-2 sm:flex">
           <Link href="/menu">
             <Button size="lg" variant="secondary" className="">
               Our Menu
