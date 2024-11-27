@@ -45,7 +45,7 @@ const MenuSlider = () => {
       style={
         {
           "--width": "125px",
-          "--height": "200px",
+          "--height": "170px",
           "--quantity": images.length,
         } as React.CSSProperties
       }
