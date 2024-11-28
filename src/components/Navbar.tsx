@@ -89,7 +89,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   href={link.link}
-                  className={`${pathname === link.link && "font-semibold text-primary"} w-fit text-2xl`}
+                  className={`${pathname === link.link && "font-semibold text-primary underline decoration-amber-500 decoration-dotted underline-offset-4"} w-fit text-2xl`}
                   onClick={() => {
                     setIsOpen(!isOpen);
                   }}
