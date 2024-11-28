@@ -50,7 +50,7 @@ const reviews = [
 ];
 
 const ReviewCard: React.FC<{ review: Review }> = ({ review }) => (
-  <div className="flex min-h-[280px] flex-col items-center justify-between rounded-lg bg-white p-8 shadow-xl shadow-primary">
+  <div className="flex min-h-[280px] flex-col items-center justify-between rounded-lg bg-white p-8 shadow-xl shadow-primary/50">
     <div className="w-fit rounded-full bg-accent p-3">
       <Quote className="h-5 w-5" />
     </div>
