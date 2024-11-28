@@ -11,7 +11,7 @@ const Headingwbackground = ({
   return (
     <h2
       className={cn(
-        "mb-8 w-full rounded-xl py-3 text-center font-heading text-3xl font-bold text-emerald-950/80 underline decoration-amber-500 decoration-dashed underline-offset-4 md:mb-16 md:text-4xl lg:text-5xl",
+        "mb-8 w-full rounded-xl py-3 text-center font-heading text-3xl font-bold text-emerald-950/80 md:mb-16 md:text-4xl lg:text-5xl",
         className,
       )}
     >

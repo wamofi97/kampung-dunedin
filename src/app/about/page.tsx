@@ -9,7 +9,7 @@ const About = () => {
       <div className="dotted-background"></div>
       <Headingwbackground>Our Story</Headingwbackground>
 
-      <div className="relative text-justify md:px-12 lg:px-20">
+      <div className="relative md:px-12 lg:px-20">
         {/* <div className="absolute inset-0 bg-[url('/batik.webp')] opacity-30"></div> */}
         <p className="mb-4 leading-relaxed md:text-lg">
           Welcome to Kampung Dunedin, where authentic flavours of Malaysia meet

@@ -70,7 +70,7 @@ export default function Home() {
                   className="h-auto rounded-lg object-cover"
                 />
               </div>
-              <p className="mt-4 border-l-4 border-primary pl-4 text-justify text-lg lg:text-xl">
+              <p className="mt-4 border-l-4 border-primary pl-4 text-lg lg:text-xl">
                 Our national dish and a favorite for any meal of the day!
                 Aromatic basmati rice infused with coconut milk and pandan
                 leaves. Served with boiled egg, crispy anchovies, roasted
@@ -115,7 +115,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <p className="mt-4 w-full border-l-4 border-primary pl-4 text-justify text-lg sm:border-l-0 sm:border-r-4 sm:pl-0 sm:pr-4 lg:text-xl">
+              <p className="mt-4 w-full border-l-4 border-primary pl-4 text-lg sm:border-l-0 sm:border-r-4 sm:pl-0 sm:pr-4 lg:text-xl">
                 Our chicken and beef satay are served with soft, compressed rice
                 cubes, a rich peanut sauce, and fresh cucumber and onions on the
                 side. Perfect for sharing with friends and{" "}
