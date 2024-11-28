@@ -50,7 +50,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.link}
-              className={`${pathname === link.link ? "font-medium text-primary" : ""} text-accent transition-colors duration-300 hover:text-amber-300 lg:text-lg`}
+              className={`${pathname === link.link ? "font-medium text-primary underline decoration-amber-500 decoration-dotted underline-offset-4" : ""} text-accent transition-colors duration-300 hover:text-amber-300 lg:text-lg`}
             >
               {link.name}
             </Link>

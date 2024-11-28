@@ -17,14 +17,14 @@ import ReviewCarousel from "@/components/ReviewCarousel";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex w-full flex-col items-center">
+    <div className="mx-auto flex w-full flex-col items-center pb-24">
       <div className="absolute -z-10 min-h-[calc(100vh-71px)] w-full bg-[url(/batik.webp)] bg-cover bg-center opacity-40 md:opacity-20"></div>
       <Hero />
 
-      <section className="flex w-full justify-center px-4 py-12 sm:px-6">
-        <div className="my-12 max-w-6xl">
+      <section className="flex w-full justify-center px-4 py-24 sm:px-6">
+        <div className="max-w-6xl">
           <Headingwbackground>Welcome to Kampung Dunedin!</Headingwbackground>
-          <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:gap-16">
+          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-8 lg:gap-16">
             <div className="relative h-96 w-full md:w-1/2">
               <Image
                 src={family}
@@ -53,13 +53,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex w-full justify-center bg-gradient-to-br from-amber-100 via-background to-amber-100 px-4 py-12 sm:px-6">
-        <div className="my-12 max-w-6xl">
+      <section className="flex w-full justify-center bg-gradient-to-br from-amber-100 via-background to-amber-100 px-4 py-24 sm:px-6">
+        <div className="max-w-6xl">
           <Headingwbackground>Our Signature Menu</Headingwbackground>
-          <div className="mb-12 flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-8 md:mb-20 lg:gap-16">
+          <div className="mb-12 flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-8 lg:gap-16">
             <div className="sm:w-1/2 md:w-2/5">
-              <h3 className="mb-8 text-center font-heading text-2xl font-semibold text-secondary underline decoration-primary underline-offset-4 md:text-start lg:text-4xl">
-                NASI LEMAK DAUN PISANG
+              <h3 className="mb-4 text-center font-heading text-2xl font-semibold uppercase text-secondary sm:mb-8 sm:text-start sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
+                Nasi Lemak Daun Pisang
               </h3>
               <div className="relative h-96 w-full sm:hidden md:w-2/3">
                 <Image
@@ -70,7 +70,7 @@ export default function Home() {
                   className="h-auto rounded-lg object-cover"
                 />
               </div>
-              <p className="text-lg lg:text-xl">
+              <p className="mt-4 border-l-4 border-primary pl-4 text-justify text-lg lg:text-xl">
                 Our national dish and a favorite for any meal of the day!
                 Aromatic basmati rice infused with coconut milk and pandan
                 leaves. Served with boiled egg, crispy anchovies, roasted
@@ -90,10 +90,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mb-12 flex flex-col justify-between gap-4 sm:flex-row-reverse sm:gap-8 md:mb-20 lg:gap-16">
-            <div className="space-y-4 sm:w-1/3 md:space-y-8">
-              <h3 className="text-center font-heading text-2xl font-semibold text-secondary underline decoration-primary underline-offset-4 md:text-start lg:text-4xl">
-                SATE AYAM & SATE DAGING
+          <div className="mb-12 flex flex-col items-center justify-between gap-4 sm:flex-row-reverse sm:gap-8 lg:gap-16">
+            <div className="sm:w-1/2 md:w-1/3">
+              <h3 className="mb-4 text-center font-heading text-2xl font-semibold uppercase text-secondary sm:mb-8 sm:text-3xl md:text-end md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
+                Sate Ayam & Sate Daging
               </h3>
               <div className="relative flex h-[900px] w-full flex-col gap-2 sm:hidden">
                 <div className="relative h-full w-full">
@@ -115,21 +115,21 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <p className="text-lg lg:text-xl">
+              <p className="mt-4 w-full border-l-4 border-primary pl-4 text-justify text-lg sm:border-l-0 sm:border-r-4 sm:pl-0 sm:pr-4 lg:text-xl">
                 Our chicken and beef satay are served with soft, compressed rice
                 cubes, a rich peanut sauce, and fresh cucumber and onions on the
                 side. Perfect for sharing with friends and{" "}
                 <span className="italic">whanau!</span>
               </p>
             </div>
-            <div className="relative hidden w-full flex-row gap-0 sm:flex sm:h-[350px] sm:w-2/3 md:h-[400px]">
+            <div className="relative hidden w-full flex-col gap-0 sm:flex sm:h-[500px] sm:w-1/2 md:h-[400px] md:w-2/3 md:flex-row">
               <div className="relative h-full w-full">
                 <Image
                   src="/images/sate-ayam.webp"
                   alt="Sate Ayam"
                   fill
                   sizes=" (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover object-bottom sm:rounded-l-lg sm:object-center"
+                  className="rounded-t-lg object-cover object-bottom md:rounded-l-lg md:object-center"
                 />
               </div>
               <div className="relative h-full w-full">
@@ -138,13 +138,13 @@ export default function Home() {
                   alt="Sate Daging"
                   fill
                   sizes="(max-width: 1200px) 50vw, 33vw"
-                  className="object-cover object-bottom sm:rounded-r-lg sm:object-center"
+                  className="rounded-b-lg object-cover object-bottom md:rounded-r-lg md:object-center"
                 />
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col-reverse justify-between gap-x-8 gap-y-4 md:flex-row">
+          <div className="mb-12 flex flex-col-reverse justify-between gap-x-8 gap-y-4 md:flex-row">
             <Note className="md:w-2/3">
               <h4 className="mb-2 text-lg font-medium">
                 And there&apos;s more to come!
@@ -166,8 +166,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex w-full flex-col items-center px-4 py-12 sm:px-6">
-        <div className="my-12 max-w-6xl">
+      <section className="flex w-full flex-col items-center px-4 py-24 sm:px-6">
+        <div className="max-w-6xl">
           <Headingwbackground>
             Craving for a taste of Malaysia?
           </Headingwbackground>
@@ -215,7 +215,7 @@ export default function Home() {
         <ReviewCarousel />
       </div>
 
-      <section className="my-12 max-w-6xl px-4 py-12 sm:px-6">
+      <section className="max-w-6xl px-4 py-24 sm:px-6">
         <Headingwbackground>Stay Updated with Weekly Menu</Headingwbackground>
         <p className="mb-8 text-lg lg:text-xl">
           Our menu changes weekly, so join our WhatsApp group and follow us on

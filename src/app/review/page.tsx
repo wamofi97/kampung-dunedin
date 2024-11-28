@@ -44,15 +44,9 @@ const reviews = [
 
 const Review = () => {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-3 py-12 md:px-6">
+    <div className="mx-auto flex min-h-[calc(100vh-161px)] w-full max-w-6xl flex-col items-center px-3 pb-24 pt-12 md:px-6">
       <div className="dotted-background"></div>
       <Headingwbackground>What Our Customers Are Saying</Headingwbackground>
-
-      {/* <p className="mb-8 text-center">
-        Every plate we serve comes with a story, and we&apos;re thrilled to hear
-        yours! Here&apos;s what our amazing customers have to say about their
-        Kampung Dunedin experience.
-      </p> */}
 
       <div className="mb-20 max-w-4xl space-y-8">
         {reviews.map((review) => (

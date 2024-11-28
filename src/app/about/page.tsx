@@ -5,7 +5,7 @@ import family from "../../../public/family.webp";
 
 const About = () => {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-12 md:min-h-[calc(100vh-257px)] md:px-6">
+    <div className="mx-auto flex min-h-[calc(100vh-161px)] w-full max-w-6xl flex-col items-center justify-center px-4 pb-24 pt-12 md:px-6">
       <div className="dotted-background"></div>
       <Headingwbackground>Our Story</Headingwbackground>
 
@@ -56,7 +56,7 @@ const About = () => {
           we hope to bring you a taste of our village.{" "}
           <span className="font-semibold italic">Selamat menjamu selera! </span>
         </p>
-        <p className="mt-8 text-center text-sm font-medium leading-relaxed text-gray-900 md:text-lg">
+        <p className="mt-8 text-center text-[0.95rem] font-medium leading-relaxed text-gray-900 md:text-lg">
           💓 Aunty Anija, Fareez Fauzi & Arina Aizal 💓
         </p>
       </div>
