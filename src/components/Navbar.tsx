@@ -23,7 +23,7 @@ const Navbar = () => {
       link: "/about",
     },
     {
-      name: "Review",
+      name: "Reviews",
       link: "/review",
     },
     {
