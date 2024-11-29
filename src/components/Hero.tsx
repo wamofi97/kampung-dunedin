@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 import MenuSlider from "./MenuSlider";
+import logowithoutbackground from "../../public/logo-without-background.png";
 
 const Hero = () => {
   return (
@@ -18,10 +19,11 @@ const Hero = () => {
         <div className="flex w-full flex-col items-center justify-center gap-x-4 gap-y-4 sm:flex-row">
           <div>
             <Image
-              src="/logo-without-background.png"
+              src={logowithoutbackground}
               alt="Logo"
-              width="1000"
-              height="1000"
+              width="300"
+              height="300"
+              placeholder="blur"
               className="w-60 sm:w-36 md:w-44"
             />
           </div>
