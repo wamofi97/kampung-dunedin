@@ -3,13 +3,7 @@ import Hero from "@/components/Hero";
 import Note from "@/components/Note";
 import ReviewsSlider from "@/components/ReviewSlider";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowUpRight,
-  ExternalLink,
-  Facebook,
-  Instagram,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowUpRight, Facebook, Instagram, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import family from "../../public/family.webp";
@@ -158,7 +152,7 @@ export default function Home() {
             <div className="flex items-center md:w-1/3">
               <Link href="/menu" className="w-full">
                 <Button size="lg" variant="secondary" className="w-full">
-                  Our Menu <ExternalLink className="ml-2 h-8 w-8" />
+                  Our Menu <ArrowUpRight className="ml-2 h-8 w-8" />
                 </Button>
               </Link>
             </div>
