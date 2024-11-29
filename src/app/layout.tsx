@@ -19,6 +19,9 @@ const bespoke = localFont({
 export const metadata: Metadata = {
   title: "Kampung Dunedin",
   description: "Malaysian Food Dunedin South Island New Zealand NZ",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
