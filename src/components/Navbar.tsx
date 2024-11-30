@@ -75,7 +75,7 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[70px] flex h-[calc(100vh-70px)] w-full justify-end text-accent transition-all duration-700 md:hidden`}
+          className={`${!isOpen && "translate-x-full"} fixed right-0 top-[70px] flex h-[calc(100vh-70px)] w-full justify-end text-accent transition-all duration-500 md:hidden`}
         >
           <div
             className="w-1/3 sm:w-1/2"
@@ -91,7 +91,7 @@ const Navbar = () => {
                   href={link.link}
                   className={`${pathname === link.link && "font-semibold text-primary"} w-fit text-2xl`}
                   onClick={() => {
-                    setIsOpen(!isOpen);
+                    setTimeout(() => setIsOpen(!isOpen), 300);
                   }}
                 >
                   {link.name}
