@@ -15,35 +15,30 @@ const reviews = [
     author: "Aisyah J.",
     rating: 4,
     text: "The Nasi Lemak Daun Pisang is absolutely divine! It took me straight back to my childhood in Malaysia. Thank you for sharing this amazing dish!",
-    date: "March 2024",
   },
   {
     id: 2,
     author: "Michael T.",
     rating: 4,
     text: "The Sate Ayam is so tender and flavorful, and the peanut sauce is spot on. My kids loved it too!",
-    date: "March 2024",
   },
   {
     id: 3,
     author: "Daniel K",
     rating: 5,
     text: "Tried the Nasi Kandar Daging Masak Hitam Mamak last week – everything blended so perfectly. Feels like I’ve been transported to Penang!",
-    date: "February 2024",
   },
   {
     id: 4,
     author: "Jonathan L.",
     rating: 5,
     text: "Kampung Dunedin has truly brought a taste of Malaysia to NZ. Every bite reminded me of my travels to Southeast Asia.",
-    date: "February 2024",
   },
   {
     id: 5,
     author: "Nurul H.",
     rating: 5,
     text: "The Sate Ayam is so tender and flavorful, and the peanut sauce is spot on. My kids loved it too!",
-    date: "January 2024",
   },
 ];
 
