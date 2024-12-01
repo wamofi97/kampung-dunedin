@@ -9,6 +9,8 @@ import satedaging from "../../../public/images/sate-daging.webp";
 import nasikandarayammadu from "../../../public/images/nasikandarayammadu.webp";
 import nasikandardagingmasakhitammamak from "../../../public/images/nasikandardagingmasakhitammamak.webp";
 import sambalobersea from "../../../public/images/sambalobersea.webp";
+import nasilemakayamrendang from "../../../public/images/nasilemakayamrendang.webp";
+import karipap from "../../../public/images/karipap.webp";
 
 const Menu = () => {
   return (
@@ -18,7 +20,7 @@ const Menu = () => {
         Malaysian Flavours You&apos;ll Love
       </Headingwbackground>
 
-      <div className="mb-8 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[
           {
             heading: "Nasi Lemak Daun Pisang",
@@ -116,6 +118,39 @@ const Menu = () => {
                   Packed with bold Malaysian flavours, it&apos;s perfect as a
                   snack or a savory topping for your favorite dishes.
                 </p>
+              </>
+            ),
+          },
+          {
+            heading: "Nasi Lemak Ayam Rendang | Chicken Rendang",
+            image: nasilemakayamrendang,
+            content: (
+              <>
+                <p className="mb-4">
+                  A Malaysia favourite! You already love our Nasi Lemak Daun
+                  Pisang - here’s a ✨ rendang-fied ✨version of it! Slow cooked
+                  chicken rendang served with aromatic basmati coconut rice
+                  infused with pandan leaves.
+                </p>
+                <p>
+                  Served with boiled egg, crispy anchovies, roasted peanuts,
+                  fresh cucumber, and spicy sambal.
+                </p>
+              </>
+            ),
+          },
+          {
+            heading: "Karipap Pusing Daging | Beef Spiral Curry Puffs",
+            image: karipap,
+            content: (
+              <>
+                <p className="mb-4">
+                  A precious family recipe passed down by our late great
+                  grandmother Che Nen - crispy and flaky pastry loaded with
+                  minced curry beef, diced potato, onion and a whole lot of
+                  spices.
+                </p>
+                <p>Perfect as a side to share.</p>
               </>
             ),
           },

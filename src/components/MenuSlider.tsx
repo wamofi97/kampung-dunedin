@@ -12,6 +12,14 @@ const images = [
     alt: "nasi campur",
   },
   {
+    src: "/images/karipap2.webp",
+    alt: "karipap2",
+  },
+  {
+    src: "/images/nasilemakayamrendang2.webp",
+    alt: "nasi lemak ayam rendang 2",
+  },
+  {
     src: "/images/nasicampur2.webp",
     alt: "nasi campur 2",
   },
