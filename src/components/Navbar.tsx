@@ -45,7 +45,7 @@ const Navbar = () => {
             className="w-28"
           />
         </Link>
-        <div className="hidden gap-8 md:flex lg:gap-12">
+        <div className="hidden gap-8 font-heading md:flex lg:gap-12">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -84,7 +84,7 @@ const Navbar = () => {
           <div
             className={`flex w-2/3 flex-col items-center justify-evenly bg-emerald-900/95 sm:w-1/2`}
           >
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-8 font-heading">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
