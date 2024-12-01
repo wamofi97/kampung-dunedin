@@ -6,7 +6,6 @@ type Review = {
   author: string;
   rating: number;
   text: string;
-  date: string;
 };
 
 const reviews = [
