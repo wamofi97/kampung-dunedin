@@ -96,7 +96,7 @@ export default function Home() {
                     alt="Sate Ayam"
                     fill
                     sizes="(max-width: 768px) 100vw"
-                    className="rounded-lg object-cover object-bottom sm:object-center"
+                    className="rounded-lg object-cover object-bottom"
                   />
                 </div>
                 <div className="relative h-full w-full">
@@ -105,7 +105,7 @@ export default function Home() {
                     alt="Sate Daging"
                     fill
                     sizes="(max-width: 768px) 100vw"
-                    className="rounded-lg object-cover object-bottom sm:object-center"
+                    className="rounded-lg object-cover object-bottom"
                   />
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function Home() {
                   alt="Sate Ayam"
                   fill
                   sizes=" (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-t-lg object-cover object-bottom md:rounded-l-lg md:object-center"
+                  className="rounded-t-lg object-cover object-bottom md:rounded-l-lg"
                 />
               </div>
               <div className="relative h-full w-full">
@@ -132,7 +132,7 @@ export default function Home() {
                   alt="Sate Daging"
                   fill
                   sizes="(max-width: 1200px) 50vw, 33vw"
-                  className="rounded-b-lg object-cover object-bottom md:rounded-r-lg md:object-center"
+                  className="rounded-b-lg object-cover object-bottom md:rounded-r-lg"
                 />
               </div>
             </div>

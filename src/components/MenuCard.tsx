@@ -18,14 +18,14 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
       onClick={() => setIsOpen(!isOpen)}
       className={`group flex h-fit cursor-pointer flex-col rounded-lg bg-white/50 shadow-md`}
     >
-      <div className="relative h-[100vw] min-h-[350px] overflow-hidden rounded-t-lg sm:h-[380px]">
+      <div className="relative h-[90vw] min-h-[350px] overflow-hidden rounded-t-lg sm:h-[410px]">
         <Image
           src={image}
           alt={heading}
           fill
           placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="h-auto w-auto rounded-t-lg object-cover object-[0_80%] transition-transform duration-500 group-hover:scale-105 lg:object-center"
+          className={`${heading.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-t-lg object-cover transition-transform duration-500 group-hover:scale-105`}
         />
       </div>
       <div className="px-3 py-4 transition-colors duration-500 sm:py-0">
