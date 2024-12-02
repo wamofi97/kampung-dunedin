@@ -19,12 +19,12 @@ const Review = () => {
           >
             <Quote className="absolute left-1/2 top-1/2 h-16 w-16 translate-x-[-50%] translate-y-[-50%] opacity-5" />
             {/* <Quote className="absolute bottom-8 left-8 h-12 w-12 rotate-180 opacity-10" /> */}
-            <p className="font-regular mb-8 font-heading text-lg text-neutral-600">{`"${review.text}"`}</p>
+            <p className="font-regular mb-2 font-heading text-lg text-neutral-600">{`"${review.text}"`}</p>
             <div className="mx-auto flex items-center">
               {[...Array(review.rating)].map((_, index) => (
                 <Star
                   key={index}
-                  className="h-3 w-3 fill-amber-200 text-amber-200"
+                  className="h-3 w-3 fill-amber-300 text-amber-300"
                 ></Star>
               ))}
             </div>
