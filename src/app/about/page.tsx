@@ -9,7 +9,7 @@ const About = () => {
       <div className="dotted-background"></div>
       <Headingwbackground>Our Story</Headingwbackground>
 
-      <div className="max-w-6xl space-y-4 leading-relaxed md:px-8 md:text-xl lg:space-y-8 lg:text-2xl">
+      <div className="max-w-5xl space-y-4 leading-relaxed md:px-8 md:text-xl">
         <p>
           Selamat Datang to Kampung Dunedin, where authentic flavours of
           Malaysia meet Dunedin, New Zealand.
@@ -56,7 +56,7 @@ const About = () => {
           we hope to bring you a taste of our village.{" "}
           <span className="font-semibold italic">Selamat menjamu selera! </span>
         </p>
-        <p className="mt-8 text-center text-[0.95rem] font-medium text-gray-900 md:text-lg lg:text-2xl">
+        <p className="mt-8 text-center text-[0.95rem] font-medium text-gray-900 md:text-lg">
           💓 Aunty Anija, Fareez Fauzi & Arina Aizal 💓
         </p>
       </div>
