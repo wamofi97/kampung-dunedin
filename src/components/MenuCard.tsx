@@ -16,19 +16,19 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className={`group flex h-fit cursor-pointer flex-col rounded-lg bg-white/50 shadow-md`}
+      className={`group flex h-fit cursor-pointer flex-col rounded-lg bg-white shadow-md`}
     >
-      <div className="relative h-[90vw] min-h-[350px] overflow-hidden rounded-t-lg sm:h-[410px]">
+      <div className="relative h-[90vw] min-h-[350px] overflow-hidden rounded-t-xl sm:h-[410px]">
         <Image
           src={image}
           alt={heading}
           fill
           placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className={`${heading.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-t-lg object-cover transition-transform duration-500 group-hover:scale-105`}
+          className={`${heading.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 hover:scale-105`}
         />
       </div>
-      <div className="px-3 py-4 transition-colors duration-500 sm:py-0">
+      <div className="px-3 py-4 transition-colors duration-500 sm:py-3">
         <div className="flex items-center gap-2 sm:min-h-[70px]">
           <h2 className="font-heading text-lg font-bold text-secondary">
             {heading}
