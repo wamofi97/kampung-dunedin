@@ -11,7 +11,7 @@ const Review = () => {
       <div className="dotted-background"></div>
       <Headingwbackground>What Our Customers Are Saying</Headingwbackground>
 
-      <div className="mb-20 flex max-w-4xl flex-col gap-y-8">
+      <div className="mb-20 flex max-w-4xl flex-col-reverse gap-y-8">
         {reviews.map((review) => (
           <div
             key={review.id}
