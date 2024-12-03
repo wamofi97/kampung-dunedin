@@ -18,7 +18,7 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
       onClick={() => setIsOpen(!isOpen)}
       className={`group flex h-fit cursor-pointer flex-col rounded-lg bg-white shadow-md`}
     >
-      <div className="relative h-[90vw] min-h-[350px] overflow-hidden rounded-t-xl sm:h-[410px]">
+      <div className="relative h-[90vw] min-h-[350px] overflow-hidden rounded-t-xl sm:h-[375px]">
         <Image
           src={image}
           alt={heading}
