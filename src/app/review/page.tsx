@@ -15,11 +15,11 @@ const Review = () => {
         {reviews.map((review) => (
           <div
             key={review.id}
-            className="item-center relative flex min-w-[500px] flex-col gap-4 rounded-lg border-b p-8 text-center"
+            className="item-center relative flex flex-col gap-4 border-b border-secondary/30 py-8 text-center"
           >
-            <Quote className="absolute left-1/2 top-1/2 h-16 w-16 translate-x-[-50%] translate-y-[-50%] opacity-5" />
-            {/* <Quote className="absolute bottom-8 left-8 h-12 w-12 rotate-180 opacity-10" /> */}
-            <p className="font-regular mb-2 font-heading text-lg text-neutral-600">{`"${review.text}"`}</p>
+            <Quote className="absolute right-8 top-0 size-16 text-primary opacity-20" />
+            <Quote className="absolute bottom-20 left-8 size-12 scale-x-[-1] text-primary opacity-20" />
+            <p className="font-regular mb-2 font-heading text-neutral-700 sm:text-lg">{`"${review.text}"`}</p>
             <div className="mx-auto flex items-center">
               {[...Array(review.rating)].map((_, index) => (
                 <Star
