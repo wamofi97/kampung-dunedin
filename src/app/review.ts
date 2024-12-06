@@ -39,6 +39,12 @@ export const reviews: Review[] = [
     rating: 5,
     text: "Nasi lemak was spot on, I had 2 portions in one sitting. Looking forward to more variety. The karipap pusing was sublime, one of the best doughs for it. Beautifully crumbles and full of flavour. Better than some I've had in Indonesia and Singapore. Definitely will come back for more!",
   },
+  {
+    id: 6,
+    author: "Hakeema",
+    rating: 5,
+    text: "I really love that we are able to get a taste of my birth home every weekend! It's probably the first Malaysian cuisine I have eaten in Dunedin and it is tastes amazing!! 🤩🤩 Loved the Nasi Lemak the most and how authentic it looks and tastes! 10/10! It just can't get any better! Best of all is the additional sambal 😍😍",
+  },
 ];
 
 export const shortenReviews: Review[] = [
