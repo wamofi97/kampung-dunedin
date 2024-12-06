@@ -15,6 +15,14 @@ import { client } from "@/sanity/lib/client";
 import { MENU_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 
+interface MenuItem {
+  _id: string;
+  name: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  image: any;
+  description: string[];
+}
+
 const Menu = async () => {
   const menu = await client.fetch(MENU_QUERY);
 
@@ -26,7 +34,7 @@ const Menu = async () => {
       </Headingwbackground>
 
       <div className="mb-8 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-        {menu.map((item: any) => {
+        {menu.map((item: MenuItem) => {
           return (
             <MenuCard
               key={item._id}
