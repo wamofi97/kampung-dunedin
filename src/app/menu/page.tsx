@@ -200,7 +200,7 @@ const Menu = async () => {
           more flavours of Malaysia. Join our WhatsApp group for updates on our
           weekly menus!
         </p>
-        <Link href="https:bit.ly/WhatsAppKampungDunedin" target="_blank">
+        <Link href="https://bit.ly/WhatsAppKampungDunedin" target="_blank">
           <Button size="lg" className="mt-8 w-full">
             Order now
           </Button>
