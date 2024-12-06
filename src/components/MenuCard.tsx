@@ -1,12 +1,12 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 
 interface MenuProps {
   heading: string;
-  image: StaticImageData;
+  image: string;
   children: React.ReactNode;
 }
 
@@ -23,7 +23,6 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
           src={image}
           alt={heading}
           fill
-          placeholder="blur"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={`${heading.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 hover:scale-105`}
         />
