@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description: "What Our Customers Are Saying",
 };
 
+export const revalidate = 60;
+
 const Review = async () => {
   const reviews = await client.fetch(REVIEW_QUERY);
 
