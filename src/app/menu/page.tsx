@@ -3,17 +3,10 @@ import MenuCard from "@/components/MenuCard";
 import Note from "@/components/Note";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-// import nasilemakdaunpisang from "../../../public/images/nasi-lemak-daun-pisang.webp";
-// import sateayam from "../../../public/images/sate-ayam.webp";
-// import satedaging from "../../../public/images/sate-daging.webp";
-// import nasikandarayammadu from "../../../public/images/nasikandarayammadu.webp";
-// import nasikandardagingmasakhitammamak from "../../../public/images/nasikandardagingmasakhitammamak.webp";
-// import sambalobersea from "../../../public/images/sambalobersea.webp";
-// import nasilemakayamrendang from "../../../public/images/nasilemakayamrendang.webp";
-// import karipap from "../../../public/images/karipap.webp";
 import { client } from "@/sanity/lib/client";
 import { MENU_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
+import { Metadata } from "next";
 
 interface MenuItem {
   _id: string;
@@ -26,10 +19,15 @@ interface MenuItem {
   description: string[];
 }
 
+export const metadata: Metadata = {
+  title: "Kampung Dunedin | Menu",
+  description: "Discover Malaysian Flavours You'll Love",
+};
+
+export const revalidate = 10;
+
 const Menu = async () => {
-  const menu = await client.fetch(MENU_QUERY, {
-    revalidate: 30,
-  });
+  const menu = await client.fetch(MENU_QUERY);
 
   return (
     <div className="mx-auto flex min-h-[calc(100vh-161px)] w-full max-w-6xl flex-col items-center justify-center px-3 pb-24 pt-12 md:px-6">
