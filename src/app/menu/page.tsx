@@ -44,9 +44,12 @@ const Menu = async () => {
               heading={item.name}
               image={urlFor(item.image).url()}
             >
-              {item.description.map((item: string, i: number) => (
-                <p key={i} className="mb-2">
-                  {item}
+              {item.description.map((desc: string, i: number) => (
+                <p
+                  key={i}
+                  className={`mb-${i === item.description.length - 1 ? "0" : "4"}`}
+                >
+                  {desc}
                 </p>
               ))}
             </MenuCard>
