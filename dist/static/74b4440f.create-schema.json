@@ -1,0 +1,143 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "max",
+                "constraint": 50
+              }
+            ],
+            "level": "warning",
+            "message": "Dish name should not exceed 50 characters"
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Dish Name"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "warning",
+            "message": "Dish image is required"
+          }
+        ],
+        "name": "image",
+        "type": "image",
+        "title": "Menu Image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "max",
+                "constraint": 100
+              }
+            ],
+            "level": "warning",
+            "message": "Alternate text should not exceed 100 characters"
+          }
+        ],
+        "name": "alternateText",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ],
+            "level": "warning",
+            "message": "Price must be a positive number"
+          }
+        ],
+        "name": "price",
+        "type": "number"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "warning",
+            "message": "Description is required"
+          }
+        ],
+        "of": [
+          {
+            "type": "text"
+          }
+        ],
+        "name": "description",
+        "type": "array"
+      }
+    ],
+    "name": "menu",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "author",
+        "type": "string"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "max",
+                "constraint": 500
+              }
+            ],
+            "level": "warning",
+            "message": "Review should not exceed 500 characters"
+          }
+        ],
+        "name": "text",
+        "type": "text"
+      }
+    ],
+    "name": "review",
+    "type": "document"
+  }
+]
