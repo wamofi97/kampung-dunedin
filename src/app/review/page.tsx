@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Quote, Star } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-// import { reviews } from "@/app/review";
 import { client } from "@/sanity/lib/client";
 import { REVIEW_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
@@ -50,28 +49,6 @@ const Review = async () => {
           </div>
         ))}
       </div>
-
-      {/* <div className="mb-20 flex max-w-4xl flex-col-reverse gap-y-8">
-        {reviews.map((review) => (
-          <div
-            key={review.id}
-            className="item-center relative flex flex-col gap-4 border-b border-secondary/30 py-8 text-center"
-          >
-            <Quote className="absolute right-8 top-0 size-16 text-primary opacity-20" />
-            <Quote className="absolute bottom-20 left-8 size-12 scale-x-[-1] text-primary opacity-20" />
-            <p className="font-regular mb-2 font-heading text-neutral-700 sm:text-lg">{`"${review.text}"`}</p>
-            <div className="mx-auto flex items-center">
-              {[...Array(review.rating)].map((_, index) => (
-                <Star
-                  key={index}
-                  className="h-3 w-3 fill-amber-300 text-amber-300"
-                ></Star>
-              ))}
-            </div>
-            <p className="font-medium">{review.author}</p>
-          </div>
-        ))}
-      </div> */}
 
       <Headingwbackground>
         Loved Your Meal? Share Your Thoughts!
