@@ -11,10 +11,8 @@ export const MENU_QUERY =
   }`);
 
 export const REVIEW_QUERY =
-  defineQuery(`*[_type == "review" && defined(_id) | order(_createdAt desc)]{
+  defineQuery(`*[_type == "review" && defined(_id)] | order(_createdAt desc){
     _id, 
     author, 
-    desc, 
-    rating, 
     text,
   }`);
