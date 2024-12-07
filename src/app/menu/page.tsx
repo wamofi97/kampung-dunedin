@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: "Discover Malaysian Flavours You'll Love",
 };
 
-export const revalidate = 10;
+export const revalidate = 60;
 
 const Menu = async () => {
   const menu = await client.fetch(MENU_QUERY);
