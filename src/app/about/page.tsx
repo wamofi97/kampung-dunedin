@@ -5,7 +5,7 @@ import family from "../../../public/family.webp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kampung Dunedin | About",
+  title: "Kampung Dunedin | Our Story",
   description: "What Our Customers Are Saying",
 };
 
