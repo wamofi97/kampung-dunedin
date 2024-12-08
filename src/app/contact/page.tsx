@@ -51,8 +51,6 @@ const Contact = () => {
       });
   };
 
-  // Simulate form submission
-
   return (
     <div className="mx-auto flex min-h-[calc(100vh-161px)] w-full max-w-6xl flex-col items-center justify-center px-6 pb-24 pt-12 md:px-6">
       <div className="dotted-background"></div>
@@ -107,8 +105,8 @@ const Contact = () => {
         <div>
           <h2 className="mb-4 text-2xl font-medium">Drop us a Message</h2>
           {formStatus === "submitted" ? (
-            <div className="rounded-lg bg-green-100 p-4 dark:bg-green-900">
-              <p className="text-green-700 dark:text-green-100">
+            <div className="rounded-lg bg-green-100 p-4">
+              <p className="text-green-700">
                 Thank you for your message! We&apos;ll get back to you soon.
               </p>
             </div>

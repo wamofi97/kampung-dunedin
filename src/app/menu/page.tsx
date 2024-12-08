@@ -8,6 +8,13 @@ import { MENU_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Kampung Dunedin | Menu",
+  description: "Discover Malaysian Flavours You'll Love",
+};
+
+export const revalidate = 60;
+
 interface MenuItem {
   _id: string;
   name: string;
@@ -18,13 +25,6 @@ interface MenuItem {
   };
   description: string[];
 }
-
-export const metadata: Metadata = {
-  title: "Kampung Dunedin | Menu",
-  description: "Discover Malaysian Flavours You'll Love",
-};
-
-export const revalidate = 60;
 
 const Menu = async () => {
   const menu = await client.fetch(MENU_QUERY);
