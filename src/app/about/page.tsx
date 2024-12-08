@@ -2,6 +2,12 @@ import Headingwbackground from "@/components/Headingwbackground";
 import Image from "next/image";
 import React from "react";
 import family from "../../../public/family.webp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kampung Dunedin | About",
+  description: "What Our Customers Are Saying",
+};
 
 const About = () => {
   return (
