@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Kampung Dunedin | Our Story",
-  description: "What Our Customers Are Saying",
+  description: "Discover the Story Behind Kampung Dunedin",
 };
 
 const About = () => {
