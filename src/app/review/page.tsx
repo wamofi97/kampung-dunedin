@@ -7,18 +7,17 @@ import { client } from "@/sanity/lib/client";
 import { REVIEW_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
 
-interface Review {
-  _id: string;
-  author: string;
-  text: string;
-}
-
 export const metadata: Metadata = {
   title: "Kampung Dunedin | Reviews",
   description: "What Our Customers Are Saying",
 };
 
 export const revalidate = 60;
+interface Review {
+  _id: string;
+  author: string;
+  text: string;
+}
 
 const Review = async () => {
   const reviews = await client.fetch(REVIEW_QUERY);
