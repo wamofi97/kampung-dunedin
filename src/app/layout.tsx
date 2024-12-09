@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Kampung Dunedin",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.png",
   },
   description:
     "Experience authentic, homemade Malaysian cuisine in Dunedin, New Zealand. Kampung Dunedin brings the rich flavors of Malaysia's traditional dishes to the heart of the South Island.",
