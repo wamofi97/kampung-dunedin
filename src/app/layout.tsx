@@ -17,11 +17,43 @@ const bespoke = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kampungdunedin.nz"),
+  keywords: [
+    "Kampung Dunedin",
+    "Makan sedap New Zealand",
+    "Malaysian food Dunedin",
+    "Homemade Malaysian cuisine NZ",
+    "South Island Malaysian food",
+    "Authentic Malaysian meals Dunedin",
+    "Dunedin food delivery Malaysian",
+    "Halal Malaysian food Dunedin",
+  ],
   title: {
-    default: "Kampung Dunedin",
+    default: "Kampung Dunedin | Authentic Malaysian Food",
     template: "%s | Kampung Dunedin",
   },
-  description: "Authentic Malaysian Food in Dunedin, New Zealand",
+  icons: {
+    icon: "/favicon.svg",
+  },
+  description:
+    "Experience authentic, homemade Malaysian cuisine in Dunedin, New Zealand. Kampung Dunedin brings the rich flavors of Malaysia's traditional dishes to the heart of the South Island.",
+  openGraph: {
+    title: "Kampung Dunedin",
+    description:
+      "Authentic Malaysian Food in Dunedin, New Zealand. Discover rich, traditional flavors in the heart of the South Island.",
+    url: "https://kampungdunedin.nz",
+    images: [
+      {
+        url: "https://kampungdunedin.nz/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kampung Dunedin - Authentic Malaysian Food",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://kampungdunedin.nz",
+  },
 };
 
 export default function RootLayout({
