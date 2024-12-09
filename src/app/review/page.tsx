@@ -8,7 +8,7 @@ import { REVIEW_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kampung Dunedin | Reviews",
+  title: "Reviews",
   description: "What Our Customers Are Saying",
 };
 

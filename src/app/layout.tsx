@@ -17,11 +17,11 @@ const bespoke = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kampung Dunedin",
-  description: "Authentic Malaysian Food Dunedin South Island New Zealand NZ",
-  icons: {
-    icon: "/favicon.png",
+  title: {
+    default: "Kampung Dunedin",
+    template: "%s | Kampung Dunedin",
   },
+  description: "Authentic Malaysian Food in Dunedin, New Zealand",
 };
 
 export default function RootLayout({

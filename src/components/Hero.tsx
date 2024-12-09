@@ -23,7 +23,6 @@ const Hero = () => {
               alt="Logo"
               width="300"
               height="300"
-              placeholder="blur"
               className="w-60 sm:w-36 md:w-44"
             />
           </div>

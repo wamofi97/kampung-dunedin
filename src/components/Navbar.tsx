@@ -90,9 +90,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.link}
                   className={`${pathname === link.link && "font-semibold text-primary"} w-fit text-2xl`}
-                  onClick={() => {
-                    setTimeout(() => setIsOpen(!isOpen), 300);
-                  }}
+                  onClick={() => setIsOpen(!isOpen)}
                 >
                   {link.name}
                 </Link>

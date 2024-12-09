@@ -9,7 +9,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kampung Dunedin | Menu",
+  title: "Menu",
   description: "Discover Malaysian Flavours You'll Love",
 };
 
