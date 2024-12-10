@@ -37,6 +37,21 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kampungdunedin.nz",
   },
+  openGraph: {
+    type: "website",
+    url: "https://kampungdunedin.nz",
+    title: "Kampung Dunedin | Authentic Malaysian Food",
+    description:
+      "Experience authentic, homemade Malaysian cuisine in Dunedin, New Zealand. Kampung Dunedin brings the rich flavors of Malaysia's traditional dishes to the heart of the South Island.",
+    images: [
+      {
+        url: "https://kampungdunedin.nz/opengraph-image.png?v=1",
+        width: 1200,
+        height: 630,
+        alt: "Kampung Dunedin logo and preview image",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
