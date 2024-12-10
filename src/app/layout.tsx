@@ -32,9 +32,6 @@ export const metadata: Metadata = {
     default: "Kampung Dunedin | Authentic Malaysian Food",
     template: "%s | Kampung Dunedin",
   },
-  icons: {
-    icon: "/favicon.png",
-  },
   description:
     "Experience authentic, homemade Malaysian cuisine in Dunedin, New Zealand. Kampung Dunedin brings the rich flavors of Malaysia's traditional dishes to the heart of the South Island.",
   alternates: {
@@ -49,6 +46,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body className={`${poppins.variable} ${bespoke.variable} antialiased`}>
         <Navbar />
         {children}
