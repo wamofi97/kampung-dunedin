@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -59,6 +60,24 @@ export default function RootLayout({
           href="/apple-touch-icon.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <Script id="structured-data" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Kampung Dunedin",
+            url: "https://kampungdunedin.nz",
+            logo: "https://kampungdunedin.nz/favicon.png",
+            sameAs: [
+              "https://www.facebook.com/kampungdunedin/",
+              "https://www.instagram.com/kampungdunedin/",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              email: "kampungdunedin@gmail.com",
+              contactType: "customer service",
+            },
+          })}
+        </Script>
       </head>
       <body className={`${poppins.variable} ${bespoke.variable} antialiased`}>
         <Navbar />
