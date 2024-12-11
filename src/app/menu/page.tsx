@@ -11,6 +11,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Menu",
   description: "Discover Malaysian Flavours You'll Love",
+  alternates: {
+    canonical: "https://kampungdunedin.nz/menu",
+  },
 };
 
 export const revalidate = 60;

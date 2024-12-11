@@ -7,6 +7,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Story",
   description: "Discover the Story Behind Kampung Dunedin",
+  alternates: {
+    canonical: "https://kampungdunedin.nz/about",
+  },
 };
 
 const About = () => {

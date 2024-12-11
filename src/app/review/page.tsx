@@ -10,6 +10,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Reviews",
   description: "What Our Customers Are Saying",
+  alternates: {
+    canonical: "https://kampungdunedin.nz/review",
+  },
 };
 
 export const revalidate = 60;

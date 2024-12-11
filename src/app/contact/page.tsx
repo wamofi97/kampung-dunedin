@@ -6,6 +6,9 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get In Touch With Kampung Dunedin",
+  alternates: {
+    canonical: "https://kampungdunedin.nz/contact",
+  },
 };
 
 const Contact = () => {

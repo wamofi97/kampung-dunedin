@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Malaysian food Dunedin",
     "Homemade Malaysian cuisine NZ",
     "South Island Malaysian food",
-    "Authentic Malaysian meals Dunedin",
+    "Authentic Malaysian food Dunedin",
     "Dunedin food delivery Malaysian",
     "Halal Malaysian food Dunedin",
   ],
