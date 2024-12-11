@@ -37,20 +37,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kampungdunedin.nz",
   },
-  openGraph: {
-    type: "website",
-    url: "https://kampungdunedin.nz",
-    title: "Kampung Dunedin | Authentic Malaysian Food",
-    description:
-      "Experience authentic, homemade Malaysian cuisine in Dunedin, New Zealand. Kampung Dunedin brings the rich flavors of Malaysia's traditional dishes to the heart of the South Island.",
-    images: [
-      {
-        url: "https://kampungdunedin.nz/opengraph-image.png?v=1",
-        width: 1200,
-        height: 630,
-        alt: "Kampung Dunedin logo and preview image",
-      },
-    ],
+  icons: {
+    icon: "/favicon.png",
   },
 };
 
@@ -62,12 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="icon"
-          type="image/png"
-          href="/favicon-96x96.png"
-          sizes="96x96"
-        />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
