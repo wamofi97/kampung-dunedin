@@ -63,7 +63,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden items-center justify-center pt-10 md:flex">
+      <div className="hidden items-center justify-center pt-12 sm:flex">
         <MenuSlider />
       </div>
     </div>

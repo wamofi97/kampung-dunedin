@@ -20,8 +20,8 @@ const MenuSlider = async () => {
       className="slider"
       style={
         {
-          "--width": "125px",
-          "--height": "170px",
+          "--width": "140px",
+          "--height": "180px",
           "--quantity": images.length,
         } as React.CSSProperties
       }
@@ -30,7 +30,7 @@ const MenuSlider = async () => {
         {images.map((image: image, index: number) => (
           <div
             key={image._id}
-            className="item relative h-[170px] w-[125px]"
+            className="item relative"
             style={
               { "--position": initialPositions[index] } as React.CSSProperties
             }
@@ -39,7 +39,7 @@ const MenuSlider = async () => {
               src={image.imageUrl}
               alt={image.altText}
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 125px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 140px"
               className="rounded-lg object-cover"
             />
           </div>
