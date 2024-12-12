@@ -24,6 +24,7 @@ export default function Home() {
                 src={family}
                 alt="Dunedin"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 placeholder="blur"
                 className="h-auto rounded-lg object-cover"
               ></Image>
