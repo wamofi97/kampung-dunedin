@@ -21,12 +21,10 @@ export const revalidate = 60;
 interface MenuItem {
   _id: string;
   name: string;
-  image: {
-    asset: {
-      _ref: string;
-    };
-  };
   description: string[];
+  price?: number;
+  imageUrl: string;
+  altText: string;
 }
 
 const Menu = async () => {
@@ -44,8 +42,9 @@ const Menu = async () => {
           return (
             <MenuCard
               key={item._id}
-              heading={item.name}
-              image={urlFor(item.image).url()}
+              name={item.name}
+              image={urlFor(item.imageUrl).url()}
+              altText={item.altText}
             >
               {item.description.map((desc: string, i: number) => (
                 <p

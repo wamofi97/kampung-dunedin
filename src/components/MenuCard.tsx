@@ -5,12 +5,13 @@ import Image from "next/image";
 import React from "react";
 
 interface MenuProps {
-  heading: string;
+  name: string;
   image: string;
   children: React.ReactNode;
+  altText?: string;
 }
 
-const MenuCard = ({ heading, image, children }: MenuProps) => {
+const MenuCard = ({ name, image, children, altText }: MenuProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -21,16 +22,16 @@ const MenuCard = ({ heading, image, children }: MenuProps) => {
       <div className="relative h-[90vw] min-h-[350px] overflow-hidden rounded-t-xl sm:h-[375px]">
         <Image
           src={image}
-          alt={heading}
+          alt={altText || name}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className={`${heading.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 hover:scale-105`}
+          className={`${name.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 hover:scale-105`}
         />
       </div>
-      <div className="px-3 py-4 transition-colors duration-500 sm:py-3">
+      <div className="px-3 py-4 transition-colors duration-500 sm:py-2">
         <div className="flex items-center gap-2 sm:min-h-[70px]">
           <h2 className="font-heading text-lg font-bold text-secondary">
-            {heading}
+            {name}
           </h2>
           <span className="ml-auto">
             <ChevronRight

@@ -6,45 +6,34 @@ export default defineType({
   type: "document",
   fields: [
     defineField({
-      name: "name",
-      title: "Dish Name",
-      type: "string",
-      validation: (Rule) =>
-        Rule.required()
-          .max(50)
-          .warning("Dish name should not exceed 50 characters"),
-    }),
-    defineField({
-      name: "image",
-      title: "Menu Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      name: "dish",
+      title: "Dish Selection",
+      type: "reference",
+      description: "Select a dish from the menu images",
+      to: [{ type: "menuImages" }],
       validation: (Rule) => Rule.required().warning("Dish image is required"),
-    }),
-    defineField({
-      name: "alternateText",
-      title: "Alternate Text",
-      type: "string",
-      validation: (Rule) =>
-        Rule.max(100).warning(
-          "Alternate text should not exceed 100 characters",
-        ),
     }),
     defineField({
       name: "price",
       title: "Price",
       type: "number",
+      description: "Enter the price of the dish (optional for future use)",
       validation: (Rule) =>
         Rule.min(0).warning("Price must be a positive number"),
     }),
     defineField({
       name: "description",
       title: "Description",
+      description: "Enter the description of the dish",
       type: "array",
-      of: [{ type: "text" }],
+      of: [{ type: "text", rows: 6 }],
       validation: (Rule) => Rule.required().warning("Description is required"),
     }),
   ],
+  preview: {
+    select: {
+      title: "dish.name",
+      media: "dish.image.asset",
+    },
+  },
 });
