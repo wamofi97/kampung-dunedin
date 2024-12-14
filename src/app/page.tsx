@@ -22,7 +22,7 @@ export default function Home() {
             <div className="relative h-96 w-full md:w-1/2">
               <Image
                 src={family}
-                alt="Dunedin"
+                alt="Our Family in Dunedin"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                 placeholder="blur"

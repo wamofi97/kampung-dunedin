@@ -37,7 +37,7 @@ const MenuSlider = async () => {
           >
             <Image
               src={image.imageUrl}
-              alt={image.altText}
+              alt={image.altText || "Menu Image"}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 140px"
               className="rounded-lg object-cover"
