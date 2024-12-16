@@ -65,10 +65,10 @@ const About = () => {
           we hope to bring you a taste of our village.{" "}
           <span className="font-semibold italic">Selamat menjamu selera! </span>
         </p>
-        <p className="mt-8 text-center text-[0.95rem] font-medium text-gray-900 md:text-lg">
-          💓 Aunty Anija, Fareez Fauzi & Arina Aizal 💓
-        </p>
       </div>
+      <p className="mt-10 text-center text-[0.95rem] font-medium text-gray-900 md:text-lg">
+        💓 Aunty Anija, Fareez Fauzi & Arina Aizal 💓
+      </p>
     </div>
   );
 };
