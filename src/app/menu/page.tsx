@@ -22,13 +22,20 @@ interface MenuItem {
   _id: string;
   name: string;
   description: string[];
-  price?: number;
   imageUrl: string;
+  blurDataURL: string;
+  category: string;
   altText: string;
 }
 
 const Menu = async () => {
   const menu = await client.fetch(MENU_QUERY);
+  const mainDishes = menu.filter(
+    (item: MenuItem) => item.category === "Main Dishes",
+  );
+  const sideDishes = menu.filter(
+    (item: MenuItem) => item.category === "Side Dishes",
+  );
 
   return (
     <div className="mx-auto flex min-h-[calc(100vh-161px)] w-full max-w-6xl flex-col items-center justify-center px-3 pb-24 pt-12 md:px-6">
@@ -37,26 +44,54 @@ const Menu = async () => {
         Malaysian Flavours You&apos;ll Love
       </Headingwbackground>
 
-      <div className="mb-8 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
-        {menu.map((item: MenuItem) => {
-          return (
-            <MenuCard
-              key={item._id}
-              name={item.name}
-              image={urlFor(item.imageUrl).url()}
-              altText={item.altText}
-            >
-              {item.description.map((desc: string, i: number) => (
-                <p
-                  key={i}
-                  className={`mb-${i === item.description.length - 1 ? "0" : "4"}`}
-                >
-                  {desc}
-                </p>
-              ))}
-            </MenuCard>
-          );
-        })}
+      {/* mainDishes */}
+      <div className="mb-8">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <hr className="w-full -translate-y-2 border border-secondary sm:-translate-y-3" />
+          <h3 className="mx-auto mb-4 w-fit text-nowrap rounded-full border-2 border-secondary px-8 py-2 font-heading text-2xl font-medium uppercase text-secondary sm:mb-8 sm:text-start sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
+            Main Dishes
+          </h3>
+          <hr className="w-full -translate-y-2 border border-secondary sm:-translate-y-3" />
+        </div>
+        <div className="mb-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+          {mainDishes.map((item: MenuItem) => {
+            return (
+              <MenuCard
+                key={item._id}
+                id={item._id}
+                name={item.name}
+                image={urlFor(item.imageUrl).url()}
+                blurDataUrl={item.blurDataURL}
+                altText={item.altText}
+              />
+            );
+          })}
+        </div>
+      </div>
+
+      {/* sideDishes */}
+      <div className="mb-3">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <hr className="w-full -translate-y-2 border border-secondary sm:-translate-y-3" />
+          <h3 className="mx-auto mb-4 w-fit text-nowrap rounded-full border-2 border-secondary px-8 py-2 font-heading text-2xl font-medium uppercase text-secondary sm:mb-8 sm:text-start sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
+            Side Dishes
+          </h3>
+          <hr className="w-full -translate-y-2 border border-secondary sm:-translate-y-3" />
+        </div>
+        <div className="mb-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
+          {sideDishes.map((item: MenuItem) => {
+            return (
+              <MenuCard
+                key={item._id}
+                id={item._id}
+                name={item.name}
+                image={urlFor(item.imageUrl).url()}
+                blurDataUrl={item.blurDataURL}
+                altText={item.altText}
+              />
+            );
+          })}
+        </div>
       </div>
 
       <Note>

@@ -14,6 +14,13 @@ export default defineType({
       validation: (Rule) => Rule.required().warning("Dish image is required"),
     }),
     defineField({
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: [{ type: "category" }],
+      validation: (Rule) => Rule.required().warning("Category is required"),
+    }),
+    defineField({
       name: "price",
       title: "Price",
       type: "number",

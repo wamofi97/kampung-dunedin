@@ -8,4 +8,5 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("menu").title("Menu"),
       S.documentTypeListItem("review").title("Review"),
       S.documentTypeListItem("menuImages").title("Menu Images"),
+      S.documentTypeListItem("category").title("Category"),
     ]);
