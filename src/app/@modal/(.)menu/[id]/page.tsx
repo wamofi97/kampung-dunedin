@@ -12,6 +12,8 @@ interface MenuItem {
   altText: string;
 }
 
+export const revalidate = 120;
+
 export default async function Page({
   params,
 }: {
