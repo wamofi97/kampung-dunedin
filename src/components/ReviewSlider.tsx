@@ -50,19 +50,18 @@ const ReviewSlider = async () => {
           } as React.CSSProperties
         }
       >
-        <div className="list">
-          {filteredShortenedReviews.map((review: Review, index: number) => (
+        {filteredShortenedReviews.map((review: Review, index: number) => (
+          <div className="list" key={review._id}>
             <>
               <div
-                key={review._id}
                 className="reviewitem flex items-center justify-center"
                 style={{ "--position": index } as React.CSSProperties}
               >
                 <ReviewCard review={review} />
               </div>
             </>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
