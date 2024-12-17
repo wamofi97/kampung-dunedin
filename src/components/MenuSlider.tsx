@@ -6,6 +6,7 @@ type image = {
   _id: string;
   imageUrl: string;
   altText: string;
+  blurDataURL: string;
 };
 
 const MenuSlider = async () => {
@@ -39,6 +40,8 @@ const MenuSlider = async () => {
               src={image.imageUrl}
               alt={image.altText || "Menu Image"}
               fill
+              placeholder="blur"
+              blurDataURL={image.blurDataURL}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 140px"
               className="rounded-lg object-cover"
             />
