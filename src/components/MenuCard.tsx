@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/navigation";
 
 interface MenuProps {
   id: string;
@@ -11,10 +15,23 @@ interface MenuProps {
 }
 
 const MenuCard = ({ id, name, image, altText, blurDataUrl }: MenuProps) => {
+  const router = useRouter();
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      router.prefetch(`/menu/${id}`);
+    }
+  }, [inView, id, router]);
+
   return (
     <Link
       href={`/menu/${id}`}
       className={`group flex cursor-pointer flex-col rounded-lg bg-white shadow-md`}
+      ref={ref} // Attach ref to trigger Intersection Observer
     >
       <div className="relative h-[50vw] overflow-hidden rounded-t-xl sm:h-[300px]">
         <Image
@@ -24,7 +41,9 @@ const MenuCard = ({ id, name, image, altText, blurDataUrl }: MenuProps) => {
           placeholder="blur"
           blurDataURL={blurDataUrl}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className={`${name.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 hover:scale-105`}
+          className={`${
+            name.startsWith("Sate") && "object-bottom"
+          } h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 hover:scale-105`}
         />
       </div>
       <div className="px-3 py-2">
