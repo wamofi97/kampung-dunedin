@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const Contact = () => {
   return (
-    <div className="mx-auto flex min-h-[calc(100vh-161px)] w-full max-w-6xl flex-col items-center justify-center px-6 pb-24 pt-12 md:px-6">
+    <div className="mx-auto flex min-h-[calc(100vh-161px)] w-full max-w-6xl flex-col items-center px-6 pb-24 pt-12 md:px-6">
       <div className="dotted-background"></div>
       <Headingwbackground>We&apos;d Love to Hear from You!</Headingwbackground>
 
