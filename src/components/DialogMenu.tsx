@@ -23,7 +23,7 @@ const DialogMenu = ({ menu }: MenuItem) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-2"
       onClick={closeModal}
     >
       <div
@@ -54,12 +54,12 @@ const DialogMenu = ({ menu }: MenuItem) => {
             <h2 className="my-4 text-center font-heading text-2xl font-semibold uppercase text-secondary sm:mb-8 sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
               {menu.name}
             </h2>
-            <div>
+            <div className="border-l-4 border-primary pl-2">
               {menu.description.map((item: string, index: number) => (
                 <p
                   className={`mb-${
                     index === menu.description.length - 1 ? "0" : "4"
-                  } text-gray-700`}
+                  } text-gray-700 md:text-lg`}
                   key={index}
                 >
                   {item}

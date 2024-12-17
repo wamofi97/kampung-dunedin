@@ -42,11 +42,13 @@ export default async function Page({
             <h2 className="mb-4 text-center font-heading text-2xl font-semibold uppercase text-secondary sm:mb-8 sm:text-start sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
               {name}
             </h2>
-            {description.map((item, index) => (
-              <p className="mb-4" key={index}>
-                {item}
-              </p>
-            ))}
+            <div className="border-l-4 border-primary pl-2">
+              {description.map((item, index) => (
+                <p className="mb-4 md:text-lg" key={index}>
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
