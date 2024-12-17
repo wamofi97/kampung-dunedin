@@ -12,17 +12,17 @@ interface MenuItem {
   altText: string;
 }
 
+export const revalidate = 120;
+
 export default async function Page({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
-
   const menu: MenuItem = await client.fetch(MENU_QUERY_BY_ID, { id });
-
   const { imageUrl, altText, blurDataURL, name, description } = menu;
-  // console.log(menu);
+
   return (
     <>
       <div className="mx-auto min-h-[calc(100vh-161px)] w-full max-w-6xl">
