@@ -22,12 +22,10 @@ const DialogMenu = ({ menu }: MenuItem) => {
     router.back();
   };
 
-  const descriptionAlphabeticLength = menu.description.reduce(
+  const descriptionAlphabetLength = menu.description.reduce(
     (total, item) => total + item.length,
     0,
   );
-
-  console.log(descriptionAlphabeticLength);
 
   return (
     <div
@@ -46,7 +44,7 @@ const DialogMenu = ({ menu }: MenuItem) => {
         </button>
         <div className="flex flex-col items-center gap-x-4 md:flex-row">
           <div
-            className={`relative h-[${descriptionAlphabeticLength > 300 ? "40vh" : "50vh"}] w-full overflow-hidden md:h-[70vh] md:w-3/5`}
+            className={`relative ${descriptionAlphabetLength > 300 ? "h-[45vh]" : "h-[50vh]"} w-full overflow-hidden md:h-[70vh] md:w-3/5`}
           >
             <Image
               src={menu.imageUrl}
