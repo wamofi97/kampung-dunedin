@@ -27,7 +27,7 @@ export default async function Page({
     <>
       <div className="mx-auto min-h-[calc(100vh-161px)] w-full max-w-6xl">
         <div className="flex flex-col items-center justify-center gap-x-8 gap-y-4 px-4 py-10 sm:flex-row">
-          <div className="relative h-[75vh] max-h-[800px] w-full overflow-hidden sm:w-3/5">
+          <div className="relative h-[50vh] max-h-[800px] w-full overflow-hidden sm:w-3/5 md:h-[75vh]">
             <Image
               src={imageUrl}
               alt={altText || name}

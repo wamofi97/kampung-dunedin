@@ -1,4 +1,5 @@
 "use client";
+import { X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -21,23 +22,32 @@ const DialogMenu = ({ menu }: MenuItem) => {
     router.back();
   };
 
+  const descriptionAlphabeticLength = menu.description.reduce(
+    (total, item) => total + item.length,
+    0,
+  );
+
+  console.log(descriptionAlphabeticLength);
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-2"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 px-2"
       onClick={closeModal}
     >
       <div
-        className="relative w-full max-w-5xl overflow-hidden rounded-md bg-white p-4 shadow-lg transition-transform duration-300 ease-out"
-        onClick={(e) => e.stopPropagation()} // Prevent modal close when clicking inside
+        className="relative w-full max-w-5xl overflow-hidden rounded-md bg-white p-2 pb-4 shadow-lg transition-transform duration-300 ease-out"
+        onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={closeModal}
-          className="absolute right-2 top-2 z-10 flex items-center justify-center rounded-full bg-gray-200/80 px-3 py-1 text-2xl font-bold text-gray-500 hover:text-gray-800"
+          className="absolute right-2 top-2 z-10 flex items-center justify-center rounded-full bg-gray-200/80 p-2 text-2xl text-gray-500 hover:text-gray-800"
         >
-          &times;
+          <X />
         </button>
         <div className="flex flex-col items-center gap-x-4 md:flex-row">
-          <div className="relative h-[50vh] w-full overflow-hidden md:h-[70vh] md:w-3/5">
+          <div
+            className={`relative h-[${descriptionAlphabeticLength > 300 ? "40vh" : "50vh"}] w-full overflow-hidden md:h-[70vh] md:w-3/5`}
+          >
             <Image
               src={menu.imageUrl}
               alt={menu.altText || menu.name}
@@ -51,7 +61,7 @@ const DialogMenu = ({ menu }: MenuItem) => {
             />
           </div>
           <div className="md:w-2/5">
-            <h2 className="my-4 text-center font-heading text-2xl font-semibold uppercase text-secondary sm:mb-8 sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
+            <h2 className="my-2 text-center font-heading text-xl font-semibold uppercase text-secondary sm:mb-8 sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
               {menu.name}
             </h2>
             <div className="border-l-4 border-primary pl-2">
@@ -59,7 +69,7 @@ const DialogMenu = ({ menu }: MenuItem) => {
                 <p
                   className={`mb-${
                     index === menu.description.length - 1 ? "0" : "4"
-                  } text-gray-700 md:text-lg`}
+                  } text-sm text-gray-700 md:text-lg`}
                   key={index}
                 >
                   {item}
