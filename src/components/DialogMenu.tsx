@@ -33,7 +33,7 @@ const DialogMenu = ({ menu }: MenuItem) => {
       onClick={closeModal}
     >
       <div
-        className="relative w-full max-w-5xl overflow-hidden rounded-md bg-white p-2 pb-4 shadow-lg transition-transform duration-300 ease-out"
+        className="relative w-full max-w-5xl overflow-hidden rounded-md bg-white p-2 shadow-lg transition-transform duration-300 ease-out"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -65,9 +65,7 @@ const DialogMenu = ({ menu }: MenuItem) => {
             <div className="border-l-4 border-primary pl-2">
               {menu.description.map((item: string, index: number) => (
                 <p
-                  className={`mb-${
-                    index === menu.description.length - 1 ? "0" : "4"
-                  } text-sm text-gray-700 md:text-lg`}
+                  className="mb-4 text-sm text-gray-700 md:text-lg"
                   key={index}
                 >
                   {item}
