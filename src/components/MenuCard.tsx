@@ -21,9 +21,17 @@ const MenuCard = ({ id, name, image, altText, blurDataUrl }: MenuProps) => {
     triggerOnce: true,
   });
 
-  useEffect(() => {
-    if (inView) {
+  const handleMouseEnter = () => {
+    if (window.innerWidth > 768) {
       router.prefetch(`/menu/${id}`);
+    }
+  };
+
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      if (inView) {
+        router.prefetch(`/menu/${id}`);
+      }
     }
   }, [inView, id, router]);
 
@@ -32,6 +40,7 @@ const MenuCard = ({ id, name, image, altText, blurDataUrl }: MenuProps) => {
       href={`/menu/${id}`}
       className={`group flex cursor-pointer flex-col rounded-lg bg-white shadow-md`}
       ref={ref}
+      onMouseEnter={handleMouseEnter}
       scroll={false}
     >
       <div className="relative h-[50vw] overflow-hidden rounded-t-xl sm:h-[300px]">
