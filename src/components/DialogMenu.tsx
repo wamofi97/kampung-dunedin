@@ -58,7 +58,7 @@ const DialogMenu = ({ menu }: MenuItem) => {
               placeholder="blur"
               blurDataURL={menu.blurDataURL}
               quality={100}
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className={`${
                 menu.name.startsWith("Sate") && "object-bottom"
               } h-auto w-auto object-cover`}
