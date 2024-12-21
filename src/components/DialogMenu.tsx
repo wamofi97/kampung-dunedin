@@ -2,6 +2,7 @@
 import { X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 interface MenuItem {
   menu: {
@@ -22,29 +23,33 @@ const DialogMenu = ({ menu }: MenuItem) => {
     router.back();
   };
 
-  const descriptionAlphabetLength = menu.description.reduce(
-    (total, item) => total + item.length,
-    0,
-  );
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 px-2"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2"
       onClick={closeModal}
     >
-      <div
-        className="relative w-full max-w-5xl overflow-hidden rounded-md bg-white p-2 shadow-lg transition-transform duration-300 ease-out"
+      <dialog
+        className="relative w-full max-w-5xl rounded-md bg-white p-2"
         onClick={(e) => e.stopPropagation()}
+        open
       >
         <button
           onClick={closeModal}
-          className="absolute right-2 top-2 z-10 flex items-center justify-center rounded-full bg-gray-200/80 p-2 text-2xl text-gray-500 hover:text-gray-800"
+          className="absolute right-1 top-1 z-10 flex items-center justify-center rounded-full bg-gray-200/70 p-2 text-2xl text-gray-600 hover:text-gray-800 sm:right-2 sm:top-2"
         >
           <X />
         </button>
-        <div className="flex flex-col items-center gap-x-4 md:flex-row">
+        <div className="flex max-h-[85vh] flex-col items-center gap-x-4 overflow-auto sm:flex-row">
           <div
-            className={`relative ${descriptionAlphabetLength > 300 ? "h-[45vh]" : "h-[50vh]"} w-full overflow-hidden md:h-[70vh] md:w-3/5`}
+            className={`relative h-[50vh] min-h-[350px] w-full sm:h-[70vh] sm:w-3/5`}
           >
             <Image
               src={menu.imageUrl}
@@ -58,23 +63,20 @@ const DialogMenu = ({ menu }: MenuItem) => {
               } h-auto w-auto object-cover`}
             />
           </div>
-          <div className="md:w-2/5">
-            <h2 className="my-2 text-center font-heading text-xl font-semibold uppercase text-secondary sm:mb-8 sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
+          <div className="sm:w-2/5">
+            <h2 className="my-2 text-center font-heading text-xl font-semibold uppercase text-secondary sm:my-4 sm:text-3xl md:mb-4 md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
               {menu.name}
             </h2>
             <div className="border-l-4 border-primary pl-2">
               {menu.description.map((item: string, index: number) => (
-                <p
-                  className="mb-4 text-sm text-gray-700 md:text-lg"
-                  key={index}
-                >
+                <p className="mb-4 text-gray-700 sm:text-lg" key={index}>
                   {item}
                 </p>
               ))}
             </div>
           </div>
         </div>
-      </div>
+      </dialog>
     </div>
   );
 };
