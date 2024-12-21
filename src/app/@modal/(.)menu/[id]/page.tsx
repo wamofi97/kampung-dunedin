@@ -1,6 +1,6 @@
 import DialogMenu from "@/components/DialogMenu";
 import { client } from "@/sanity/lib/client";
-import { MENU_QUERY_BY_ID } from "@/sanity/lib/queries";
+import { MENU_QUERY, MENU_QUERY_BY_ID } from "@/sanity/lib/queries";
 
 interface MenuItem {
   _id: string;
@@ -13,6 +13,11 @@ interface MenuItem {
 }
 
 export const revalidate = 120;
+
+export const generateStaticParams = async () => {
+  const menus = await client.fetch(MENU_QUERY);
+  return menus.map((menu: MenuItem) => ({ id: menu._id }));
+};
 
 export default async function Page({
   params,
