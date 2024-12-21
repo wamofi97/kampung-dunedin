@@ -1,6 +1,8 @@
 import { client } from "@/sanity/lib/client";
-import { MENU_QUERY_BY_ID } from "@/sanity/lib/queries";
+import { MENU_QUERY, MENU_QUERY_BY_ID } from "@/sanity/lib/queries";
+import { Metadata } from "next";
 import Image from "next/image";
+// import { cache } from "react";
 
 interface MenuItem {
   _id: string;
@@ -12,6 +14,41 @@ interface MenuItem {
   altText: string;
 }
 
+export const generateStaticParams = async () => {
+  const menus = await client.fetch(MENU_QUERY);
+  return menus.map((menu: MenuItem) => ({ id: menu._id }));
+};
+
+const getMenu = async (id: string) => {
+  const menu = await client.fetch(MENU_QUERY_BY_ID, { id });
+  return menu;
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const id = (await params).id;
+  const menu: MenuItem = await getMenu(id);
+  return {
+    title: { absolute: menu.name + " - Kampung Dunedin" },
+    keywords: menu.name + " - Kampung Dunedin",
+    description: menu.description.join(" "),
+    openGraph: {
+      title: menu.name + " - Kampung Dunedin",
+      description: menu.description.join(" "),
+      images: [menu.imageUrl],
+      siteName: "Kampung Dunedin",
+      type: "website",
+      url: `https://kampungdunedin.nz/menu/${id}`,
+    },
+    alternates: {
+      canonical: `https://kampungdunedin.nz/menu/${id}`,
+    },
+  };
+}
+
 export const revalidate = 120;
 
 export default async function Page({
@@ -20,14 +57,14 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
-  const menu: MenuItem = await client.fetch(MENU_QUERY_BY_ID, { id });
+  const menu: MenuItem = await getMenu(id);
   const { imageUrl, altText, blurDataURL, name, description } = menu;
 
   return (
     <>
       <div className="mx-auto min-h-[calc(100vh-161px)] w-full max-w-6xl">
         <div className="flex flex-col items-center justify-center gap-x-8 gap-y-4 px-4 py-10 sm:flex-row">
-          <div className="relative h-[50vh] max-h-[800px] w-full overflow-hidden sm:w-3/5 md:h-[75vh]">
+          <div className="relative h-[60vh] max-h-[800px] w-full overflow-hidden sm:w-3/5 md:h-[75vh]">
             <Image
               src={imageUrl}
               alt={altText || name}
