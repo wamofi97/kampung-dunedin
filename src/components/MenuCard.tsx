@@ -31,7 +31,8 @@ const MenuCard = ({ id, name, image, altText, blurDataUrl }: MenuProps) => {
     <Link
       href={`/menu/${id}`}
       className={`group flex cursor-pointer flex-col rounded-lg bg-white shadow-md`}
-      ref={ref} // Attach ref to trigger Intersection Observer
+      ref={ref}
+      scroll={false}
     >
       <div className="relative h-[50vw] overflow-hidden rounded-t-xl sm:h-[300px]">
         <Image
@@ -47,7 +48,7 @@ const MenuCard = ({ id, name, image, altText, blurDataUrl }: MenuProps) => {
         />
       </div>
       <div className="px-3 py-2">
-        <h2 className="md:text-md text-center font-heading font-bold text-secondary lg:text-lg">
+        <h2 className="md:text-md text-center font-heading font-medium text-secondary sm:font-bold lg:text-lg">
           {name}
         </h2>
       </div>
