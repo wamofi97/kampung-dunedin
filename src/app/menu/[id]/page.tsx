@@ -2,7 +2,6 @@ import { client } from "@/sanity/lib/client";
 import { MENU_QUERY, MENU_QUERY_BY_ID } from "@/sanity/lib/queries";
 import { Metadata } from "next";
 import Image from "next/image";
-// import { cache } from "react";
 
 interface MenuItem {
   _id: string;
@@ -34,10 +33,10 @@ export async function generateMetadata({
   return {
     title: { absolute: menu.name + " - Kampung Dunedin" },
     keywords: menu.name + " - Kampung Dunedin",
-    description: menu.description.join(" "),
+    description: `Discover more about ${menu.name} at Kampung Dunedin`,
     openGraph: {
       title: menu.name + " - Kampung Dunedin",
-      description: menu.description.join(" "),
+      description: `Discover more about ${menu.name} at Kampung Dunedin`,
       images: [menu.imageUrl],
       siteName: "Kampung Dunedin",
       type: "website",
