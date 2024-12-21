@@ -70,6 +70,7 @@ export default async function Page({
               fill
               placeholder="blur"
               blurDataURL={blurDataURL}
+              quality={100}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className={`${name.startsWith("Sate") && "object-bottom"} h-auto w-auto object-cover`}
             />
