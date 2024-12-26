@@ -12,13 +12,14 @@ interface MenuItem {
   altText: string;
 }
 
-export const revalidate = 120;
-
 const getMenu = async (id: string) => {
   const menu = await client.fetch(
     MENU_QUERY_BY_ID,
     { id },
-    { cache: "force-cache" },
+    {
+      cache: "force-cache",
+      next: { tags: [`menu-${id}`] },
+    },
   );
   return menu;
 };
