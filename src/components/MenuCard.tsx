@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/navigation";
 
 interface MenuProps {
   _id: string;
@@ -15,11 +18,32 @@ interface MenuProps {
 
 const MenuCard = ({ menu }: { menu: MenuProps }) => {
   const { _id: id, name, imageUrl, blurDataURL, altText } = menu;
+  const router = useRouter();
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  const handleMouseEnter = () => {
+    if (window.innerWidth > 768) {
+      router.prefetch(`/menu/${id}`);
+    }
+  };
+
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      if (inView) {
+        router.prefetch(`/menu/${id}`);
+      }
+    }
+  }, [inView, id, router]);
 
   return (
     <Link
       href={`/menu/${id}`}
       className={`group flex cursor-pointer flex-col rounded-lg bg-white shadow-md`}
+      onMouseEnter={handleMouseEnter}
+      ref={ref}
       scroll={false}
     >
       <div className="relative h-[50vw] overflow-hidden rounded-t-xl sm:h-[300px]">
