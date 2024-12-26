@@ -13,14 +13,7 @@ interface MenuItem {
 }
 
 const getMenu = async (id: string) => {
-  const menu = await client.fetch(
-    MENU_QUERY_BY_ID,
-    { id },
-    {
-      cache: "force-cache",
-      next: { tags: [`menu-${id}`] },
-    },
-  );
+  const menu = await client.fetch(MENU_QUERY_BY_ID, { id });
   return menu;
 };
 
