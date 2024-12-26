@@ -8,7 +8,7 @@ const loading = () => {
         open
       >
         <div className="flex max-h-[85vh] flex-col items-center gap-x-4 overflow-auto sm:flex-row">
-          <div className="relative h-[50vh] min-h-[350px] w-full bg-slate-200 sm:h-[70vh] sm:w-3/5">
+          <div className="relative h-[50vh] min-h-[350px] w-full bg-slate-200 sm:h-[80vh] sm:w-3/5">
             <div className="h-full w-full animate-pulse bg-slate-200"></div>
           </div>
           <div className="sm:w-2/5">
