@@ -4,7 +4,7 @@ const loading = () => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2">
       <dialog
-        className="relative w-full max-w-5xl rounded-md bg-white p-2"
+        className="relative w-full max-w-6xl rounded-md bg-white p-2"
         open
       >
         <div className="flex max-h-[85vh] flex-col items-center gap-x-4 overflow-auto sm:flex-row">
