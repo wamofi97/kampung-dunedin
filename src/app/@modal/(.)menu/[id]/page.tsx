@@ -15,7 +15,11 @@ interface MenuItem {
 export const revalidate = 120;
 
 const getMenu = async (id: string) => {
-  const menu = await client.fetch(MENU_QUERY_BY_ID, { id });
+  const menu = await client.fetch(
+    MENU_QUERY_BY_ID,
+    { id },
+    { cache: "force-cache" },
+  );
   return menu;
 };
 
