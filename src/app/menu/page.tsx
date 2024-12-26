@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 import { MENU_QUERY } from "@/sanity/lib/queries";
-import { urlFor } from "@/sanity/lib/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -55,16 +54,7 @@ const Menu = async () => {
         </div>
         <div className="mb-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
           {mainDishes.map((item: MenuItem) => {
-            return (
-              <MenuCard
-                key={item._id}
-                id={item._id}
-                name={item.name}
-                image={urlFor(item.imageUrl).url()}
-                blurDataUrl={item.blurDataURL}
-                altText={item.altText}
-              />
-            );
+            return <MenuCard key={item._id} menu={item} />;
           })}
         </div>
       </div>
@@ -80,16 +70,7 @@ const Menu = async () => {
         </div>
         <div className="mb-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
           {sideDishes.map((item: MenuItem) => {
-            return (
-              <MenuCard
-                key={item._id}
-                id={item._id}
-                name={item.name}
-                image={urlFor(item.imageUrl).url()}
-                blurDataUrl={item.blurDataURL}
-                altText={item.altText}
-              />
-            );
+            return <MenuCard key={item._id} menu={item} />;
           })}
         </div>
       </div>
