@@ -52,6 +52,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Kampung Dunedin",
       },
+      {
+        url: "https://kampungdunedin.nz/og-image-square.png",
+        width: 400,
+        height: 400,
+        alt: "Kampung Dunedin",
+      },
     ],
     siteName: "Kampung Dunedin",
   },
