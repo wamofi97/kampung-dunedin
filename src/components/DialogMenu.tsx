@@ -1,26 +1,41 @@
 "use client";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface MenuItem {
-  menu: {
-    _id: string;
-    name: string;
-    description: string[];
-    imageUrl: string;
-    blurDataURL: string;
-    category: string;
-    altText: string;
-  };
+  _id: string;
+  name: string;
+  description: string[];
+  imageUrl: string;
+  blurDataURL: string;
+  category: string;
+  altText: string;
 }
 
-const DialogMenu = ({ menu }: MenuItem) => {
+const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
   const router = useRouter();
+
+  const initialIndex = ids.indexOf(menu._id);
+  const [loading, setLoading] = useState(true);
 
   const closeModal = () => {
     router.back();
+  };
+
+  const handleNext = () => {
+    const nextIndex = (initialIndex + 1) % ids.length;
+    const nextId = ids[nextIndex];
+    router.prefetch(`/menu/${nextId}`);
+    router.replace(`/menu/${nextId}`, { scroll: false });
+  };
+
+  const handlePrev = () => {
+    const prevIndex = (initialIndex - 1 + ids.length) % ids.length;
+    const prevId = ids[prevIndex];
+    router.prefetch(`/menu/${prevId}`);
+    router.replace(`/menu/${prevId}`, { scroll: false });
   };
 
   useEffect(() => {
@@ -31,28 +46,24 @@ const DialogMenu = ({ menu }: MenuItem) => {
     };
   }, []);
 
-  const [loading, setLoading] = useState(true);
-
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2"
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2 md:px-12`}
       onClick={closeModal}
     >
       <dialog
-        className="relative w-full max-w-6xl rounded-md bg-white p-2"
+        className="relative w-full max-w-6xl rounded-lg bg-white p-1 pb-2 sm:p-0"
         onClick={(e) => e.stopPropagation()}
         open
       >
         <button
           onClick={closeModal}
-          className="absolute right-1 top-1 z-10 flex items-center justify-center rounded-full bg-gray-200/70 p-2 text-2xl text-gray-600 hover:text-gray-800 sm:right-2 sm:top-2"
+          className="group absolute right-1 top-1 z-10 flex items-center justify-center rounded-full bg-gray-200/80 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 sm:right-2 sm:top-2"
         >
           <X />
         </button>
-        <div className="flex max-h-[85vh] flex-col items-center gap-x-4 overflow-auto sm:flex-row">
-          <div
-            className={`relative h-[50vh] min-h-[350px] w-full sm:h-[80vh] sm:w-3/4 md:w-3/5`}
-          >
+        <div className="flex h-[80vh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto sm:flex-row">
+          <div className="relative h-full min-h-[400px] w-full sm:w-2/3 md:w-3/5">
             {loading && (
               <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
                 <div className="flex h-10 w-10 animate-spin items-center justify-center rounded-full border-4 border-t-secondary"></div>
@@ -65,27 +76,42 @@ const DialogMenu = ({ menu }: MenuItem) => {
               placeholder="blur"
               blurDataURL={menu.blurDataURL}
               quality={100}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 5
-              0vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               onLoad={() => setLoading(false)}
               className={`${
-                menu.name.startsWith("Sate") && "object-bottom"
-              } h-auto w-auto object-cover`}
+                menu.name.startsWith("Sate") ? "object-bottom" : ""
+              } h-auto w-auto rounded-md rounded-b-none object-cover sm:rounded-l-md sm:rounded-r-none`}
             />
           </div>
-          <div className="sm:w-1/4 md:w-2/5">
-            <h2 className="my-2 text-center font-heading text-xl font-semibold uppercase text-secondary sm:my-4 sm:text-3xl md:mb-4 md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
+          <div className="flex flex-col justify-center gap-2 p-2 sm:w-1/3 sm:px-0 md:w-2/5">
+            <h2 className="text-center font-heading text-xl font-semibold uppercase text-secondary sm:my-4 sm:text-3xl md:mb-4 md:text-4xl lg:text-[2.75rem] lg:leading-none xl:text-5xl">
               {menu.name}
             </h2>
             <div className="border-l-4 border-primary pl-2">
               {menu.description.map((item: string, index: number) => (
-                <p className="mb-4 text-gray-700 sm:text-lg" key={index}>
+                <p
+                  className={`${
+                    index === menu.description.length - 1 ? "mb-0" : "mb-4"
+                  } text-gray-700 sm:text-lg`}
+                  key={index}
+                >
                   {item}
                 </p>
               ))}
             </div>
           </div>
         </div>
+        <ChevronRight
+          size={40}
+          className="absolute -bottom-12 right-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-right-12 md:top-1/2"
+          onClick={handleNext}
+        />
+
+        <ChevronLeft
+          size={40}
+          className="absolute -bottom-12 left-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-left-12 md:top-1/2"
+          onClick={handlePrev}
+        />
       </dialog>
     </div>
   );
