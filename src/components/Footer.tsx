@@ -7,7 +7,18 @@ const Footer = () => {
       <div className="flex w-full max-w-6xl items-center justify-between gap-14 px-3 py-6 md:px-6">
         <div className="text-[0.75rem] md:text-sm">
           <p>Copyright &copy; 2024 Kampung Dunedin. All Rights Reserved.</p>
-          <p className="text-gray-400">Developed by by wamofi.dev</p>
+          <p className="text-[0.75rem] text-gray-400">
+            Developed by
+            <a
+              href="https://wnfrds.vercel.app/"
+              className="text-gray-400"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              wamofi.dev{" "}
+            </a>
+          </p>
         </div>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6">
           <a
