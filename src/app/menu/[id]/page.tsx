@@ -62,8 +62,8 @@ export default async function Page({
   return (
     <>
       <div className="mx-auto min-h-[calc(100vh-161px)] w-full max-w-6xl">
-        <div className="flex flex-col items-center justify-center gap-x-8 gap-y-4 px-4 py-10 sm:flex-row">
-          <div className="relative h-[60vh] max-h-[800px] w-full overflow-hidden sm:w-3/5 md:h-[75vh]">
+        <div className="flex flex-col items-center justify-center gap-x-8 gap-y-4 p-2 sm:flex-row sm:p-4">
+          <div className="relative h-[60vh] max-h-[800px] w-full overflow-hidden sm:h-[85vh] sm:w-3/5">
             <Image
               src={imageUrl}
               alt={altText || name}
@@ -72,7 +72,7 @@ export default async function Page({
               blurDataURL={blurDataURL}
               quality={100}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className={`${name.startsWith("Sate") && "object-bottom"} h-auto w-auto object-cover`}
+              className={`${name.startsWith("Sate") && "object-bottom"} h-auto w-auto rounded-md object-cover`}
             />
           </div>
           <div className="sm:w-2/5">
