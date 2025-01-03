@@ -11,7 +11,7 @@ import ReviewCarousel from "@/components/ReviewCarousel";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex w-full flex-col items-center pb-24">
+    <div className="mx-auto flex w-full flex-col items-center pb-8">
       <div className="absolute -z-10 min-h-[calc(100vh-71px)] w-full bg-[url(/batik.webp)] bg-cover bg-center opacity-40 md:opacity-20"></div>
       <Hero />
 
@@ -124,7 +124,7 @@ export default function Home() {
                   alt="Sate Ayam"
                   fill
                   sizes=" (max-width: 1200px) 50vw, 33vw"
-                  className="rounded-t-lg object-cover object-bottom md:rounded-l-lg"
+                  className="object-cover object-bottom md:rounded-l-lg"
                 />
               </div>
               <div className="relative h-full w-full">
@@ -133,7 +133,7 @@ export default function Home() {
                   alt="Sate Daging"
                   fill
                   sizes="(max-width: 1200px) 50vw, 33vw"
-                  className="rounded-b-lg object-cover object-bottom md:rounded-r-lg"
+                  className="object-cover object-bottom md:rounded-r-lg"
                 />
               </div>
             </div>
