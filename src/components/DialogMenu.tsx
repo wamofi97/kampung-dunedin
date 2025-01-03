@@ -16,27 +16,39 @@ interface MenuItem {
 
 const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
   const router = useRouter();
-
   const initialIndex = ids.indexOf(menu._id);
   const [loading, setLoading] = useState(true);
 
-  const closeModal = () => {
-    router.back();
+  const closeModal = () => router.back();
+
+  const navigateTo = (index: number) => {
+    const id = ids[index];
+    router.prefetch(`/menu/${id}`);
+    router.replace(`/menu/${id}`, { scroll: false });
   };
 
-  const handleNext = () => {
-    const nextIndex = (initialIndex + 1) % ids.length;
-    const nextId = ids[nextIndex];
-    router.prefetch(`/menu/${nextId}`);
-    router.replace(`/menu/${nextId}`, { scroll: false });
-  };
+  const handleNext = () => navigateTo((initialIndex + 1) % ids.length);
 
-  const handlePrev = () => {
-    const prevIndex = (initialIndex - 1 + ids.length) % ids.length;
-    const prevId = ids[prevIndex];
-    router.prefetch(`/menu/${prevId}`);
-    router.replace(`/menu/${prevId}`, { scroll: false });
-  };
+  const handlePrev = () =>
+    navigateTo((initialIndex - 1 + ids.length) % ids.length);
+
+  useEffect(() => {
+    const handleGlobalKeyPress = (e: KeyboardEvent) => {
+      if (e.key === "ArrowRight") {
+        handleNext();
+      } else if (e.key === "ArrowLeft") {
+        handlePrev();
+      } else if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+    window.addEventListener("keydown", handleGlobalKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleGlobalKeyPress);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -52,7 +64,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
       onClick={closeModal}
     >
       <dialog
-        className="relative w-full max-w-6xl rounded-lg bg-white p-1 pb-2 sm:p-0"
+        className="relative w-full max-w-6xl bg-transparent"
         onClick={(e) => e.stopPropagation()}
         open
       >
@@ -62,7 +74,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
         >
           <X />
         </button>
-        <div className="flex h-[80vh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto sm:flex-row">
+        <div className="flex h-[90dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white p-1 pb-2 sm:flex-row sm:p-0 sm:pr-2">
           <div className="relative h-full min-h-[400px] w-full sm:w-2/3 md:w-3/5">
             {loading && (
               <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
@@ -92,7 +104,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
                 <p
                   className={`${
                     index === menu.description.length - 1 ? "mb-0" : "mb-4"
-                  } text-gray-700 sm:text-lg`}
+                  } text-gray-700 md:text-lg`}
                   key={index}
                 >
                   {item}
@@ -101,17 +113,31 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
             </div>
           </div>
         </div>
-        <ChevronRight
-          size={40}
-          className="absolute -bottom-12 right-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-right-12 md:top-1/2"
-          onClick={handleNext}
-        />
+        <div className="mt-2 flex items-center justify-center gap-8 sm:hidden">
+          <ChevronLeft
+            size={40}
+            className="flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900"
+            onClick={handlePrev}
+          />
+          <ChevronRight
+            size={40}
+            className="flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900"
+            onClick={handleNext}
+          />
+        </div>
+        <div className="hidden sm:flex">
+          <ChevronRight
+            size={40}
+            className="absolute -bottom-12 right-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-right-12 md:top-1/2"
+            onClick={handleNext}
+          />
 
-        <ChevronLeft
-          size={40}
-          className="absolute -bottom-12 left-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-left-12 md:top-1/2"
-          onClick={handlePrev}
-        />
+          <ChevronLeft
+            size={40}
+            className="absolute -bottom-12 left-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-left-12 md:top-1/2"
+            onClick={handlePrev}
+          />
+        </div>
       </dialog>
     </div>
   );
