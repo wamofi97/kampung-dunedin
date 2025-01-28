@@ -56,7 +56,7 @@ const MenuCard = ({ menu }: { menu: MenuProps }) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={`${
             name.startsWith("Sate") && "object-bottom"
-          } h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 hover:scale-105`}
+          } h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 group-hover:scale-105`}
         />
       </div>
       <div className="px-3 py-2">
