@@ -63,12 +63,6 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
       className={`fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2 md:px-12`}
       onClick={closeModal}
     >
-      <button
-        onClick={closeModal}
-        className="group absolute right-2 top-2 z-10 flex items-center justify-center rounded-full bg-gray-800/80 p-2 text-2xl text-gray-300 transition-colors hover:text-gray-900 sm:right-2 sm:top-2 sm:hidden"
-      >
-        <X />
-      </button>
       <dialog
         className="relative w-full max-w-6xl bg-transparent"
         onClick={(e) => e.stopPropagation()}
@@ -76,7 +70,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
       >
         <button
           onClick={closeModal}
-          className="group absolute right-2 top-2 z-10 hidden items-center justify-center rounded-full bg-gray-200/80 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 sm:right-2 sm:top-2 sm:flex"
+          className="group absolute -top-12 right-0 z-10 items-center justify-center rounded-full bg-gray-800/80 p-2 text-2xl text-gray-300 transition-colors hover:text-gray-900 sm:right-2 sm:top-2 sm:bg-gray-200/80 sm:text-gray-600"
         >
           <X />
         </button>
