@@ -63,18 +63,17 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
       className={`fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2 md:px-12`}
       onClick={closeModal}
     >
-      <dialog
-        className="relative w-full max-w-6xl bg-transparent"
-        onClick={(e) => e.stopPropagation()}
-        open
-      >
+      <dialog className="relative w-full max-w-6xl bg-transparent" open>
         <button
           onClick={closeModal}
           className="group absolute right-1 top-1 z-10 flex items-center justify-center rounded-full bg-gray-200/80 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 sm:right-2 sm:top-2"
         >
           <X />
         </button>
-        <div className="flex h-[90dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white p-1 pb-2 sm:flex-row sm:p-0 sm:pr-2">
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="flex h-[90dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white p-1 pb-2 sm:flex-row sm:p-0 sm:pr-2"
+        >
           <div className="relative h-full min-h-[400px] w-full sm:w-2/3 md:w-3/5">
             {loading && (
               <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
