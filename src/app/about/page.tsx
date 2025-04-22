@@ -1,7 +1,6 @@
 import Headingwbackground from "@/components/Headingwbackground";
 import Image from "next/image";
 import React from "react";
-import family from "../../../public/family.webp";
 import family2 from "../../../public/family2.webp";
 import { Metadata } from "next";
 
