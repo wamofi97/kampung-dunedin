@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Facebook, Instagram, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import family from "../../public/family.webp";
 import family2 from "../../public/family2.webp";
 import ReviewCarousel from "@/components/ReviewCarousel";
 
