@@ -2,6 +2,7 @@ import Headingwbackground from "@/components/Headingwbackground";
 import Image from "next/image";
 import React from "react";
 import family from "../../../public/family.webp";
+import family2 from "../../../public/family2.webp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ const About = () => {
         </p>
         <div className="relative h-[50vw] max-h-[525px] min-h-[350px] w-full">
           <Image
-            src={family}
+            src={family2}
             alt="Dunedin"
             fill
             placeholder="blur"

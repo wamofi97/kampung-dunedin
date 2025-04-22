@@ -7,6 +7,7 @@ import { ArrowUpRight, Facebook, Instagram, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import family from "../../public/family.webp";
+import family2 from "../../public/family2.webp";
 import ReviewCarousel from "@/components/ReviewCarousel";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-8 lg:gap-16">
             <div className="relative h-96 w-full md:w-1/2">
               <Image
-                src={family}
+                src={family2}
                 alt="Our Family in Dunedin"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
