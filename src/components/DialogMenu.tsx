@@ -1,7 +1,7 @@
 "use client";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface MenuItem {
@@ -16,21 +16,29 @@ interface MenuItem {
 
 const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
   const router = useRouter();
-  const initialIndex = ids.indexOf(menu._id);
+  const searchParams = useSearchParams();
+  const filter = searchParams.get("filter") || "all";
+  const currentIndex = ids.indexOf(menu._id);
   const [loading, setLoading] = useState(true);
 
   const closeModal = () => router.back();
 
   const navigateTo = (index: number) => {
     const id = ids[index];
-    router.prefetch(`/menu/${id}`);
-    router.replace(`/menu/${id}`, { scroll: false });
+    router.replace(`/menu/${id}?filter=${filter}`, { scroll: false });
   };
 
-  const handleNext = () => navigateTo((initialIndex + 1) % ids.length);
+  const handleNext = () => {
+    if (currentIndex !== -1) {
+      navigateTo((currentIndex + 1) % ids.length);
+    }
+  };
 
-  const handlePrev = () =>
-    navigateTo((initialIndex - 1 + ids.length) % ids.length);
+  const handlePrev = () => {
+    if (currentIndex !== -1) {
+      navigateTo((currentIndex - 1 + ids.length) % ids.length);
+    }
+  };
 
   useEffect(() => {
     const handleGlobalKeyPress = (e: KeyboardEvent) => {
@@ -47,8 +55,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
     return () => {
       window.removeEventListener("keydown", handleGlobalKeyPress);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [currentIndex, ids]);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

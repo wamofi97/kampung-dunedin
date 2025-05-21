@@ -13,15 +13,27 @@ interface MenuItem {
   altText: string;
 }
 
-const getMenuIds = async () => {
+const getFilteredMenuIds = async (filter?: string) => {
   const menus = await client.fetch(MENU_QUERY);
-  const sortedMenus = menus.sort((a: MenuItem, b: MenuItem) => {
-    if (a.category < b.category) return -1;
-    if (a.category > b.category) return 1;
-    return 0;
-  });
-  const ids = sortedMenus.map((menu: MenuItem) => menu._id);
-  return ids;
+  const filteredMenus = filter
+    ? menus.filter((menu: MenuItem) => {
+        if (filter === "rice") return menu.name.toLowerCase().includes("nasi");
+        if (filter === "noodles")
+          return ["laksa", "mee", "bihun"].some((word) =>
+            menu.name.toLowerCase().includes(word),
+          );
+        if (filter === "other")
+          return (
+            menu.category === "Main Dishes" &&
+            !["nasi", "laksa", "mee", "bihun"].some((word) =>
+              menu.name.toLowerCase().includes(word),
+            )
+          );
+        return true; // Default: no filter
+      })
+    : menus;
+
+  return filteredMenus.map((menu: MenuItem) => menu._id);
 };
 
 const getMenu = async (id: string) => {
@@ -34,11 +46,17 @@ const getMenu = async (id: string) => {
 
 export default async function Page({
   params,
+  searchParams,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
+  searchParams: { filter?: string };
 }) {
-  const id = (await params).id;
-  const [menu, ids] = await Promise.all([getMenu(id), getMenuIds()]);
+  const id = params.id;
+  const filter = searchParams.filter || "all";
+  const [menu, ids] = await Promise.all([
+    getMenu(id),
+    getFilteredMenuIds(filter),
+  ]);
 
   return <DialogMenu menu={menu} ids={ids} />;
 }

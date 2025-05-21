@@ -16,8 +16,14 @@ interface MenuProps {
   altText: string;
 }
 
-const MenuCard = ({ menu }: { menu: MenuProps }) => {
+interface MenuCardProps {
+  menu: MenuProps;
+  openModal?: (id: string) => void;
+}
+
+const MenuCard = ({ menu, openModal }: MenuCardProps) => {
   const { _id: id, name, imageUrl, blurDataURL, altText } = menu;
+
   const router = useRouter();
 
   const { ref, inView } = useInView({
@@ -40,11 +46,13 @@ const MenuCard = ({ menu }: { menu: MenuProps }) => {
 
   return (
     <Link
-      href={`/menu/${id}`}
-      className={`group flex cursor-pointer flex-col rounded-lg bg-white shadow-md`}
-      onMouseEnter={handleMouseEnter}
+      href="#"
+      onClick={(e) => {
+        e.preventDefault();
+        openModal?.(id);
+      }}
+      className="group flex cursor-pointer flex-col rounded-2xl border-2 border-neutral-200/80 bg-white p-1 transition-shadow duration-500 hover:shadow-md"
       ref={ref}
-      scroll={false}
     >
       <div className="relative h-[50vw] overflow-hidden rounded-t-xl sm:h-[300px]">
         <Image
@@ -56,7 +64,7 @@ const MenuCard = ({ menu }: { menu: MenuProps }) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={`${
             name.startsWith("Sate") && "object-bottom"
-          } h-auto w-auto rounded-t-xl object-cover p-1 pb-0 transition-transform duration-500 group-hover:scale-105`}
+          } h-auto w-auto rounded-t-sm object-cover transition-transform duration-500 group-hover:scale-105 sm:rounded-t-xl`}
         />
       </div>
       <div className="px-3 py-2">
