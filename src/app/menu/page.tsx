@@ -7,6 +7,7 @@ import { client } from "@/sanity/lib/client";
 import { MENU_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
 import MainDishes from "@/components/MainDishes";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Menu",
@@ -45,7 +46,13 @@ const Menu = async () => {
       </Headingwbackground>
 
       {/* mainDishes */}
-      <MainDishes mainDishes={mainDishes} />
+      <Suspense
+        fallback={
+          <div className="h-10 w-10 animate-spin rounded-full border-4 border-t-secondary"></div>
+        }
+      >
+        <MainDishes mainDishes={mainDishes} />
+      </Suspense>
 
       {/* sideDishes */}
       <div className="mb-3">

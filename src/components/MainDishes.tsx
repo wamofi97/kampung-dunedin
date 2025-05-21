@@ -59,11 +59,12 @@ const MainDishes = ({ mainDishes }: { mainDishes: MenuItem[] }) => {
         setActiveButton("all");
         break;
     }
-  }, [searchParams, originalMenu, filterNasi, filterNoodles, filterOther]);
+  }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Update the URL when a filter button is clicked without scrolling to the top
   const updateFilter = (filter: string) => {
     router.replace(`?filter=${filter}`, { scroll: false });
+    console.log(searchParams);
   };
 
   const openModal = (id: string) => {
