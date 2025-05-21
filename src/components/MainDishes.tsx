@@ -107,7 +107,7 @@ const MainDishes = ({ mainDishes }: { mainDishes: MenuItem[] }) => {
         </Button>
       </div>
       <div className="mb-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
-        {menu.map((item: MenuItem, index: number) => {
+        {menu.map((item: MenuItem) => {
           return <MenuCard key={item._id} menu={item} openModal={openModal} />;
         })}
       </div>
