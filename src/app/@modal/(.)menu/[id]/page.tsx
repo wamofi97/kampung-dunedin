@@ -48,11 +48,11 @@ export default async function Page({
   params,
   searchParams,
 }: {
-  params: { id: string };
-  searchParams: { filter?: string };
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ filter?: string }>;
 }) {
-  const id = params.id;
-  const filter = searchParams.filter || "all";
+  const id = (await params).id;
+  const filter = (await searchParams).filter || "all";
   const [menu, ids] = await Promise.all([
     getMenu(id),
     getFilteredMenuIds(filter),

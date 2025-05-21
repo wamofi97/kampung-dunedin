@@ -59,7 +59,7 @@ const MainDishes = ({ mainDishes }: { mainDishes: MenuItem[] }) => {
         setActiveButton("all");
         break;
     }
-  }, [searchParams]);
+  }, [searchParams, originalMenu, filterNasi, filterNoodles, filterOther]);
 
   // Update the URL when a filter button is clicked without scrolling to the top
   const updateFilter = (filter: string) => {
