@@ -51,6 +51,7 @@ const MenuCard = ({ menu, openModal }: MenuCardProps) => {
         e.preventDefault();
         openModal?.(id);
       }}
+      onMouseEnter={handleMouseEnter}
       className="group flex cursor-pointer flex-col rounded-2xl border-2 border-neutral-200/80 bg-white p-1 transition-shadow duration-500 hover:shadow-md"
       ref={ref}
     >

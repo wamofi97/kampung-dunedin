@@ -55,7 +55,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
     return () => {
       window.removeEventListener("keydown", handleGlobalKeyPress);
     };
-  }, [currentIndex, ids]);
+  }, [currentIndex, ids]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
