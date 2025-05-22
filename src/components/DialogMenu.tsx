@@ -25,45 +25,33 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
 
   const navigateTo = (index: number) => {
     const id = ids[index];
-    if (!filter) {
-      router.replace(`/menu/${id}`, { scroll: false });
-      return;
-    }
-    router.replace(`/menu/${id}?filter=${filter}`, { scroll: false });
+    const path = filter ? `/menu/${id}?filter=${filter}` : `/menu/${id}`;
+    router.replace(path, { scroll: false });
   };
 
-  const handleNext = () => {
+  const handleNavigation = (direction: "next" | "prev") => {
     if (currentIndex !== -1) {
-      navigateTo((currentIndex + 1) % ids.length);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex !== -1) {
-      navigateTo((currentIndex - 1 + ids.length) % ids.length);
+      const newIndex =
+        direction === "next"
+          ? (currentIndex + 1) % ids.length
+          : (currentIndex - 1 + ids.length) % ids.length;
+      navigateTo(newIndex);
     }
   };
 
   useEffect(() => {
     const handleGlobalKeyPress = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
-        handleNext();
-      } else if (e.key === "ArrowLeft") {
-        handlePrev();
-      } else if (e.key === "Escape") {
-        closeModal();
-      }
+      if (e.key === "ArrowRight") handleNavigation("next");
+      if (e.key === "ArrowLeft") handleNavigation("prev");
+      if (e.key === "Escape") closeModal();
     };
-    window.addEventListener("keydown", handleGlobalKeyPress);
 
-    return () => {
-      window.removeEventListener("keydown", handleGlobalKeyPress);
-    };
+    window.addEventListener("keydown", handleGlobalKeyPress);
+    return () => window.removeEventListener("keydown", handleGlobalKeyPress);
   }, [currentIndex, ids]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
-
     return () => {
       document.body.style.overflow = "";
     };
@@ -71,7 +59,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2 md:px-12`}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2 md:px-12"
       onClick={closeModal}
     >
       <dialog
@@ -111,7 +99,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
               {menu.name}
             </h2>
             <div className="border-l-4 border-primary pl-2">
-              {menu.description.map((item: string, index: number) => (
+              {menu.description.map((item, index) => (
                 <p
                   className={`${
                     index === menu.description.length - 1 ? "mb-0" : "mb-4"
@@ -124,29 +112,16 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
             </div>
           </div>
         </div>
-        {/* <div className="mt-2 flex items-center justify-center gap-8 sm:hidden">
-          <ChevronLeft
-            size={40}
-            className="flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900"
-            onClick={handlePrev}
-          />
-          <ChevronRight
-            size={40}
-            className="flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900"
-            onClick={handleNext}
-          />
-        </div> */}
-        <div className="">
+        <div>
           <ChevronRight
             size={40}
             className="absolute -bottom-12 right-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-right-12 md:top-1/2"
-            onClick={handleNext}
+            onClick={() => handleNavigation("next")}
           />
-
           <ChevronLeft
             size={40}
             className="absolute -bottom-12 left-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-left-12 md:top-1/2"
-            onClick={handlePrev}
+            onClick={() => handleNavigation("prev")}
           />
         </div>
       </dialog>
