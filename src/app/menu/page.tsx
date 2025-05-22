@@ -1,5 +1,4 @@
 import Headingwbackground from "@/components/Headingwbackground";
-import MenuCard from "@/components/MenuCard";
 import Note from "@/components/Note";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
