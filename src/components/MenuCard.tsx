@@ -69,7 +69,7 @@ const MenuCard = ({ menu }: MenuCardProps) => {
         />
       </div>
       <div className="px-3 py-2">
-        <h2 className="md:text-md text-center font-heading font-medium text-secondary lg:text-lg">
+        <h2 className="md:text-md text-center font-heading font-medium leading-none tracking-tight text-secondary lg:text-lg">
           {name}
         </h2>
       </div>
