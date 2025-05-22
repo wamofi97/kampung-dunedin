@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface MenuProps {
   _id: string;
@@ -18,22 +18,25 @@ interface MenuProps {
 
 interface MenuCardProps {
   menu: MenuProps;
-  openModal?: (id: string) => void;
 }
 
-const MenuCard = ({ menu, openModal }: MenuCardProps) => {
+const MenuCard = ({ menu }: MenuCardProps) => {
   const { _id: id, name, imageUrl, blurDataURL, altText } = menu;
 
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
 
+  const filter = searchParams.get("filter") || null;
+
   const handleMouseEnter = () => {
     if (window.innerWidth > 768) {
       router.prefetch(`/menu/${id}`);
     }
+    console.log(`Prefetching /menu/${id}`);
   };
 
   useEffect(() => {
@@ -46,14 +49,11 @@ const MenuCard = ({ menu, openModal }: MenuCardProps) => {
 
   return (
     <Link
-      href="#"
-      onClick={(e) => {
-        e.preventDefault();
-        openModal?.(id);
-      }}
+      href={`/menu/${id}${filter ? `?filter=${filter}` : ""}`}
       onMouseEnter={handleMouseEnter}
       className="group flex cursor-pointer flex-col rounded-2xl border-2 border-neutral-200/80 bg-white p-1 transition-shadow duration-500 hover:shadow-md"
       ref={ref}
+      scroll={false}
     >
       <div className="relative h-[50vw] overflow-hidden rounded-t-xl sm:h-[300px]">
         <Image

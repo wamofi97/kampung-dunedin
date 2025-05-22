@@ -66,15 +66,6 @@ const MainDishes = ({ mainDishes }: { mainDishes: MenuItem[] }) => {
     router.replace(`?filter=${filter}`, { scroll: false });
   };
 
-  const openModal = (id: string) => {
-    const filter = searchParams.get("filter") || null;
-    if (!filter) {
-      router.push(`/menu/${id}`, { scroll: false });
-      return;
-    }
-    router.push(`/menu/${id}?filter=${filter}`, { scroll: false });
-  };
-
   return (
     <div className="mb-8 w-full">
       <div className="flex items-center gap-2 sm:gap-4">
@@ -112,7 +103,7 @@ const MainDishes = ({ mainDishes }: { mainDishes: MenuItem[] }) => {
       </div>
       <div className="mb-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4 lg:grid-cols-4">
         {menu.map((item: MenuItem) => {
-          return <MenuCard key={item._id} menu={item} openModal={openModal} />;
+          return <MenuCard key={item._id} menu={item} />;
         })}
       </div>
     </div>
