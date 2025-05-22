@@ -62,7 +62,7 @@ const MenuCard = ({ menu, openModal }: MenuCardProps) => {
           fill
           placeholder="blur"
           blurDataURL={blurDataURL}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 1200px) 50vw, 33vw"
           className={`${
             name.startsWith("Sate") && "object-bottom"
           } h-auto w-auto rounded-t-sm object-cover transition-transform duration-500 group-hover:scale-105 sm:rounded-t-xl`}
