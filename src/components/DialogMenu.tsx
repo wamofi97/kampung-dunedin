@@ -26,6 +26,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
   const navigateTo = (index: number) => {
     const id = ids[index];
     const path = filter ? `/menu/${id}?filter=${filter}` : `/menu/${id}`;
+    router.prefetch(path);
     router.replace(path, { scroll: false });
   };
 
@@ -87,7 +88,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
               placeholder="blur"
               blurDataURL={menu.blurDataURL}
               quality={80}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              sizes="(max-width: 768px) 50vw, 33vw"
               priority
               onLoad={() => setLoading(false)}
               className={`${
