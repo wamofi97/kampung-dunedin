@@ -55,7 +55,13 @@ const Menu = async () => {
       </Suspense>
 
       {/* sideDishes */}
-      <SideDishes sideDishes={sideDishes} />
+      <Suspense
+        fallback={
+          <div className="h-10 w-10 animate-spin rounded-full border-4 border-t-secondary"></div>
+        }
+      >
+        <SideDishes sideDishes={sideDishes} />
+      </Suspense>
 
       <Note>
         <h3 className="mb-2 text-xl font-medium">
