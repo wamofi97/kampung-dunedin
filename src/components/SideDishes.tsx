@@ -1,5 +1,4 @@
 "use client";
-import { useRouter } from "next/navigation";
 import MenuCard from "./MenuCard";
 
 interface MenuItem {
@@ -13,8 +12,6 @@ interface MenuItem {
 }
 
 const SideDishes = ({ sideDishes }: { sideDishes: MenuItem[] }) => {
-  const router = useRouter();
-
   return (
     <div className="mb-8 w-full">
       <div className="flex items-center gap-2 sm:gap-4">
