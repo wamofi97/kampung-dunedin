@@ -87,11 +87,13 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
               fill
               placeholder="blur"
               blurDataURL={menu.blurDataURL}
-              quality={80}
-              sizes="(max-width: 768px) 50vw, 33vw"
+              quality={90}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               priority
               onLoad={() => setLoading(false)}
-              className={`${
+              className={`transition-[filter] duration-700 ease-in-out ${
+                loading ? "blur-md" : "blur-0"
+              } ${
                 menu.name.startsWith("Sate") ? "object-bottom" : ""
               } h-auto w-auto rounded-md rounded-b-none object-cover sm:rounded-l-md sm:rounded-r-none`}
             />
