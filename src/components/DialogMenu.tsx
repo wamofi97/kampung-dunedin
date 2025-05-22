@@ -88,7 +88,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
               placeholder="blur"
               blurDataURL={menu.blurDataURL}
               quality={90}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              sizes="(max-width: 768px) 50vw, 33vw"
               priority
               onLoad={() => setLoading(false)}
               className={`transition-[filter] duration-700 ease-in-out ${
