@@ -17,7 +17,7 @@ interface MenuItem {
 const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const filter = searchParams.get("filter") || "all";
+  const filter = searchParams.get("filter") || null;
   const currentIndex = ids.indexOf(menu._id);
   const [loading, setLoading] = useState(true);
 
@@ -25,6 +25,10 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
 
   const navigateTo = (index: number) => {
     const id = ids[index];
+    if (!filter) {
+      router.replace(`/menu/${id}`, { scroll: false });
+      return;
+    }
     router.replace(`/menu/${id}?filter=${filter}`, { scroll: false });
   };
 

@@ -13,7 +13,7 @@ interface MenuItem {
   altText: string;
 }
 
-const getFilteredMenuIds = async (filter?: string) => {
+const getFilteredMenuIds = async (filter: string | null) => {
   const menus = await client.fetch(MENU_QUERY);
   const filteredMenus = filter
     ? menus.filter((menu: MenuItem) => {
@@ -52,7 +52,7 @@ export default async function Page({
   searchParams: Promise<{ filter?: string }>;
 }) {
   const id = (await params).id;
-  const filter = (await searchParams).filter || "all";
+  const filter = (await searchParams).filter || null;
   const [menu, ids] = await Promise.all([
     getMenu(id),
     getFilteredMenuIds(filter),

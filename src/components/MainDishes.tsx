@@ -39,36 +39,39 @@ const MainDishes = ({ mainDishes }: { mainDishes: MenuItem[] }) => {
 
   // Update the menu based on the filter type in the URL
   useEffect(() => {
-    const filter = searchParams.get("filter") || "all";
+    const filter = searchParams.get("filter") || undefined;
 
-    switch (filter) {
-      case "rice":
-        setMenu(filterNasi);
-        setActiveButton("rice");
-        break;
-      case "noodles":
-        setMenu(filterNoodles);
-        setActiveButton("noodles");
-        break;
-      case "other":
-        setMenu(filterOther);
-        setActiveButton("other");
-        break;
-      default:
-        setMenu(originalMenu);
-        setActiveButton("all");
-        break;
+    if (!filter) {
+      setMenu(originalMenu);
+      setActiveButton("all");
+      return;
+    }
+    if (filter === "rice") {
+      setMenu(filterNasi);
+      setActiveButton("rice");
+    } else if (filter === "noodles") {
+      setMenu(filterNoodles);
+      setActiveButton("noodles");
+    } else if (filter === "other") {
+      setMenu(filterOther);
+      setActiveButton("other");
     }
   }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Update the URL when a filter button is clicked without scrolling to the top
-  const updateFilter = (filter: string) => {
+  const updateFilter = (filter?: string) => {
+    if (!filter) {
+      router.replace("/menu", { scroll: false });
+      return;
+    }
     router.replace(`?filter=${filter}`, { scroll: false });
-    console.log(searchParams);
   };
 
   const openModal = (id: string) => {
-    const filter = searchParams.get("filter") || "all";
+    const filter = searchParams.get("filter") || null;
+    if (!filter) {
+      router.push(`/menu/${id}`, { scroll: false });
+      return;
+    }
     router.push(`/menu/${id}?filter=${filter}`, { scroll: false });
   };
 
@@ -84,7 +87,7 @@ const MainDishes = ({ mainDishes }: { mainDishes: MenuItem[] }) => {
       <div className="mb-4 flex items-center justify-center gap-2 sm:gap-4">
         <Button
           variant={activeButton === "all" ? "secondary" : "outline"}
-          onClick={() => updateFilter("all")}
+          onClick={() => updateFilter()}
         >
           All
         </Button>
