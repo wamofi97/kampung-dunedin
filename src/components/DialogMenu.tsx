@@ -86,8 +86,9 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
               fill
               placeholder="blur"
               blurDataURL={menu.blurDataURL}
-              quality={100}
+              quality={80}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              priority
               onLoad={() => setLoading(false)}
               className={`${
                 menu.name.startsWith("Sate") ? "object-bottom" : ""
