@@ -2,9 +2,9 @@ import React from "react";
 
 const loading = () => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2 md:px-12">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-2 backdrop-blur-sm md:px-12">
       <dialog className="relative w-full max-w-6xl bg-transparent" open>
-        <div className="flex h-[90dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white p-1 pb-2 sm:flex-row sm:p-0 sm:pr-4">
+        <div className="flex h-[83dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white p-1 pb-2 sm:flex-row sm:p-0 sm:pr-4 md:h-[87dvh]">
           <div className="relative h-1/3 min-h-[400px] w-full sm:h-full sm:w-2/3 md:w-3/5">
             <div className="h-full w-full animate-pulse bg-slate-200"></div>
           </div>
