@@ -1,8 +1,15 @@
 "use client";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  MoveLeft,
+  MoveRight,
+  X,
+} from "lucide-react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 interface MenuItem {
   _id: string;
@@ -60,7 +67,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-2 md:px-12"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-2 backdrop-blur-sm md:px-12"
       onClick={closeModal}
     >
       <dialog
@@ -74,7 +81,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
         >
           <X />
         </button>
-        <div className="flex h-[87dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white p-1 pb-2 sm:flex-row sm:p-0 sm:pr-2">
+        <div className="flex h-[83dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white pb-2 sm:flex-row sm:p-0 sm:pr-2 md:h-[87dvh]">
           <div className="relative h-full min-h-[400px] w-full sm:w-2/3 md:w-3/5">
             {loading && (
               <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
@@ -107,7 +114,7 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
                 <p
                   className={`${
                     index === menu.description.length - 1 ? "mb-0" : "mb-4"
-                  } text-gray-700 md:text-lg`}
+                  } text-gray-700 lg:text-lg`}
                   key={index}
                 >
                   {item}
@@ -116,15 +123,38 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
             </div>
           </div>
         </div>
+        <div className="mt-2 flex md:hidden">
+          {currentIndex < ids.length - 1 && (
+            <Button
+              variant={"secondary"}
+              onClick={() => handleNavigation("next")}
+              className="absolute -bottom-11 right-0 z-10 flex items-center gap-4 rounded-md p-2 px-8 text-lg transition-colors hover:text-gray-900"
+            >
+              <p>Next</p>
+              <MoveRight size={30} />
+            </Button>
+          )}
+
+          {currentIndex > 0 && (
+            <Button
+              variant={"secondary"}
+              onClick={() => handleNavigation("prev")}
+              className="absolute -bottom-11 left-0 z-10 flex items-center gap-4 rounded-md p-2 px-8 text-lg transition-colors hover:text-gray-900"
+            >
+              <MoveLeft size={30} />
+              <p>Prev</p>
+            </Button>
+          )}
+        </div>
         <div>
           <ChevronRight
             size={40}
-            className="absolute -bottom-12 right-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-right-12 md:top-1/2"
+            className="absolute -right-12 top-1/2 z-10 hidden cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:flex"
             onClick={() => handleNavigation("next")}
           />
           <ChevronLeft
             size={40}
-            className="absolute -bottom-12 left-1/3 z-10 flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:-left-12 md:top-1/2"
+            className="absolute -left-12 top-1/2 z-10 cursor-pointer items-center justify-center rounded-full bg-gray-200 p-2 text-2xl text-gray-600 transition-colors hover:text-gray-900 md:flex"
             onClick={() => handleNavigation("prev")}
           />
         </div>
