@@ -123,12 +123,13 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
             </div>
           </div>
         </div>
-        <div className="mt-2 flex md:hidden">
+        <div className="mt-4 flex md:hidden">
           {currentIndex < ids.length - 1 && (
             <Button
               variant={"secondary"}
+              size={"lg"}
               onClick={() => handleNavigation("next")}
-              className="absolute -bottom-11 right-0 z-10 flex items-center gap-4 rounded-md p-2 px-8 text-lg transition-colors hover:text-gray-900"
+              className="absolute -bottom-11 right-0 z-10 flex items-center gap-4 rounded-md px-8 text-lg transition-colors hover:text-gray-900"
             >
               <p>Next</p>
               <MoveRight size={30} />
@@ -138,8 +139,9 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
           {currentIndex > 0 && (
             <Button
               variant={"secondary"}
+              size={"lg"}
               onClick={() => handleNavigation("prev")}
-              className="absolute -bottom-11 left-0 z-10 flex items-center gap-4 rounded-md p-2 px-8 text-lg transition-colors hover:text-gray-900"
+              className="absolute -bottom-11 left-0 z-10 flex items-center gap-4 rounded-md px-8 text-lg transition-colors hover:text-gray-900"
             >
               <MoveLeft size={30} />
               <p>Prev</p>
