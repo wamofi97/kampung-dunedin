@@ -82,11 +82,19 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
           <X />
         </button>
         <div className="flex h-[83dvh] max-h-[1000px] flex-col items-center gap-x-4 overflow-auto rounded-lg bg-white pb-2 sm:flex-row sm:p-0 sm:pr-2 md:h-[87dvh]">
-          <div className="relative h-full min-h-[400px] w-full sm:w-2/3 md:w-3/5">
+          <div
+            className="relative h-full min-h-[400px] w-full bg-cover bg-center sm:w-2/3 md:w-3/5"
+            style={{
+              backgroundImage: `url(${menu.blurDataURL})`,
+            }}
+          >
             {loading && (
               <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
                 <div className="flex h-10 w-10 animate-spin items-center justify-center rounded-full border-4 border-t-secondary"></div>
               </div>
+            )}
+            {loading && (
+              <div className="absolute inset-0 animate-pulse bg-white opacity-10"></div>
             )}
             <Image
               src={menu.imageUrl}
@@ -94,14 +102,14 @@ const DialogMenu = ({ menu, ids }: { menu: MenuItem; ids: string[] }) => {
               fill
               placeholder="blur"
               blurDataURL={menu.blurDataURL}
-              quality={90}
+              quality={100}
               sizes="(max-width: 768px) 50vw, 33vw"
               priority
               onLoad={() => setLoading(false)}
-              className={`transition-[filter] duration-700 ease-in-out ${
+              className={`transition-filter duration-300 ease-in-out ${
                 loading ? "blur-md" : "blur-0"
               } ${
-                menu.name.startsWith("Sate") ? "object-bottom" : ""
+                menu.name.startsWith("Sate") ? "object-bottom" : "object-center"
               } h-auto w-auto rounded-md rounded-b-none object-cover sm:rounded-l-md sm:rounded-r-none`}
             />
           </div>
