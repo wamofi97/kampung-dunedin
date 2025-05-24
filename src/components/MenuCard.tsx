@@ -36,7 +36,6 @@ const MenuCard = ({ menu }: MenuCardProps) => {
     if (window.innerWidth > 768) {
       router.prefetch(`/menu/${id}`);
     }
-    console.log(`Prefetching /menu/${id}`);
   };
 
   useEffect(() => {
